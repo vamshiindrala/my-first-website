@@ -1,0 +1,16 @@
+<html>
+	<head>
+		<title>Resume</title>
+	</head>
+	<body>
+		<h3>
+			<b>VISWANATH SAMPATH KUMAR BATTINA</i></b> <h />
+		    <p><a href="mailto:sampathbattinav.com"><p id="email">sampathbattinav@gmail.com</p></a></p>
+		</h3>
+		<p><a href="Objectice"><p Objective</p></a></p>
+		<p><a href="Skills"><p Skills</p></a></p>
+		<p><a href="Education"><p Education</p></a></p>
+		<p><a href="Personal Skills"><p Personal Skills</p></a></p>
+		<p>My goal is to get a challening job at Nike as a front-end/ui engineer.</p>
+	</body>
+</html>
