@@ -5,6 +5,12 @@ button {
 	padding: 6px 12px; 
 	border-radius:4px; 
 	font-size:14px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #286090;
+    border-color: #204d74;
 }
 
 .danger {
@@ -16,3 +22,33 @@ button {
 	background-color: #5cb85c;
 	border: 1px solid #4cae4c;
 }
+
+.box {
+	text-align:center; 
+	margin:50px;
+	padding:50px;
+	border: 1px solid #666;
+	background-color: #F1F1F1;
+}
+
+#app {
+	background-color: #FFFFCC;
+}
+
+ul {
+	padding: 0;
+	list-style-type: none;
+}
+
+li {
+	border: 1px solid #AAAAAA;
+	display: inline;
+	padding: 5px;
+	background-color: #FFFFCC;
+}
+
+body {
+	margin: 0;
+}
+
+
