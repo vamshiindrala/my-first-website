@@ -38,6 +38,9 @@ button:hover {
 ul {
 	padding: 0;
 	list-style-type: none;
+	background-color: blue;
+	overflow: auto;
+	padding: 10px;
 }
 
 li {
@@ -49,6 +52,12 @@ li {
 
 body {
 	margin: 0;
+	font-size: 18px;
+}
+
+h1{
+	background-color: red;
+	font-size: 4em;
 }
 
 
