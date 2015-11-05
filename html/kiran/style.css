@@ -30,6 +30,7 @@ button:hover {
 	padding:50px;
 	border: 1px solid #666;
 	background-color: #F1F1F1;
+	overflow: auto;
 }
 
 #app {
@@ -39,7 +40,6 @@ button:hover {
 ul {
 	padding: 0;
 	list-style-type: none;
-	background-color: blue;
 	overflow: auto;
 	padding: 10px;
 }
@@ -56,9 +56,9 @@ body {
 	font-size: 18px;
 }
 
-h1{
-	background-color: red;
-	font-size: 4em;
+img {
+	float: left;
+	margin-right: 10px;
 }
 
 
