@@ -1,0 +1,25 @@
+.red{
+	background: red;
+	z-index: 3;
+	padding: 25px;
+	position: absolute;
+	left: 50;
+	top: 50;
+
+}
+.blue{
+	background: blue;
+	z-index: 2;
+	padding: 50px;
+	position: absolute;
+	left: 25;
+	top: 25;
+}
+.green{
+	background: green;
+	z-index: 1;
+	padding: 75px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
