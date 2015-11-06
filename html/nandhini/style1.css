@@ -1,0 +1,25 @@
+.violet{
+	background:#9C27B0;
+	z-index: 3;
+	padding: 25px;
+	position: absolute;
+	left: 50;
+	top: 50;
+
+}
+.skyblue{
+	background:#00ABFF;
+	z-index: 2;
+	padding: 50px;
+	position: absolute;
+	left: 25;
+	top: 25;
+}
+.snuff{
+	background:#801900;
+	z-index: 1;
+	padding: 75px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
