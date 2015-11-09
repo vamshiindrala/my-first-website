@@ -1,0 +1,7 @@
+body{
+	display: inline-block;
+	    background-color: green;
+	text-align: center;
+}
+.container{  background-color: blue;}
+.table{background-color: red;}
