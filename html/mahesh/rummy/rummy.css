@@ -4,7 +4,7 @@
     margin: 40px auto;
     min-height: 500px;
     padding: 40px;
-    
+    text-align: center;
     width: 350px;
     position: relative;
     overflow: hidden;
@@ -15,4 +15,17 @@ text-align: center;
 }
 .table{
 	background-color: red;
+	text-align: center;
 }
+td, th {
+    padding: 5px 10px;
+    text-align: center;
+    }
+ table{
+    border-collapse: collapse;
+    margin: 20px auto;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    }
