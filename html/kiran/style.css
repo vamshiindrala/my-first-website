@@ -104,3 +104,16 @@ img {
 	}
 }
 
+@media screen and (min-width: 200 px){ 
+.box{
+	margin:100px;
+	padding:500px;
+	}
+}
+
+@media screen and (min-width: 600 px){
+.box{
+	margin:200px;
+	padding: 10px;
+	}
+}
