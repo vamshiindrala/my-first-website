@@ -5,20 +5,55 @@
 	</head>
 	<body class="app" id="app">
 		<div class="box">
-			<h1>Fruits</h1>
-			<ul>
-				<li>Apples</li>
-				<li>Oranges</li>
-				<li>Grapes</li>
-			</ul>
+			<h1>My Form</h1>
 			<div class="box">
-				<img style="width:100px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH95XmfZCnxmD3aS71qAWY4eMfjM1-OQUVw9gE7j1YkLc4-1qF9pxlUg" />
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ullamcorper viverra ipsum quis fermentum. Quisque ac nibh ut metus condimentum cursus ut a eros. Etiam lacinia in lectus a porta. 
-				</p>
-				<div class="icon google-black-icon"></div>
+				<form name="userRegistration" action="myaction.html" method="GET">
+				  <label>First name:</label>
+				  <input type="text" name="firstname" />
+				  <br />
+				  <label>Last name:</label>
+				  <input type="text" name="lastname" />
+				  <br />
+				  <label>Email:</label>
+				  <input type="text" name="email" />
+				  <br/>
+				  <br/>
+				  <div>
+				  	<input type="checkbox" name="skills" value="html"/> HTML
+				  	<input type="checkbox" name="skills" value="css"/> CSS
+				  	<input type="checkbox" name="skills" value="js"/> JS
+				  </div>
+				  <br/>
+				  <div>
+				  	<input type="radio" name="sex" value="m"> Male <br/>
+				  	<input type="radio" name="sex" value="f"> Fe Male <br/>
+				  </div>
+				  <br/>
+				  <input type="file" name="resume" />
+				  <br/>
+				  <input type="checkbox" name="tac"/> Agree to Term and Conitions
+				  <br/>
+				  <input type="submit" value="Register" />
+				</form>
 			</div>
-			<button>Next Page</button>
 		</div>
+		<script type="text/javascript">
+			var fname = "John",
+				lname = undefined,
+				age = 2,
+				test = true,
+				add = function(a, b){return a + b;},
+				obj = {},
+				skills = null;
+
+			console.log(typeof fname);
+			console.log(typeof lname);
+			console.log(typeof age);
+			console.log(typeof test);
+			console.log(typeof add);
+			console.log(typeof obj);
+			console.log(typeof skills);
+
+		</script>
 	</body>
 </html>
