@@ -1,0 +1,9 @@
+<script>
+	function get(name){
+	   if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
+	      return decodeURIComponent(name[1]);
+	}
+
+	document.write("First Name:" + get('firstname') + '<br/>');
+	document.write("Last Name:" + get('lastname'));
+</script>

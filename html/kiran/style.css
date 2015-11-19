@@ -89,18 +89,11 @@ img {
     background-position: -190px 0px;
 }
 
-
-@media screen and (min-width: 500px) {
-	.box {
-		margin: 20px;
-		padding: 20px;
-	}
+form{
+	width:200px;
+	margin: 0 auto;
+	text-align: left;
 }
-
-@media screen and (min-width: 800px) {
-	.box {
-		margin: 50px;
-		padding: 50px;
-	}
+label{
+	display: block;
 }
-
