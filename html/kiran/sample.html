@@ -38,21 +38,42 @@
 			</div>
 		</div>
 		<script type="text/javascript">
-			var fname = "John",
+			var fname = "O'harah",
 				lname = undefined,
 				age = 2,
 				test = true,
-				add = function(a, b){return a + b;},
+				add = function(a, b) {
+					return parseFloat(a) + parseFloat(b);
+				},
 				obj = {},
 				skills = null;
 
-			console.log(typeof fname);
-			console.log(typeof lname);
-			console.log(typeof age);
-			console.log(typeof test);
-			console.log(typeof add);
-			console.log(typeof obj);
-			console.log(typeof skills);
+
+			// console.log(typeof fname);
+			// console.log(typeof lname);
+			// console.log(typeof age);
+			// console.log(typeof test);
+			// console.log(typeof add);
+			// console.log(typeof obj);
+			// console.log(typeof skills);
+
+
+
+			// var age = 30,
+		 //    daughtersAge = 16,
+		 //    candles = " candles";
+		 
+			// console.log( "Age diff: " + ( age - daughtersAge ) );
+			// console.log( daughtersAge + candles );
+
+			// var isTrue = true;
+			// console.log( !isTrue );
+
+			var sum = add(1, "3");
+			console.log( "Sum: "+ sum );
+			console.log( add );
+			//add = "Add is no longer a function";
+			console.log( typeof add );
 
 		</script>
 	</body>
