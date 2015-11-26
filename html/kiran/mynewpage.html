@@ -13,15 +13,15 @@
 			<div class="header clearfix">
 				<nav>
 					<ul class="nav nav-pills pull-right">
-						<li class="menuItem active" data-id="home" onclick="showPage('home')"><a href="#home">About Me</a></li>
-						<li class="menuItem" data-id="objective" onclick="showPage('objective')"><a href="#objective">Objective</a></li>
-						<li class="menuItem" data-id="contact" onclick="showPage('contact')"><a href="#contact">Contact</a></li>
-						<li class="menuItem" data-id="achievements" onclick="showPage('achievements')"><a href="#achievments">Achievements</a></li>
-						<li class="menuItem" data-id="resume" onclick="showPage('resume')"><a href="#resume">Resume</a></li>
+						<li class="menuItem active" id="menu-home"><a href="#home">About Me</a></li>
+						<li class="menuItem" id="menu-objective"><a href="#objective">Objective</a></li>
+						<li class="menuItem" id="menu-contact"><a href="#contact">Contact</a></li>
+						<li class="menuItem" id="menu-achievements"><a href="#achievements">Achievements</a></li>
+						<li class="menuItem" id="menu-resume"><a href="#resume">Resume</a></li>
 					</ul>
 				</nav>
 				<h3>
-					Mahesh 
+					Mahesh
 				</h3>
 			</div>
 			<div class="jumbotron page current" id="home">
@@ -63,35 +63,50 @@
 
 		<script type="text/javascript">
 			
-			function hideAllPages(){
-				var pages = document.getElementsByClassName('page');
-				for(var i=0; i<pages.length; i++){
-					pages[i].setAttribute('class', 'jumbotron page');
-				}
-			}
+			(function(){
 
-			function resetMenu(){
-				var items = document.getElementsByClassName('menuItem');
-				for(var i=0; i<items.length; i++){
-					items[i].setAttribute('class', 'menuItem');
-				}
-			}
+				var hideAllPages,
+					resetMenu,
+					showPage;
 
-			function activateMenu(pageName){
-				var items = document.getElementsByClassName('menuItem');
-				for(var i=0; i<items.length; i++){
-					if(items[i].getAttribute('data-id') === pageName){
-						items[i].setAttribute('class', 'menuItem active');	
+				hideAllPages = function(){
+					var pages, i;
+					pages = document.getElementsByClassName('page');
+					for(i=0; i<pages.length; i++){
+						pages[i].setAttribute('class', 'jumbotron page');
+					}
+				};
+
+				resetMenu = function(){
+					var items, i;
+					items = document.getElementsByClassName('menuItem');
+					for(i=0; i<items.length; i++){
+						items[i].setAttribute('class', 'menuItem');
 					}
 				}
-			}
 
-			function showPage(pageName){
-				hideAllPages();
-				resetMenu();
-				activateMenu(pageName);
-				document.getElementById(pageName).setAttribute('class', 'jumbotron page current');
-			}
+				showPage = function(){
+					var pageName = window.location.hash,
+						menuItemElement,
+						pageElement;
+
+					pageName = pageName.replace('#', '');
+
+					hideAllPages();
+					resetMenu();
+
+					menuItemElement = document.getElementById('menu-' + pageName);
+					menuItemElement.setAttribute('class', 'menuItem active');
+					
+					pageElement = document.getElementById(pageName);
+					pageElement.setAttribute('class', 'jumbotron page current');
+
+				}
+
+				window.onhashchange = showPage;
+
+			})();
+
 		</script>
 	</body>
 </html>
