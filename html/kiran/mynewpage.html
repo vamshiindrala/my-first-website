@@ -85,10 +85,12 @@
 					}
 				}
 
-				showPage = function(){
+				showPage = function(event){
 					var pageName = window.location.hash,
 						menuItemElement,
 						pageElement;
+
+					console.log(event.target);
 
 					pageName = pageName.replace('#', '');
 
