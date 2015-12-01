@@ -12,9 +12,10 @@
 	</head>
 	<body>
 		<div id="box"></div>
-		<p class="neat" hidden>
-		    Congratulations! You just ran a snippet of jQuery code.
-		</p>
+		<div class="neat" hidden>Other content. And such. And so forth.</div>
+		<p>Still some other content here. This time in a paragraph element</p>
+		<p class="neat" hidden>Congratulations! You just ran a snippet of jQuery code.</p>
+
 		<script 
 			type="text/javascript" 
 			src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js">
@@ -26,15 +27,7 @@
 
 				var $neat = $(".neat");
 
-				$neat.addClass( "ohmy" ).show( "slow" );
-
-				$box.on('click', function(){
-					if($neat.is(":visible")) {
-						$neat.slideUp();	
-					} else {
-						$neat.slideDown();
-					}
-				});
+				$neat.addClass( "ohmy" ).slideDown( "slow" );
 
 			})();
 		</script>

@@ -1,0 +1,88 @@
+<html>
+	<head>
+		<title>
+			Mahesh's Website
+		</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="header clearfix">
+				<nav>
+					<ul class="nav nav-pills pull-right">
+						<li class="menuItem" id="menu-home"><a href="#home">About Me</a></li>
+						<li class="menuItem" id="menu-objective"><a href="#objective">Objective</a></li>
+						<li class="menuItem" id="menu-contact"><a href="#contact">Contact</a></li>
+						<li class="menuItem" id="menu-achievements"><a href="#achievements">Achievements</a></li>
+						<li class="menuItem" id="menu-resume"><a href="#resume">Resume</a></li>
+					</ul>
+				</nav>
+				<h3>
+					Mahesh
+				</h3>
+			</div>
+			<div class="jumbotron page" id="home">
+				<h3>About me</h3>
+				<p>
+					Versatile user experience designer, engineering team manager and front-end engineer with a proven track record of designing user interfaces, rapid prototyping, managing and leading the development of projects involving tight timelines, high risk and rapidly changing requirements.
+
+					Expert in the design of complex, web-based and mobile web applications for consumer audiences.
+				</p>
+			</div>
+			<div class="jumbotron page" id="objective">
+				<h3>Objective</h3>
+				<p>
+					Versatile user experience designer, engineering team manager and front-end engineer with a proven track record of designing user interfaces, rapid prototyping, managing and leading the development of projects involving tight timelines, high risk and rapidly changing requirements.
+
+					Expert in the design of complex, web-based and mobile web applications for consumer audiences.
+				</p>
+			</div>
+			<div class="jumbotron page" id="contact">
+				<h3>Contact</h3>
+				<p>
+					Phone: <a href="tel:3372552122">337-255-2122</a> <br/>
+					Email: <a href="mailto:kiran.manda@gmail.com">kiran.manda@gmail.com</a>
+				</p>
+			</div>
+			<div class="jumbotron page" id="achievements">
+				<h3>Achievements</h3>
+				<p>
+					My bragging rights page.
+				</p>
+			</div>
+			<div class="jumbotron page" id="resume">
+				<h3>Resume</h3>
+				<p>
+					My resume page goes here
+				</p>
+			</div>
+		</div>
+
+		<script 
+			type="text/javascript" 
+			src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js">
+		</script>
+
+		<script type="text/javascript">
+			
+			(function(){
+
+				var showPage = function(event){
+					var pageName = window.location.hash.replace('#', '');
+					if(pageName === '') pageName = 'home';
+					$( '.page' ).hide();
+					$( '.menuItem' ).removeClass('active');
+					$( '#menu-' + pageName ).addClass('active');
+					$( '#' + pageName ).fadeIn('slow');
+				}
+
+				$(window).on('hashchange load', showPage);
+
+			})();
+
+		</script>
+	</body>
+</html>
