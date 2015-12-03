@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>
+			jQuery Intro
+		</title>
+		<style>
+		    .ohmy {
+		        background-color: blue;
+		        color: #aaa;
+		    }
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<div class="neat" hidden>Other content. And such. And so forth.</div>
+		<p>Still some other content here. This time in a paragraph element</p>
+		<p class="neat" hidden>Congratulations! You just ran a snippet of jQuery code.</p>
+
+		<script 
+			type="text/javascript" 
+			src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js">
+		</script>
+		<script type="text/javascript">
+			(function(){
+				var $box = $('#box'); //jQuery('#box')
+				$box.html("<h1>Hello World!</h1>");
+
+				var $neat = $(".neat");
+
+				$neat.addClass( "ohmy" ).slideDown( "slow" );
+
+			})();
+		</script>
+	</body>
+</html>
