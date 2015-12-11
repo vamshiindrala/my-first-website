@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>jqurey Can Validate Input</h1>
+<p>input a name :</p>
+<input id="name" type="name" value="">
+<button type="button" onclick="myFunction()">Submit</button>
+<p id="demo" onclick="clicked()">asdfasdf</p>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.3.min.js" ></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#txt_name").keyup(function(){
+            alert($(this).val());
+        });
+    })
+</script>
+
+<input type="text" id="txt_name"  />
+</body>
+
+</html> 
