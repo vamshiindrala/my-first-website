@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>
+			Kiran's Website
+		</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="header clearfix">
+				<nav><ul class="nav nav-pills pull-right" id="nav"></ul></nav>
+				<h3>Kiran</h3>
+			</div>
+			<div id="output"></div>
+		</div>
+
+		<script id="pageTemplate" type="text/x-handlebars-template">
+			<div class="jumbotron page current">
+				<h3>{{pageName}}</h3>
+				<p>{{pageContent}}</p>
+			</div>
+		</script>
+
+		<script type="text/x-handlebars-template" id="menuItemTemplate">
+			<li class="menuItem" id="menu-{{page}}">
+				<a href="#{{page}}">{{pageName}}</a>
+			</li>
+		</script>
+
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script type="text/javascript" src="handlebars-v4.0.5.js"></script>
+		
+		<script type="text/javascript" src="websitedata.js"></script>
+		<script type="text/javascript" src="handlebarsdemo.js"></script>
+	</body>
+</html>
