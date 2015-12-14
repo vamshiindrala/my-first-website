@@ -2,6 +2,21 @@
 	display: none;
 }
 
+<<<<<<< HEAD
+@media screen and (min-width: 200 px){ 
+.box{
+	margin:100px;
+	padding:500px;
+	}
+}
+
+@media screen and (min-width: 600 px){
+.box{
+	margin:200px;
+	padding: 10px;
+	}
+=======
 .current {
 	display: block;
+>>>>>>> 776dcae77eaf5f3a848e00ae061a6b1e437999bf
 }

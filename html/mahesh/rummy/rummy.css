@@ -1,7 +1,31 @@
-body{
-	display: inline-block;
-	    background-color: green;
+#box{
+	background-color: #fff;
+    border-radius: 4px;
+    margin: 40px auto;
+    min-height: 500px;
+    padding: 40px;
+    text-align: center;
+    width: 350px;
+    position: relative;
+    overflow: hidden;
+}
+.container{ 
+ background-color: blue;
+text-align: center;
+}
+.table{
+	background-color: red;
 	text-align: center;
 }
-.container{  background-color: blue;}
-.table{background-color: red;}
+td, th {
+    padding: 5px 10px;
+    text-align: center;
+    }
+ table{
+    border-collapse: collapse;
+    margin: 20px auto;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    }
