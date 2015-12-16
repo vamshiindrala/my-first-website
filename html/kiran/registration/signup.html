@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>
+			Sign up
+		</title>
+		<link rel="stylesheet" type="text/css" href="signup.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="box">
+				<h2>Join Today</h2>
+				<form name="signUpForm" method="post">
+					<table>
+						<tr>
+							<td>User Name</td>
+							<td>
+								<input type="text" name="userName" />
+								<span class="successMsg">Available</span>
+							</td>
+						</tr>
+						<tr>
+							<td>Password</td>
+							<td>
+								<input type="password" name="password" class="error"/>
+								<br/>
+								<label><input type="checkbox" name="showPassword"/> Show Password</label>
+								<span class="errorMsg">Required</span>
+							</td>
+						</tr>
+						<tr>
+							<td>Email</td>
+							<td>
+								<input type="text" name="email" class="error"/>
+								<span class="errorMsg">Email already taken</span>
+							</td>
+						</tr>
+					</table>
+					<div><input type="submit" name="signupbtn" value="Join"/></div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
