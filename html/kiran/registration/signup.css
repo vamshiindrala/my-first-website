@@ -1,0 +1,66 @@
+body{
+	background-color: #2A2A2A;
+}
+
+.box{
+	width: 350px;
+	margin: 50px auto;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	background-color: #F1F1F1;
+	padding: 20px;
+	font-family: helvetica;
+}
+
+h2{
+	text-align: center;
+}
+
+input[type="text"], input[type="password"], table {
+	width: 100%;
+}
+
+input[type="text"], input[type="password"]{
+	padding: 5px;
+	border-radius: 2px;
+	border: 1px solid #aaa;
+}
+
+td{
+	vertical-align: top;
+	padding: 5px;
+	line-height: 1.5em;
+	white-space: nowrap;
+}
+
+input[type="submit"] {
+	background-color: #333;
+	border-radius: 2px;
+	border: 1px solid transparent;
+	padding: 5px;
+	width: 100px;
+	color: #FFF;
+	margin: 20px auto 0px;
+	display: block;
+	text-transform: uppercase;
+	line-height: 1.5em;
+	font-size: 14px;
+}
+
+input[type="text"].error, input[type="password"].error{
+	border:1px solid red;
+}
+.errorMsg{
+	color: red;
+	font-size: 12px;
+	display: block;
+}
+.successMsg{
+	color: green;
+	font-size: 12px;
+	display: block;
+}
+
+label{
+	font-size: 12px;
+}
