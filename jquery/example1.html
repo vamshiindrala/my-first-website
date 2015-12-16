@@ -1,0 +1,49 @@
+Covered topics : Basics, Selectors, Attributes,
+<html>   
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+   		 $("p").click(function(){
+        	$(this).hide();
+   		});
+		});
+         $(document).ready(function() {
+            $("div").click(function() {alert("This is an alert!");});
+         });
+
+         $(document).ready(function() {
+            $("p").css("background-color", "yellow");
+         });
+         $(document).ready(function() {
+            var title = $("em").attr("title");
+            $("#divid").text(title);
+         });
+         $(document).ready(function() {
+            $("li").eq(0).addClass("selected");
+
+            $("p").find("span").addClass("selected");
+         });
+         $(document).ready(function() {
+            $("#myimg").attr("src", "images/jquery.png");
+         });
+    </script>
+    <style>
+         .selected { color:red; }
+      </style>
+  </head>
+  <body>
+    <div>
+         <img id = "myimg" src = "images/jquery.png" alt = "image" />
+      </div><p>Sampath Kumar disappears by clicking!</p>
+    <p>Sampath disappears Know by <span>clicking</span></p>
+    <div>
+         <em title = "Sampath kumar and Sampath"></em>
+         <div id = "divid"></div>
+         <ul>
+         	<li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+         </ul>
+    </div>
+   </body>
+</html>
