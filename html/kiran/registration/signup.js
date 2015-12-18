@@ -22,10 +22,18 @@
 	function isEmailAvailable(email){
 		if(typeof email === "string"){
 			//TODO do an ajax call to see if its available in the db.
-
-			return true;
-		}else{
-			return false;
+			var data = {};
+			data.method = "GET";
+			data.url = "http://localhost:8080/data/isEmailAvailable.json";
+			data.data = {"email": email};
+			$.ajax(data).done(function(data){
+				var $emailInput = $('input[name="email"]');
+				if(data.success){
+					showSuccess($emailInput, "Available");
+				}else{
+					showError($emailInput, "Email already taken");
+				}
+			});
 		}
 	}
 
@@ -48,8 +56,17 @@
 	* a valid email. false otherwise.
 	*/
 	function isValidEmail(email){
-		//TODO
-		return true;
+		var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		return regex.test(email);
+	}
+
+	/**
+	* clears all both error and success messages for the specified 
+	* jQuery Object
+	*/
+	function clearMessages($obj){
+		$obj.removeClass("error").closest('td').find('span.errorMsg').remove();
+		$obj.closest('td').find('span.successMsg').remove();
 	}
 
 	/**
@@ -57,7 +74,18 @@
 	* and shows the specfied message.
 	*/
 	function showError($obj, message){
+		clearMessages($obj);
 		$obj.addClass("error").closest('td').append('<span class="errorMsg">'+message+'</span>');
+	}
+
+	/**
+	* Appends the succecss html for the specfied jQuery Object
+	* and shows the specfied message.
+	*/
+	function showSuccess($obj, message){
+		clearMessages($obj);
+		$obj.closest('td').append('<span class="successMsg">'+message+'</span>');;
+
 	}
 
 	/**
@@ -71,18 +99,21 @@
 		$form.find('input[type="text"], input[type="password"]')
 			.each(function() {
 				var val = $(this).val();
-				$(this).removeClass("error").closest('td').find('span.errorMsg').remove();
+				clearMessages($(this));
 				if(val === '') {
 					success = false;
 					showError($(this),'Required');
 				} else {
 					if( $(this).attr('name') === 'email'){
-						if(!isValidEmail(val)){
+						if(isValidEmail(val)){
+							isEmailAvailable(val);
+						}else{
 							showError($(this), 'Invalid Email');
-						}
+						}	
 					}
 				}
 			});
+
 		return success;
 	}
 
