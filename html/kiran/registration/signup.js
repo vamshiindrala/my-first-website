@@ -4,13 +4,24 @@
 	* Returns true if the username is available else 
 	* returns false for the specified username.
 	*/
-	function isUsernameAvailable(username){
-		if(typeof username === "string"){
-			//TODO do an ajax call to see if its available in the db.
+	function isUsernameAvailable(userName){
 
-			return true;
-		}else{
-			return false;
+		if(typeof userName === "string"){
+			//TODO do an ajax call to see if its available in the db.
+			var request = $.ajax({
+				method: "GET",
+				url: "http://localhost:8080/data/isUserNameAvailable.json",
+				data: {"userName": userName}
+			});
+
+			request.done(function(data){
+				var $userNameInput = $('input[name="userName"]');
+				if(data.success){
+					showSuccess($userNameInput, data.message);
+				}else{
+					showError($userNameInput, data.message);
+				}
+			});
 		}
 	}
 
@@ -22,16 +33,20 @@
 	function isEmailAvailable(email){
 		if(typeof email === "string"){
 			//TODO do an ajax call to see if its available in the db.
-			var data = {};
-			data.method = "GET";
-			data.url = "http://localhost:8080/data/isEmailAvailable.json";
-			data.data = {"email": email};
-			$.ajax(data).done(function(data){
+			var request = $.ajax({
+				method: "GET",
+				url: "http://localhost:8080/data/isEmailAvailable.json",
+				data: {"email": email}
+			});
+
+			request.done(function(data){
 				var $emailInput = $('input[name="email"]');
 				if(data.success){
-					showSuccess($emailInput, "Available");
+					showSuccess($emailInput, data.message);
+					
 				}else{
-					showError($emailInput, "Email already taken");
+					showError($emailInput, data.message);
+					
 				}
 			});
 		}
@@ -65,8 +80,8 @@
 	* jQuery Object
 	*/
 	function clearMessages($obj){
-		$obj.removeClass("error").closest('td').find('span.errorMsg').remove();
-		$obj.closest('td').find('span.successMsg').remove();
+		$obj.removeClass("error").closest('td').find('span.errorMsg').removeClass('errorMsg').html("&nbsp;");
+		$obj.closest('td').find('span.successMsg').removeClass('successMsg').html("&nbsp;");
 	}
 
 	/**
@@ -75,7 +90,7 @@
 	*/
 	function showError($obj, message){
 		clearMessages($obj);
-		$obj.addClass("error").closest('td').append('<span class="errorMsg">'+message+'</span>');
+		$obj.addClass("error").closest('td').find('span.msg').addClass("errorMsg").html(message);
 	}
 
 	/**
@@ -84,8 +99,20 @@
 	*/
 	function showSuccess($obj, message){
 		clearMessages($obj);
-		$obj.closest('td').append('<span class="successMsg">'+message+'</span>');;
+		$obj.closest('td').find('span.msg').addClass("successMsg").html(message);
 
+	}
+
+	/**
+	* Validate the specifed jquery Object(input)
+	**/
+	function validateInput($input){
+		var val = $input.val();
+		clearMessages($input);
+		if(val === '') {
+			showError($input,'Required');
+			return false;
+		}
 	}
 
 	/**
@@ -94,27 +121,12 @@
 	* error "Required"
 	**/
 	function validateForm($form){
-		var success = true;
-
+		var succecss = false;
 		$form.find('input[type="text"], input[type="password"]')
 			.each(function() {
-				var val = $(this).val();
-				clearMessages($(this));
-				if(val === '') {
-					success = false;
-					showError($(this),'Required');
-				} else {
-					if( $(this).attr('name') === 'email'){
-						if(isValidEmail(val)){
-							isEmailAvailable(val);
-						}else{
-							showError($(this), 'Invalid Email');
-						}	
-					}
-				}
+				success = validateInput($(this));
 			});
-
-		return success;
+		return succecss;
 	}
 
 	/**
@@ -122,6 +134,8 @@
 	*/
 	function signUp($form){
 		//TODO
+		console.log("Signing up");
+		
 	}
 
 
@@ -132,17 +146,31 @@
 
 	$("form").on("submit", function(e){
 		e.preventDefault();
-		var success = validateForm($(this));
-		if(success){
-			console.log("Validation successful");
-			//TODO something
-		}else{
-			console.log("Validation failed");
+		validateForm($(this));
+		if($('.errorMsg').length === 0){
+			signUp($("form"));
 		}
 	})
 
+
+	$('input[name="email"]').on('keyup blur', function(){
+		var val = $(this).val();
+		if(isValidEmail(val)){
+			isEmailAvailable(val);
+		}else{
+			showError($(this), 'Invalid Email');
+		}	
+	});
+
+	$('input[name="userName"]').on('keyup blur', function(){		
+		var val = $(this).val();
+		if(val !== ""){
+			isUsernameAvailable(val);
+		}
+	});
+
 	$('input[type="text"], input[type="password"]').on('keyup blur', function(){
-		validateForm($(this).closest("form"));
+		validateInput($(this));
 	});
 
 

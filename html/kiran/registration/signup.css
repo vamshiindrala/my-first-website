@@ -50,15 +50,15 @@ input[type="submit"] {
 input[type="text"].error, input[type="password"].error{
 	border:1px solid red;
 }
-.errorMsg{
-	color: red;
+.msg{
 	font-size: 12px;
 	display: block;
 }
+.errorMsg{
+	color: red;
+}
 .successMsg{
 	color: green;
-	font-size: 12px;
-	display: block;
 }
 
 label{
