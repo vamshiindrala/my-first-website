@@ -1,30 +1,42 @@
 body{
-     background-color: white;> }
- .box{
-     width: 300px;
+     background-color: #2A2A2A;
+}
+
+.box{
+     width: 350px;
      margin: 50px auto;
-     border:1px solid #999;
+     border: 1px solid transparent;
+     border-radius: 5px;
      background-color: #F1F1F1;
      padding: 20px;
      font-family: helvetica;
- }
- h3{
+}
+
+h2{
      text-align: center;
- }
- input[type="text"], input[type="password"], table{
+}
+
+input[type="text"], input[type="password"], table {
      width: 100%;
- }
- input[type="text"], input[type="password"]{
+}
+
+input[type="text"], input[type="password"]{
      padding: 5px;
- }
- td{
+     border-radius: 2px;
+     border: 1px solid #aaa;
+}
+
+td{
      vertical-align: top;
      padding: 5px;
      line-height: 1.5em;
- }
- input[type="submit"]{
-     border: 1px solid #999;
+     white-space: nowrap;
+}
+
+input[type="submit"] {
      background-color: #333;
+     border-radius: 2px;
+     border: 1px solid transparent;
      padding: 5px;
      width: 100px;
      color: #FFF;
@@ -33,3 +45,22 @@ body{
      text-transform: uppercase;
      line-height: 1.5em;
      font-size: 14px;
+}
+
+input[type="text"].error, input[type="password"].error{
+     border:1px solid red;
+}
+.msg{
+     font-size: 12px;
+     display: block;
+}
+.errorMsg{
+     color: red;
+}
+.successMsg{
+     color: green;
+}
+
+label{
+     font-size: 12px;
+}
