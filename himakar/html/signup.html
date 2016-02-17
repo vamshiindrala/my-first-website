@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SIGN UP PAGE</title>
+	</head>
+	<body>
+		<style>
+		form{padding: 20px}
+		div {padding: 5px}
+		.a {color: red;}
+		form {
+			max-width:500px;
+			padding:10px 50px;
+			border:2px solid gray;
+			margin-left:300px;
+			border-radius: 20px;	
+			}
+		</style>
+		<form>
+			<fieldset>
+				<legend>Sign Up Form</legend>
+				<div>First Name<span class="a">*</span> <br>
+				<input type="text" name="firstname" required><br>
+				</div>
+				<div>
+				Last name<span class="a">*</span><br>
+				<input type="text" name="Lastname" required><br>
+				</div>
+				<div>
+				Email Address<span class="a">*</span><br>
+				<input type="email" name="email_ID" value="example@erp.com"required><br>
+				</div>
+				<div>
+				Password<span class="a">*</span><br>
+				<input type="password" name="password" required><br>
+				</div>
+				<div>
+				Confirm Password<span class="a">*</span><br>
+				<input type="password" name="confirpwd" required>
+				</div>
+				<div>
+				Screen Name<span class="a">*</span><br>
+				<input type="text" name="Scrname" required>
+				</div>
+				<div>
+				Date Of Birth<span class="a">*</span><br>
+				<input type="date" name="DOB" required>
+				</div>
+				<div>
+				Gender<span class="a">*</span><br>
+				<input type="radio" name="gender" value="male" checked>Male<br>
+				<input type="radio" name="gender" value="female">Female<br>
+				<input type="radio" name="gender" value="other">Other
+				</div>
+				<div>
+				Zipcode<span class="a">*</span>
+				<input type="text" name="zip" required>
+				</div>
+				<div>
+				<input type="checkbox" name="ads">Sign up for emails regarding the latest updates to this site<br>
+				<span class="a">*</span>Required fields
+				</div>
+				<hr>
+				<input type="submit" value="Sign Up">
+			</fieldset>
+		</form>
+	</body>
+</html>
