@@ -2,23 +2,40 @@
 <html>
 	<head>
 		<title>Signup Page</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	</head>
 	<body>
-		<form action="index.html">
+	  <div class="container">
+       <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation"><a href="index.html">Home</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Sign-Up Now !!</h3>
+       </div>
+		<form action="index.html" method="post">
 			<fieldset>
 				<legend align = "center">SIGN UP PAGE</legend>
 			  	First Name:<br/>
-	            <input type="text" name="firstname"><br/><br/>
+	            <input type="text" name="firstname" required><br/><br/>
 	            Last Name:<br/>
-	            <input type="text" name="lastname"><br/><br/>
+	            <input type="text" name="lastname" required><br/><br/>
 	            Email:<br/>
-	            <input type="text" name="email"><br/><br/>
+	            <input type="text" name="email" required><br/><br/>
 	            Password:<br/>
-	            <input type="password" name="password"><br/><br/>
+	            <input type="password" name="password" required><br/><br/>
 	            Confirm Password:<br/>
-	            <input type="passwod" name="confirmpassword"><br/><br/>
+	            <input type="passwod" name="confirmpassword" required><br/><br/>
 	            Screen Name:<br/>
-	            <input type="text" name="screenname"><br/><br/>
+	            <input type="text" name="screenname" required><br/><br/>
 	            Date of Birth:<br/>
 	            <select name="month">
 	            <option value="MM" selected>MM</option>
@@ -107,10 +124,11 @@
 	            <input type="radio" name="gender" value="male" checked> Female
 	            <input type="radio" name="gender" value="female"> Male<br/><br/>
 	            Zipcode:<br/>
-	            <input type="text" name="zip"> <br/><br/>
+	            <input type="text" name="zip" required> <br/><br/>
 	            <input type="submit" value="Submit">
 	        </fieldset>
         </form>
+      </div> <!-- /close container --> 
 	</body>
 </html>
 
