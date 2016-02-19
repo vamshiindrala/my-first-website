@@ -1,1 +1,25 @@
 /*Your css goes here*/
+.home {
+    background-color: Grey;
+    background-image: url("../images/roses.jpg");
+    background-repeat: no-repeat;
+}
+header {
+	background-color: #0D7CB4;
+	text-align: center;
+	height: 120px;
+}
+.icon {
+	height: 120px;
+	width: 120px;
+	float: left;
+}
+.banner {
+	height: 120px;
+}
+#description {
+	text-indent: 50px;
+}
+#jumbotron {
+    background-color: #9ACD32;
+}

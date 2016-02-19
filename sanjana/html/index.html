@@ -1,28 +1,43 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Details of Sanjana</title>
-        <style>
-            ul{
-               list-style-type: none;
-               padding: 0;
-            }
-            li{
-               padding: 8px;
-            }  
-        </style>
+		<title>Home Page</title>
+    <!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <style>
+      @import url(../css/style.css);
+    </style>
 	</head>
-	<body>
-		<h2 align ="center">Home Page of Sanjana</h2>
-		<hr style="border:1px solid black;"/>
-	    <p>This page provides links to my resume, contact and co-workers details</p>
-	    <nav>
-	        <ul>
-			   <li><a href = "resume.html">RESUME</a></li>
-			   <li><a href = "contact.html">CONTACT DETAILS</a></li>
-			   <li><a href = "co-workers.html">CO-WORKERS DETAILS</a></li>
-			   <li><a href = "signup.html">SIGN-UP</a></li>
-	        </ul>
-        </nav>        
+	<body class="home">
+		<div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a href="signup.html">Signup</a></li>
+            <li role="presentation"><a href="resume.html">Resume</a></li>
+            <li role="presentation"><a href="co-workers.html">Co-workers</a></li>
+            <li role="presentation"><a href="viewnetworktraffic.html">Monitor Traffic</a></li>
+            <li role="presentation"><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">My Page !!!</h3>
+      </div>
+      <div class="jumbotron" id="jumbotron">
+        <h2>Sanjana Kodari - "I code. I learn. I live to thrive."</h2>
+        <p class="lead">
+         Here's a brief description of who I am.
+        </p>
+        <p id="description" class="lead">
+          Hi! My name is Sanjana. I am a graduate student and have majored in Computer Science from Oklahoma State University.Well I have comprehensive background in Bigdata,Java application developement and Web designing. Right now my emphasis and my area of interest is User Interface design. I worked as a Web programmer in Integrative Biology Department,OSU. My job was to support and develop BIOL1114 website. I have also administered and maintained the database for the same. Prior to this I have also worked as an intern in Apollo Micro systems and created an Intranet web application named "Internal Mailing System" for the employees of AMS.<br/>
+          My Thesis title is - "Reliability of Twitter as an information source : A case study using Oil industry data."
+         </p>
+      </div>
+    </div> <!-- /close container -->
 	</body>
 </html>
