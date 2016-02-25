@@ -8,34 +8,130 @@
 		<link rel="stylesheet" type="text/css" href="indexstyle.css">
     </head>
 	<body>
-		<div class = "container">
-			<div class="header clearfix">
-        		<nav>
-          			<ul class="nav nav-pills pull-right">
-		           		<li role="presentation" class="active"><a href="index.html">Home</a></li>
-		            	<li role="presentation"><a href="about.html">About</a></li>
-		            	<li role="presentation"><a href="contact.html">Contact</a></li>
-		            	<li role="presentation"><a href="resume.html">Resume</a></li>
-		          	</ul>
-		        </nav>
-        		<h3 class="text-muted">Developer's Domain</h3>
-      		</div>
-      		<div class="jumbotron">
-        	<h1>WELCOME!</h1>
-        	<p class="lead">To the world of developer's</p>
-     		</div>
-			<img src="http://i0.wp.com/itsevalicious.com/wp-content/uploads/2015/07/abdul-kalam-insipirational-quotes-with-images-min.jpg?resize=500%2C393" alt="abdul kalam" title="Abdul Kalam" width="700" height="400">
-			<h1 style="color: maroon;"> This is my first website</h1>
-			<p>Hi, I am Himakar Gaddam. I'm trying to create an amazing website here.</p>
-			<div>
-			<button onclick="function1()">click here to sign up!</button>
-			<script>
-				function function1() {window.open("signup.html");}
-			</script>
+		<nav>
+		  <ul class="pagination">
+		    <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+		    <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+		    <li ><a href="resume.html">2<span class="sr-only">(current)</span></a></li>
+		  </ul>
+		</nav>
+		<nav class="navbar navbar-default navbar-static-top">
+			<div class = "container">
+				<div class="header clearfix">
+	        		<nav>
+	          			<ul class="nav nav-pills pull-right">
+			           		<li role="presentation" class="active"><a href="index.html">Home</a></li>
+			            	<li role="presentation"><a href="about.html">About</a></li>
+			            	<li role="presentation"><a href="contact.html">Contact</a></li>
+			            	<li role="presentation"><a href="resume.html">Resume</a></li>
+			          	</ul>
+			        </nav>
+	        		<h3 class="text-muted">Himakar Gaddam</h3>
+	      		</div>
+
+	      		<div class="jumbotron">
+	        	<h1>WELCOME!</h1>
+	        	<p class="lead">To the world of developer's</p>
+	     		</div>
+	     		<div class="sidebar-module sidebar-module-inset">
+            <!-- /Login -->
+            <h4 >Register</h4>
+                  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#myModal">
+  Login
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 >Login</h4>
+      </div>
+      <div class="modal-body">
+        <div align ="center">
+        <form class="form-inline">
+            <div class="form-group">
+            <label class="sr-only" for="exampleInputEmail3">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+            </div>
+            <br/>
+            <br/>
+            <div class="form-group">
+            <label class="sr-only" for="exampleInputPassword3">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+            </div>
+            <br/>
+            <br/>
+            <div class="checkbox">
+            <label>
+             <input type="checkbox"> Keep me signed in
+            </label>
+            </div>
+            <br/>
+            
+        </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+<br/>
+           <!-- /SignUp -->
+        
+<button type="button" class="btn btn-primary btn-lg btn-block btn-block" data-toggle="modal" data-target="#myModal1">
+  SignUp
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 >SignUp</h4>
+      </div>
+      <div class="modal-body">
+        <p>Complete the form to register</p>
+        First Name:<input type="text" class="form-control" placeholder="First name"><br/>
+        Last Name:<input type="text" class="form-control" placeholder="Last name"><br/>
+        Email:<input type="text" class="form-control" placeholder="Email address"><br/>
+        Mobile:<input type="text" class="form-control" placeholder="Mobile number"><br/>
+        <textarea class="form-control" rows="3">Enter Message...</textarea><br/>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">SignUp</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+				<br>
+				<img src="http://i0.wp.com/itsevalicious.com/wp-content/uploads/2015/07/abdul-kalam-insipirational-quotes-with-images-min.jpg?resize=500%2C393" alt="abdul kalam" title="Abdul Kalam" width="700" height="400">
+				<h1 style="color: maroon;"> This is my first website</h1>
+				<p>Hi, I am Himakar Gaddam. I'm trying to create an amazing website here.</p>
+				<div>
+				<button onclick="function1()">click here to sign up!</button>
+				<script>
+					function function1() {window.open("signup.html");}
+				</script>
+				</div>
+				<br>
+				<iframe src="contact.html" width="500" height="800"></iframe>
+				
+
 			</div>
-			<br>
-			<iframe src="contact.html" width="500" height="800"></iframe>
-			<object width="600" height="810" data="himakar_resume.pdf"></object>
-		</div>
+		</nav>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="http://getbootstrap.com/assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+
 	</body>
 </html>
