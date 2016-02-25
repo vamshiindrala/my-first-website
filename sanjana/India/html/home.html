@@ -65,9 +65,65 @@
                   </ul>
                 </li>
               </ul>
+              <!-- Button trigger modal -->
+              <button align="left" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#login">Log in</button>
+              <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#signup">Sign up</button>
             </div>
           </div>
         </nav>
+      </div>
+    </div>
+
+
+
+<!-- Log in Modal -->
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Log In</h4>
+          </div>
+          <div class="modal-body">
+            <form action="about.html" method="post">
+              Email:<br/>
+              <input type="text" name="email" required><br/><br/>
+              Password:<br/>
+              <input type="password" name="password" required><br/><br/>
+              <input type="checkbox" name="vehicle" value="Bike">Remember me<br>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Log in</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Sign up Modal -->
+    <div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Sign Up</h4>
+          </div>
+          <div class="modal-body">
+            <form action="about.html" method="post">
+              Email:<br/>
+              <input type="text" name="email" required><br/><br/>
+              Password:<br/>
+              <input type="password" name="password" required><br/><br/>
+              Confirm Password:<br/>
+              <input type="password" name="password" required><br/><br/>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Sign up</button>
+          </div>
+        </div>
       </div>
     </div>
 
