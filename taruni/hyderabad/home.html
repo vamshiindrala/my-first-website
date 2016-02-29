@@ -11,6 +11,20 @@
 
   <title>Hyderabad</title>
 
+  <style>
+
+  .img-circle{
+    width:140px;
+    height:140px;
+  }
+
+  #mainpageheading{
+    font-size:95px;
+    font-weight:bold;
+  }
+  </style>
+  
+
   <!-- Bootstrap core CSS -->
   <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -77,14 +91,50 @@
                   </li>
                   <li class="dropdown">
                     <a href="hotels.html" class="dropdown-toggle" >Hotels</a></li>
-                  </ul>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="modal" data-target="#myloginModal" >Log In</a></li>
+                      <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="modal" data-target="#mysignupModal" >Sign up</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </nav>
+
+              </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myloginModal" role="dialog">
+              <div class="modal-dialog">
+                <!-- Modal content--Login-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Log In</h4>
+                  </div>
+                  <div class="modal-body">
+                    <form role="form">
+                      <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email">
+                      </div>
+                      <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                      </div>
+                      <div class="checkbox">
+                        <label><input type="checkbox"> Remember me</label>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-default">Login</button>
+                    </div>
+                  </div>
+
                 </div>
               </div>
-            </nav>
-
-          </div>
-        </div>
-
+              
 
     <!-- Carousel
     ================================================== -->
@@ -103,7 +153,7 @@
           <div class="container">
 
             <div class="carousel-caption">
-              <h1 style="font-size:95px;font-weight:bold;">Hyderabad</h1>
+              <h1 id="mainpageheading">Hyderabad</h1>
               <h1>City of Pearls</h1>
               
               <!--  <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p> -->
@@ -149,33 +199,68 @@
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="col-lg-4">
-          <img class="img-circle" src="..\images\eat.jpg" alt="Generic placeholder image" width="140" height="140">
+          <img class="img-circle" src="..\images\eat.jpg" alt="Generic placeholder image">
           <h2>Eat</h2>
           <p>To think of Hyderabad is to recall its rich and incomparable cuisine, its wealth of architecture, its refined traditions of gracious hospitality and an exquisitely cultured way of life.Hyderabad is a heaven for "Food Lovers".
           </p>
           <p><a class="btn btn-default" href="restaurants.html" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="..\images\pray.jpg" alt="Generic placeholder image" width="140" height="140">
+          <img class="img-circle" src="..\images\pray.jpg" alt="Generic placeholder image">
           <h2>Pray</h2>
           <p>Hyderabad exhibits a unique amalgamation of two distinct cultures and religion—Hinduism and Islam.Also, the city is known as the home to the oldest Roman Catholic Church, which was earlier, the Cathedral of the Archdiocese of Hyderabad. </p>
           <p><a class="btn btn-default" href="pray.html" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="..\images\study1.jpg" alt="Generic placeholder image" width="140" height="140">
+          <img class="img-circle" src="..\images\study1.jpg" alt="Generic placeholder image">
           <h2>Study</h2>
           <p>Hyderabad is an important seat of learning in southern India. The city hosts 2 central universities, 3 deemed universities, &amp 6 state universities.This educational infrastructure attracts students from all over India &amp some international students.</p>
           <p><a class="btn btn-default" href="study.html" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
 
-      <!-- FOOTER -->
-      <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        
-      </footer>
 
-    </div><!-- /.container -->
+      <!-- Modal -->
+      <div class="modal fade" id="mysignupModal" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content--Login-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Sign up</h4>
+            </div>
+            <div class="modal-body">
+              <form role="form">
+                <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                  <label for="pwd">Password:</label>
+                  <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                </div>
+                <div class="form-group">
+                  <label for="cpwd">Confirm Password:</label>
+                  <input type="password" class="form-control" id="cpwd" placeholder="Enter password again">
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-default">Sign up</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+          <p class="pull-right"><a href="#">Back to top</a></p>
+          
+        </footer>
+
+      </div><!-- /.container -->
 
 
     <!-- Bootstrap core JavaScript
@@ -188,5 +273,7 @@
     <script src="http://getbootstrap.com/assets/js/vendor/holder.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+
   </body>
   </html>
