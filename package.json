@@ -1,0 +1,30 @@
+{
+  "name": "my-first-website",
+  "version": "1.0.0",
+  "description": "This is my first website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kiranmanda/my-first-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kiranmanda/my-first-website/issues"
+  },
+  "homepage": "https://github.com/kiranmanda/my-first-website#readme",
+  "dependencies": {
+    "angular": "^1.5.0",
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.1"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "http-server": "^0.9.0",
+    "less": "^2.6.0"
+  }
+}

@@ -1,55 +1,82 @@
- <form>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="http://getbootstrap.com/dist/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="http://getbootstrap.com/assets/css/ie10-viewport-bug-workaround.cs">
+<link rel="stylesheet" type="text/css" href="http://getbootstrap.com/examples/blog/blog.css">
+<link rel="stylesheet" type="text/css" href="Style/style.css">
+<script type="text/javascript" src="http://getbootstrap.com/assets/js/ie-emulation-modes-warning.js"></script>
+</head>
 
-  First name:<br>
-  <input type="text" name="First name"><br>
-  Last name:<br>
-  <input type="text" name="Last name"><br>
-  Email address:<br>
-  <input type="text" name="Email address"><br>
-  Password:<br>
-  <input type="text" name="Password"><br>
-  Confirm password:<br>
-  <input type="text" name="Confirm password"><br>
-  Screen name:<br>
-  <input type="text" name="Screen name"><br>
-  Date of birth:<br>
-   MM:<select>
-	<option value="January">jan</option>
-	<option value="february">feb</option>
-	<option value="march">mar</option>
-	<option value="april">apr</option>
-	<option value="may">may</option>
-	<option value="june">jun</option>
-	<option value="july">jul</option>
-	<option value="august">aug</option>
-	<option value="september">sep</option>
-	<option value="october">oct</option>
-	<option value="november">nov</option>
-	<option value="december">dec</option>
-</select>
-DD:<select>
-	<option value="01">01</option>
-	<option value="02">02</option>
-	<option value="03">03</option>
-	<option value="04">04</option>
-	<option value="05">05</option>
-	<option value="06">06</option>
-</select>
-YY:<select>
-	<option value="1992">1992</option>
-	<option value="1993">1993</option>
-	<option value="1994">1994</option>
-	<option value="1995">1995</option>
-	<option value="1996">1996</option>
-	<option value="1997">1997</option>
-</select>
- <br>
-  Gender:<br>
-  <input type="radio" name="gender" value="male" checked> Male<br>
-  <input type="radio" name="gender" value="female"> Female<br>
-  <input type="radio" name="gender" value="other"> Other<br>
-    Zipcode:<br>
-  <input type="text" name="Zipcode"><br>
-  <input type="checkbox" name="checkbox"> sign up for email<br>
-  <input type="submit" value="Sign up">
-</form> 
+<body>
+<div class = "container">
+            <h1>Registration</h1>
+<button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#myModal">
+  Login
+</button>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 >Login</h4>
+      </div>
+      <div class="modal-body">
+        <div align ="center">
+        <form class="form-inline">
+            <div class="form-group">
+            <label class="sr-only" for="exampleInputEmail3">Email</label>
+            <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+            </div>
+            <br>
+            <br>
+            <div class="form-group">
+            <label class="sr-only" for="exampleInputPassword3">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+            </div>
+            <br>
+            <br>
+            <div class="checkbox">
+            <label>
+             <input type="checkbox"> Remember me
+            </label>
+            </div>
+            <br>
+        </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Login</button>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<button type="button" class="btn btn-primary btn-lg btn-block btn-block" data-toggle="modal" data-target="#myModal1">
+  SignUp
+</button>
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 >SignUp</h4>
+      </div>
+      <div class="modal-body">
+        <input type="text" class="form-control" placeholder="Email address"><br>
+        <input type="text" class="form-control" placeholder="Passsword"><br>
+        <input type="text" class="form-control" placeholder="Remember Password"><br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">SignUp</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://getbootstrap.com/assets/js/vendor/jquery.min.js"><\/script>')</script> <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+<script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+</html>
