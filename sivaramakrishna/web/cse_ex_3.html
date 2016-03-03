@@ -1,91 +1,101 @@
+<!DOCTYPE html>
 <html>
 <head>
- <style type="text/css">
- body{
-      font-family: 'Open Sans', sans-serif;
- }
- .style1{
-  width: 100%;
-  overflow: hidden;
-  padding: 40px;
-  margin: 60px 30px 60px 30px;
- }
- .style2{
-  width: 500px;
-  float: left;
+  <title>css-exercise-3</title>
+  <style type="text/css">
+  body{font-family: 'Open Sans', sans-serif;}
+  .col1{
+    
+      font-size: 18px;
+      line-height: 1.55em;
+      
+  }
 
+  .col2{
+    
+    padding: 5px 0;
+    text-align: center;
+    float :right ;
+  }
+  
+  .icon{
+  display: inline-block;
+    width: 105px;
+    margin: 0 10px 30px;
+    vertical-align: top;
+  }
 
- }
- .style3{
-  margin-left: 620px;
- }
- img{
-  padding: 10px;
- }
- 
- .icontext{
-  font-size: 13px;
-        color: #666666;
-        line-height: 15px;
-        text-transform: uppercase;
-        font-weight: 700;
-        width: 5px;
- }
- .assetCategories {
+  .container{
+  display: inline-block;
+    width: 400px;
+    text-align: center;
+    }
+
+    .caption {
+    font-size: 13px;
+    color: #666666;
+    line-height: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    }
+
+  .categories {
     color: #8F8F8F;
     font-style: italic;
-}
+  }
+  .box{
+    margin: 35px 20px;
+  }
 
- </style>
+     @media only screen and (max-width: 780px){
+
+      .col:first-child{
+        margin-bottom :20px;
+      }
+      .col, .container{
+        width: auto;
+      }
+     }
+  </style>
+
 </head>
 <body>
-
-
-
- <div class="style1">
-    <div class="style2">
-        <h4>Get 180000+ insights you wont find anywhere else</h4>
-        <p>Choose from over 150 professionally built motifs and more than 180,000 motifs built or customized by the Motif community, reflecting unique industry trends, trading strategies, and personal values.</p>
-        <p>We offer professionally built motifs in six, easy-to-access categories:</p>
-        <p class="assetCategories">Sectors, Income Strategies, Trading Strategies, Global Opportunities, Values-based, and Asset Allocation.</p>
+  <div class="box">
+    <div class="col2">
+        <div class="container">
+        <div class="icon">
+        <a href="#"><img src="sectors_brown.png" alt="sectors_brown" width="48" height="64" ></a>
+        <div class="caption">Sectors</div>
+        </div>
+        <div class="icon">
+        <a href="#"><img src="income_brown.png" alt="income_brown" width="64" height="64" class="aligncenter size-full wp-image-15944"></a>
+        <div class="caption">Income Strategies</div>
+        </div>
+        <div class="icon">
+        <a href="#"><img src="trading_brown.png" alt="trading_brown" width="46" height="64"></a>
+        <div class="caption">Trading Strategies</div>
+        </div>
+        <div class="icon">
+        <a href="#"><img src="global_brown.png" alt="global_brown" width="64" height="64" class="aligncenter size-full wp-image-15942"></a>
+        <div class="caption">Global Opportunities</div>
+        </div>
+        <div class="icon">
+        <a href="#"><img src="values_brown.png" alt="values_brown" width="62" height="69" class="aligncenter size-full wp-image-15941"></a>
+        <div class="caption">Values-Based</div>
+        </div>
+        <div class="icon">
+        <a href="#"><img src="assets_brown.png" alt="assets_brown" width="64" height="63" class="aligncenter size-full wp-image-15940"></a>
+        <div class="caption">Asset Allocation</div>
+        </div>
+      </div>
     </div>
-
-    <div class="rightCol" style="width: 49%">
-    <div class="iconsContainer">
-
-    <div class="style3">
-     <table>
-  <tr>
-   <td><img src="sectors_brown.png" alt="sectors_brown" class="aligncenter size-full wp-image-15945" height="64" width="48"><br/>
-    <label class="icontext">sectors</label>
-   </td>
-   <td><img src="income_brown.png" alt="sectors_brown" class="aligncenter size-full wp-image-15945" height="64" width="48"><br/>
-    <label class="icontext">income strategies</label>
-   </td>
-   <td><img src="trading_brown.png" alt="sectors_brown" class="aligncenter size-full wp-image-15945" height="64" width="48"><br/>
-    <label class="icontext">trading strategies</label>
-   </td>
-  </tr>
-  <tr>
-   <td><img src="global_brown.png" alt="sectors_brown" class="aligncenter size-full wp-image-15945" height="64" width="48"><br/>
-    <label class="icontext">global opportunities</label>
-   </td>
-   <td><img src="values_brown.png" alt="sectors_brown" class="aligncenter size-full wp-image-15945" height="64" width="48"><br/>
-    <label class="icontext">values-based</label>
-   </td>
-   <td><img src="assets_brown.png" alt="sectors_brown" class="aligncenter size-full wp-image-15945" height="64" width="48"><br/>
-    <label class="icontext">asset allocation</label>
-   </td>
-  </tr>
-  </table>
-
-
-    </div>
-    </div>
- 
- 
- 
- 
-
+    <div class="col1">
+          <div><h3>Get 180,000+ insights you won't find anywhere else</div>
+      <div>Choose from over 150 professionally built motifs and more than 180,000 motifs built or customized by the Motif community, reflecting unique industry trends, trading strategies,and personal values.<h3></div>
+      <div>We offer professionally built motifs in six, easy-to-access categories:</div>
+      <div class="categories">Sectors, Income Strategies, Trading Strategies, Global Opportunities, Values-based, and Asset Allocation.</div>
+      </div>
+      
+  </div>
 </body>
 </html>
