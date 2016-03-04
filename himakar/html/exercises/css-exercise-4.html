@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSS Exercises - 4</title>
+		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+		<style type="text/css">
+			body{
+				font-family: 'Open Sans', sans-serif;
+				
+
+			}
+			body::after{
+				content: "";
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: -1;
+				background: url(https://s1.wp.com/home.logged-out/images/pic-crowd-2x.webp?2) no-repeat center center;
+			}
+			.top {
+			    list-style-type: none;
+			    margin: 0;
+			    padding: 0;
+			    overflow: auto;
+			    background: #1e8cbe;
+			    line-height: 20px;
+			    text-align: center;
+			}
+			li
+			{
+			   display: inline;
+			   color: white;
+			   text-align: center;
+			   padding: 14px 16px;
+			   text-decoration: none;
+			}
+			li a:hover {
+			    background-color: #111;
+			}
+			span {
+				color: gray;
+			}
+			img {
+			    color: #fff;
+			    display: inline-block;
+			    height:30px;
+			    width:30px;
+			}
+			.ab {
+				background-color: lightblue;
+				float:right;
+				margin-right: 100px;
+			}
+			.cntr {
+				margin: 100px 0px;
+				padding:20px;
+				text-align: center;
+				color: white;
+				font-weight: 700;
+			}
+			.btns{
+				text-align: center;
+			}
+			.btn1, .btn2{
+				height: 40px;
+				background-color: lightblue;
+			}
+			.i1::before{
+				content:"";
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="top">
+		 	<li><a href="#" class="i1"><img src="wordpress.jpeg" class="i2"> WordPress<span>.com</span></a>
+			</li>
+			<li class="ab"><a href="#">Log In</a></li>
+		</ul>
+		<div class="cntr">
+			<h1>Create your new website for free</h1>
+			<p>WordPress.com is the best place</p>
+			<p>for your personal blog or business site.</p>
+		</div>
+		<ul class="btns">
+			<li><button class="btn1"><a href="#">Create Website</a></button></li>
+			<li><a href="#"><button class="btn2">Create Blog</button></a></li>
+		</ul>
+	</body>
+</html>
+
