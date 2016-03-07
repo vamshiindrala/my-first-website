@@ -40,7 +40,7 @@
 				line-height: normal;
 				margin: 30px 0px;
 				padding: .5em 1.0em;
-				transition: background 200ms 
+				transition: background 200ms;
 				cursor: auto;
 				box-shadow: 0px 0px 0px 10px rgba(0,0,0,0.5);
 			}
@@ -171,6 +171,48 @@
 				color: #F2FFFF;
 
 			}
+			@font-face {
+			    font-family: "Noticons";
+			    font-style: normal;
+			    font-weight: 400;
+			    src: url("/i/noticons/Noticons.eot?") format("embedded-opentype");
+			}
+			@font-face {
+			    font-family: "Noticons";
+			    font-style: normal;
+			    font-weight: 400;
+			    src: url("https://s1.wp.com/i/noticons/Noticons.woff") format("woff"), url("/i/noticons/Noticons.ttf") format("truetype"), url("/i/noticons/Noticons.svg#Noticons") format("svg");
+			}
+			@font-face {
+			    font-family: "Noticons";
+			    src: url("/i/noticons/Noticons.svg#Noticons") format("svg");
+			}
+			.noticon {
+			    display: inline-block;
+			    font-family: "Noticons";
+			    font-size: 32px;
+			    font-style: normal;
+			    font-variant: normal;
+			    font-weight: 400;
+			    line-height: 1;
+			    text-align: center;
+			    text-decoration: inherit;
+			    text-transform: none;
+			    vertical-align: top;
+			    border: 1px solid;
+			    border-radius: 32px;
+			    padding: 15px;
+			}
+			.image-website::before {
+			    content: "\f475";
+			}
+			.image-blog::before {
+			    content: "\f8a9";
+			}
+			.image-discover::before {
+			    content: "\f8a2";
+			}
+
   		</style>
 	</head>
 	<body>
@@ -193,7 +235,7 @@
 		 	<div class="icons">
 				<div class="individualicon">
 					<a href="#" target="_blank" class="icon website">
-						<img src="assets\website.JPG" alt="websiteicon"/>
+						<span class="noticon image-website"></span>
 						<h3>Create a Website</h3>
 						<p>Promote your business or<br/> personal brand</p>
 						<p class="link">Learn More</p>
@@ -201,7 +243,7 @@
 				</div>
 				<div class="individualicon">
 					<a href="#" target="_blank" class="icon website">
-						<img src="assets\blog.JPG" alt="blogicon"/>
+						<span class="noticon image-blog"></span>
 						<h3>Start a blog</h3>
 						<p>Share your thoughts with friends<br/> and fans</p>
 						<p class="link">Learn More</p>
@@ -209,7 +251,7 @@
 				</div>
 				<div class="individualicon">
 					<a href="#" target="_blank" class="icon website">
-						<img src="assets\discover.JPG" alt="discovericon"/>
+						<span class="noticon image-discover"></span>
 						<h3>Discover</h3>
 						<p>Find and discuss the best stories<br/> on the web</p>
 						<p class="link">Learn More</p>
