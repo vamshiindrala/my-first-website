@@ -19,25 +19,27 @@
 				z-index: -1;
 				background: url(https://s1.wp.com/home.logged-out/images/pic-crowd-2x.webp?2) no-repeat center center;
 			}
-			.top {
+			.header{
+				background: #1e8cbe;
+				padding:0px 50px;
+			}
+			.header .top {
 			    list-style-type: none;
 			    margin: 0;
-			    padding: 0;
+			    padding:0
+			    width:700px;
+			    margin: 0 auto;
 			    overflow: auto;
-			    background: #1e8cbe;
-			    line-height: 20px;
-			    text-align: center;
 			}
-			li
-			{
+			.header li {
 			   display: inline;
-			   color: white;
-			   text-align: center;
-			   padding: 14px 16px;
-			   text-decoration: none;
 			}
 			li a:hover {
-			    background-color: #111;
+			    background-color: #808080;
+			}
+			.header li a{
+				line-height: 50px;
+				display: inline-block;
 			}
 			span {
 				color: gray;
@@ -52,6 +54,8 @@
 				background-color: lightblue;
 				float:right;
 				margin-right: 100px;
+				width: 100px;
+				text-align: center;
 			}
 			.cntr {
 				margin: 100px 0px;
@@ -70,23 +74,122 @@
 			.i1::before{
 				content:"";
 			}
+
+			.glyph{
+				
+				width:100%;
+				text-align:center;
+				margin:0;
+				padding:0;
+				color: rgb(242, 255, 255);		
+			}
+
+			.icons{
+				display:inline-block;
+				padding:20px;
+				margin:20px;
+				height: 230px; 
+				width: 260px;	
+			}
+
+			.icons a{
+				color: #F2FFFF;
+				text-decoration:none;
+			}
+			.glyph:hover{
+				 background-color: #808080;
+			}
+			p{
+				line-height: 1.4em;
+				color: #F2FFFF;
+			}
+			.learn{
+				text-decoration: underline;
+				font-weight: bold;
+
+			}
+			@font-face {
+			    font-family: "Noticons";
+			    font-style: normal;
+			    font-weight: 400;
+			    src: url("/i/noticons/Noticons.eot?") format("embedded-opentype");
+			}
+			@font-face {
+			    font-family: "Noticons";
+			    font-style: normal;
+			    font-weight: 400;
+			    src: url("https://s1.wp.com/i/noticons/Noticons.woff") format("woff"), url("/i/noticons/Noticons.ttf") format("truetype"), url("/i/noticons/Noticons.svg#Noticons") format("svg");
+			}
+			@font-face {
+			    font-family: "Noticons";
+			    src: url("/i/noticons/Noticons.svg#Noticons") format("svg");
+			}
+			.noticon {
+			    display: inline-block;
+			    font-family: "Noticons";
+			    font-size: 32px;
+			    font-style: normal;
+			    font-variant: normal;
+			    font-weight: 400;
+			    line-height: 1;
+			    text-align: center;
+			    text-decoration: inherit;
+			    text-transform: none;
+			    vertical-align: top;
+			    border: 1px solid;
+			    border-radius: 32px;
+			    padding: 15px;
+			}
+			.image-website::before {
+			    content: "\f475";
+			}
+			.image-blog::before {
+			    content: "\f8a9";
+			}
+			.image-discover::before {
+			    content: "\f8a2";
+			}
 		</style>
 	</head>
 	<body>
+		<div class="header">
 		<ul class="top">
 		 	<li><a href="#" class="i1"><img src="wordpress.jpeg" class="i2"> WordPress<span>.com</span></a>
 			</li>
 			<li class="ab"><a href="#">Log In</a></li>
 		</ul>
+		</div>
 		<div class="cntr">
 			<h1>Create your new website for free</h1>
 			<p>WordPress.com is the best place</p>
 			<p>for your personal blog or business site.</p>
 		</div>
-		<ul class="btns">
-			<li><button class="btn1"><a href="#">Create Website</a></button></li>
-			<li><a href="#"><button class="btn2">Create Blog</button></a></li>
-		</ul>
+		<div class="glyph">
+				<div class="icons">
+					<a href="#" target="_blank" class="icon website">
+						<span class="noticon image-website"></span>
+						<h3>Create a Website</h3>
+						<p>Promote your business or<br/> personal brand</p>
+						<p class="link">Learn More</p>
+					</a>
+				</div>
+				<div class="icons">
+					<a href="#" target="_blank" class="icon website">
+						<span class="noticon image-blog"></span>
+						<h3>Start a blog</h3>
+						<p>Share your thoughts with friends<br/> and fans</p>
+						<p class="link">Learn More</p>
+					</a>
+				</div>
+				<div class="icons">
+					<a href="#" target="_blank" class="icon website">
+						<span class="noticon image-discover"></span>
+						<h3>Discover</h3>
+						<p>Find and discuss the best stories<br/> on the web</p>
+						<p class="learn">Learn More</p>
+					</a>
+				</div>
+			</div>
 	</body>
 </html>
 
