@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSS Exercises - 5</title>
+		<style type="text/css">
+		body{
+			text-align: center;
+			}
+			.box{
+		  		margin: 50px auto 50px auto;
+				padding: 20px 20px;
+				max-width: 925px;
+				overflow: auto;
+				background-color: #F8F8F9;
+				border: 1px solid #000;
+		  	}
+		  	button{
+		  		margin: 10px;
+		  		padding: 10px;
+		  		background:  #fff;
+		  		color: #000;
+		  		line-height: 43px;
+		  		font-size: 14px;
+		  		font-weight: bold;
+		  		margin-top: 10px;
+		  		text-transform: uppercase;
+		  		padding: 5px;
+		  		border: 1px solid #555;
+		  		background-color: #98AFC7;
+		  	}
+		  	button::before{
+		  		content: "";
+		  		width: 43px;
+		  		height: 43px;
+		  		display: inline-block;
+		  		float: left;
+		  		margin-right: 5px;
+		  		background: url("http://info.appdirect.com/uploads/blog/Content/2011/SVG-icons.png") no-repeat 0 0;
+		  	}
+		  	button.email::before{
+		  		background-position: -181px -111px;
+		  	}
+		  	button.gtalk::before{
+		  		background-position: -218px -149px;
+		  	}
+		  	button.twitter::before{
+		  		background-position: -329px -150px;
+		  	}
+		  	button.smiley::before {
+		  		background-position: -145px -37px;
+		  	}
+		  	button:hover {
+			    background-color:#4863A0;	    
+			}
+			button.firefox::before{
+		  		background-position: -71px -184px;
+		  	}
+		  	button.chrome::before{
+		  		background-position: -181px -184px;
+		  	}
+		  	button.ie::before{
+		  		background-position: -108px -184px;
+		  	}
+		  	button.opera::before {
+		  		background-position: -144px -184px;
+		  	}
+		  	button.safari::before {
+		  		background-position: -219px -185px;
+		  	}
+  		</style>
+	</head>
+	<body>
+		<div class="box" >
+			<h2>Image sprites</h2>
+			<button class="email">
+				Inbox
+			</button>
+			<button class="gtalk">
+				Gtalk
+			</button>
+			<button class="twitter">
+				Twitter
+			</button>
+			<button class="smiley">	
+				I am Happy
+			</button></br></br></br>
+			<h2>Browser Types</h2>
+			<button class="firefox">
+				Mozilla FireFox
+			</button>
+			<button class="chrome">
+				Google Chrome
+			</button>
+			<button class="ie">
+				Internet Explorer
+			</button>
+			<button class="opera">	
+				Opera
+			</button>
+			<button class="safari">	
+				Safari
+			</button>
+		</br></br></br>
+		</div>
+	</body>
+</html>
