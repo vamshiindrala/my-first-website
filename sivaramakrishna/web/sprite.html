@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSS Exercises - 5</title>
+		<style type="text/css">
+		  	button{
+		  		margin: 0;
+		  		padding: 0;
+		  		background:  #fff;
+		  		color: #000;
+		  		line-height: 30px;
+		  		font-size: 15px;
+		  		font-weight: bold;
+		  		
+		  		text-transform: uppercase;
+		  		padding: 5px 10px;
+		  		border: 1px solid #999;
+		  	}
+		  	button::before{
+		  		content: "";
+		  		width: 40px;
+		  		height: 40px;
+		  		display: inline-block;
+		  		float: left;
+		  		margin-right: 5px;
+		  		background: url("http://info.appdirect.com/uploads/blog/Content/2011/SVG-icons.png") no-repeat 0 0;
+		  	}
+		  	button.map::before{
+		  		background-position: 1px -221px;
+		  	}
+		  	button.switchoff::before{
+		  		background-position: -254px -221px;
+		  	}
+		  	button.triangle::before{
+		  		background-position: -224px -221px;
+		  	}
+		  	button.clock::before{
+		  		background-position: -222px -188px;
+		  	}
+		  	button.shuffle::before{
+		  		background-position: -32px -37px;
+		  	}
+
+		  	button.gtalk::before{
+		  		background-position: -218px -149px;
+		  	}
+		  	button.volume::before{
+		  		background-position: -144px -221px;
+		  	}
+		  	button.smile::before {
+		  		background-position: -145px -37px;
+		  	}
+
+  		</style>
+	</head>
+	<body>
+		
+		<button class="map">
+			map
+		</button>
+		<button class="switchoff">
+			switchoff
+		</button>
+		<button class="traingle">
+			triangle
+		</button>
+		<button class="clock">
+			clock
+		</button>
+		<button class="shuffle">
+			shuffle
+		</button>
+		<button class="gtalk">
+			Gtalk
+		</button>
+		<button class="volume">
+			Volume
+		</button>
+		<button class="smile">	
+			Smile
+		</button>
+	
+	</body>
+</html>
