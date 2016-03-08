@@ -40,7 +40,7 @@
 				line-height: normal;
 				margin: 30px 0px;
 				padding: .5em 1.0em;
-				transition: background 200ms;
+				transition: background 200ms 
 				cursor: auto;
 				box-shadow: 0px 0px 0px 10px rgba(0,0,0,0.5);
 			}
@@ -171,48 +171,17 @@
 				color: #F2FFFF;
 
 			}
-			@font-face {
-			    font-family: "Noticons";
-			    font-style: normal;
-			    font-weight: 400;
-			    src: url("/i/noticons/Noticons.eot?") format("embedded-opentype");
-			}
-			@font-face {
-			    font-family: "Noticons";
-			    font-style: normal;
-			    font-weight: 400;
-			    src: url("https://s1.wp.com/i/noticons/Noticons.woff") format("woff"), url("/i/noticons/Noticons.ttf") format("truetype"), url("/i/noticons/Noticons.svg#Noticons") format("svg");
-			}
-			@font-face {
-			    font-family: "Noticons";
-			    src: url("/i/noticons/Noticons.svg#Noticons") format("svg");
-			}
-			.noticon {
-			    display: inline-block;
-			    font-family: "Noticons";
-			    font-size: 32px;
-			    font-style: normal;
-			    font-variant: normal;
-			    font-weight: 400;
-			    line-height: 1;
-			    text-align: center;
-			    text-decoration: inherit;
-			    text-transform: none;
-			    vertical-align: top;
-			    border: 1px solid;
-			    border-radius: 32px;
-			    padding: 15px;
-			}
-			.image-website::before {
-			    content: "\f475";
-			}
-			.image-blog::before {
-			    content: "\f8a9";
-			}
-			.image-discover::before {
-			    content: "\f8a2";
-			}
-
+			.bf-sub-header {
+    background: #e8f0f5 none repeat scroll 0 0;
+    padding: 60px 0;
+    text-align: center;
+     padding: 0 100px 150px;
+}
+.bf-wrapper {
+    display: table;
+    margin: 0 auto;
+    max-width: 940px;
+}
   		</style>
 	</head>
 	<body>
@@ -222,7 +191,7 @@
 		 <header class="pageheader">
 		 	<div>
 		 		<ul>
-		 			<li class="logo"><img src="assets/logo.PNG"/></li>
+		 			<li class="logo"><img src="logo.PNG"/></li>
 				  	<li class="name"><a href="#">WordPress<span class="comfont">.com</span></a></li>
 				  	<li class="login"><a href="#">Log In</a></li>
 				</ul>
@@ -235,7 +204,7 @@
 		 	<div class="icons">
 				<div class="individualicon">
 					<a href="#" target="_blank" class="icon website">
-						<span class="noticon image-website"></span>
+						<img src="website.JPG" alt="websiteicon"/>
 						<h3>Create a Website</h3>
 						<p>Promote your business or<br/> personal brand</p>
 						<p class="link">Learn More</p>
@@ -243,7 +212,7 @@
 				</div>
 				<div class="individualicon">
 					<a href="#" target="_blank" class="icon website">
-						<span class="noticon image-blog"></span>
+						<img src="blog.JPG" alt="blogicon"/>
 						<h3>Start a blog</h3>
 						<p>Share your thoughts with friends<br/> and fans</p>
 						<p class="link">Learn More</p>
@@ -251,13 +220,13 @@
 				</div>
 				<div class="individualicon">
 					<a href="#" target="_blank" class="icon website">
-						<span class="noticon image-discover"></span>
+						<img src="discover.JPG" alt="discovericon"/>
 						<h3>Discover</h3>
 						<p>Find and discuss the best stories<br/> on the web</p>
 						<p class="link">Learn More</p>
 					</a>
 				</div>
-			</div>
+				
 		</div>	
 	</body>
 </html>
