@@ -1,168 +1,253 @@
 <html>
-	<head>
-		<title>CSS Exercises - 4</title>
-		<style type="text/css">
-			body{
-				font-family: 'Open Sans', sans-serif;
-			}
-			body::after{
-				content: "";
-				width: 100%;
-				height: 100%;
-				position: absolute;
-				left: 0;
-				top: 0;
-				z-index: -1;
-				background: url(background.jpg) no-repeat center center;
-			}
-			header.wpcom-header {
-            
-               background: #1e8cbe;
-               border-bottom: 1px solid #005684;
-               box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-   			   height: 2.95rem;
-               left: 0;
-               margin-bottom: 1.6rem;
-               position: fixed;
-               top: 0;
-               width: 100%;
-               z-index: 9999;
-            }
-            div{
-            	display: inline-block;
-            }
-           
-            .imageone{
-            	padding-top: 200px;
-            	padding-left: 300px;
-            	width: 64px;
-            	height: 64px;
-            }
-            .D{
-            	position: absolute;
-                bottom: 10px;
-            	font-size: 20px;
-            	color: #fff;
-                right:830px;
-            }
-            .box {
-				margin: 60px auto 60px auto;
-				overflow: auto;
-				text-align: center;
-				background-color: transparent;
-				border: 0px;
-				padding: 10px;
-				z-index: -0.5px;
-			}
-			h1{
-				color: #fff;
-				padding-top: 100px;
-				padding-left: 730px;
-			}
-             h3{
-             	color: #fff;
-             	padding-left: 730px;
-             	font-size: 25px;
-             	font-weight: normal;
-             	margin: 5px auto 5px auto;
+ <head>
+  <title>wordpress</title>
+  <style type="text/css">
+   body{
+    font-family: 'Open Sans', sans-serif;
+   
+   }
+   body::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    z-index: -1;
+       background: url(background.jpg) no-repeat  center center;
+   }
+   .header{
+       background: #1e8cbe;
+       border-bottom: 1px solid #005684;
+       box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+       height: 2.8rem;
+       left: 0;
+       margin-bottom: 1.6rem;
+       position: fixed;
+       top: 0;
+       width: 100%;
+       z-index: 9999;
+   }
+   .btn{
+    background: #1e8cbe;
+    border: 0;
+    color: #fff;
+    float: center;
+    font-size: 1.5em;
+    line-height: normal;
+    margin: 30px 0px;
+    padding: .5em 1.0em;
+    transition: background 200ms;
+    cursor: auto;
+    box-shadow: 0px 0px 0px 10px rgba(0,0,0,0.5);
+   }
+   .btn:hover {
+       background-color: #49B3E3;    
+   }
+   .home{
+       min-height: 100vh;
+       padding: 45px 30px 0;
+       border: 0;
+       margin: 15px
+       padding: 0;
+       text-align: center;
+   }
+   .home h1{
+    font-size: 2.3em;
+       line-height: 1.25;
+       margin: 0 auto;
+       max-width: 792px;
+       text-shadow: 1px 2px 2px rgba(0,0,0,0.3);
+       font-weight: 300;
+       padding-top: 50px;
+       color: #F2FFFF;
+       display: block;
+   }
+   h3{
+    font-size: 1.3em;
+       line-height: 1.55;
+       margin: 0 auto;
+       max-width: 90%;
+       text-shadow: 1px 2px 2px rgba(0,0,0,0.3);
+       font-weight: lighter;
+       padding-top: 17px;
+       color: #F2FFFF;
+   }
+   ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1e8cbe;
+    border-bottom: 1px solid #005684;
+    height: 3rem;
+    left: 0;
+    margin-bottom: 1.6rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:1;
 
-             }
-             }
-             .button1{
-             	width: 150px;
-             	height: 40px;
-             	color: #fff;
-             	font-size: 16px;
-             	background-color: #1E8CBE;
+   }
 
-             	
-             }
-             .sun{
-             	position: absolute;
-             	left: 1600px;
-             }
-             button{
-             	background-color: #0073A5;
-             	width: 60px;
-             	height: 40px;
-             }
-            ul.icons{
-		       float: center;
-		       padding: 200px 10px 10px 400px;
-		       text-align: center;
-		       max-width: 500px;
-	         }
-	        .icons li{
-		       width: 64px;
-		       height: 64px;
-		       padding: 30px;
-		       text-align: center;
-		       text-transform: uppercase;
-		       font-size: 10px;
-		       font-weight: bold;
-		       margin: 10px;
-		       display: inline-block;
-		       color: #fff;
-	        }
-	        label{
-	        	width: 100%;
-	        	text-align: center;
-	        }
-	        .align1{
-	        	padding-left: 900px;
-	        	padding-top: 40px;
-	        	text-align: center;
-	        }
-	        .align2{
-	        	padding-left: 350px;
-	        	text-align: center;
-	        }
-          
+   li{
+    float:left;
+    font-weight: 300;
+    
 
-		</style>
-	</head>
-	<body>
-		<header class="wpcom-header">
-			<div>
-				<img src="wordpress.jpg" />
-			</div>
-			<div>
-			    <label class="D">Wordpress.com</label>
-			</div>
-			<div class = "sun">
-				<button>Login</button>
-			</div>
-		</header>
-			<div align="center">
-				<h1>Create your new website for free</h1>
-				<h3>WordPress.com is the best place</h3>
-				<h3>for your personal blog or business site.</h3>
-			</div>
-			<br/>
-			<div class="align1">
-				<button class="button1">Create Website</button>
-			</div>
-			<div class="align2">
-				<ul class="icons">
-				  	<li>
-				  	 <a>
-				      <img src="sundeep1.jpg" /><br/>
-				      <label>Create a Website</label>
-				     </a>
-			        </li>
-			        <li>
-			         <a>
-				      <img src="sundeep2.jpg" /><br/>
-				      <label>Start a Blog</label>
-			         </a>
-			        </li>
-			        <li>
-			         <a>
-				      <img src="sundeep3.jpg" /><br/>
-				      <label>Discover</label>
-			         </a>
-			        </li>
-		        </ul>
-			</div>
-	</body>
+   }
+   li img{
+
+       padding-top: 8px;
+       padding-bottom:8px;
+
+   }
+
+   li a {
+       display: inline-block;
+       color:rgba(255,255,255,1);
+       text-align: center;
+       padding-top:18px;
+       padding-bottom:18px;
+       text-decoration: none;
+   }
+
+   .login:hover {
+       background-color: #49B3E3;    
+   }
+   .wordpress{
+    padding-left:220px;
+   }
+   .name{
+    padding-left:5px;
+   }
+   span{
+    color:rgba(255,255,255,0.6);
+   }
+   .login{
+     padding-right:20px;
+    margin-right:200px;
+    margin-left:200px;
+    padding-left:20px;
+    float:right;
+    background-color:#0073A5;
+    font-size: 13.5px;
+   }
+   
+   .icons{
+    
+    width:100%;
+    text-align:center;
+    margin:0;
+    padding:0;
+    color: #F2FFFF;  
+   }
+
+   .iconsmodel{
+    display:inline-block;
+    padding:20px;
+    margin:20px;
+    height: 230px;
+    width: 260px; 
+    color: rgb(242, 255, 255);
+    text-decoration:none;
+     background-color: rgba(0,0,0,0.5);
+   }
+   p{
+    line-height: 1.4em;
+    color:rgb(242, 255, 255);
+   }
+   .link{
+    border-bottom: 2px solid rgba(16,139,192,0.9);
+    display: inline;
+    color: #F2FFFF;
+
+   }
+   @font-face {
+       font-family: "Noticons";
+       font-style: normal;
+       font-weight: 400;
+       src: url("/i/noticons/Noticons.eot?") format("embedded-opentype");
+   }
+   @font-face {
+       font-family: "Noticons";
+       font-style: normal;
+       font-weight: 400;
+       src: url("https://s1.wp.com/i/noticons/Noticons.woff") format("woff"), url("/i/noticons/Noticons.ttf") format("truetype"), url("/i/noticons/Noticons.svg#Noticons") format("svg");
+   }
+   @font-face {
+       font-family: "Noticons";
+       src: url("/i/noticons/Noticons.svg#Noticons") format("svg");
+   }
+   .noticon {
+       display: inline-block;
+       font-family: "Noticons";
+       font-size: 32px;
+       font-style: normal;
+       font-variant: normal;
+       font-weight: 400;
+       line-height: 1;
+       text-align: center;
+       text-decoration: inherit;
+       text-transform: none;
+       vertical-align: top;
+       border: 1px solid;
+       border-radius: 32px;
+       padding: 15px;
+   }
+   .image-website::before {
+       content: "\f475";
+   }
+   .image-blog::before {
+       content: "\f8a9";
+   }
+   .image-discover::before {
+       content: "\f8a2";
+   }
+
+    </style>
+ </head>
+ <body>
+   <header class="header">
+    <div>
+     <ul>
+      <li class="wordpress"><img src="wordpress.jpg"/></li>
+       <li class="name"><a href="#">WordPress<span class="comfont">.com</span></a></li>
+       <li class="login"><a href="#">Log In</a></li>
+    </ul>
+    </div>
+   </header>
+   <div class="home">
+    <h1>Create your new website for free</h1>
+    <h3>WordPress.com is the best place<br/> for your personal blog or business site.</h3>
+    <button type="button" class="btn">Create Website</button>
+    <div class="icons">
+    <div class="iconsmodel">
+     <a href="#" target="_blank" class="icon website">
+      <span class="noticon image-website"></span>
+      <h3>Create a Website</h3>
+      <p>Promote your business or<br/> personal brand</p>
+      <p class="link">Learn More</p>
+     </a>
+    </div>
+    <div class="iconsmodel">
+     <a href="#" target="_blank" class="icon website">
+      <span class="noticon image-blog"></span>
+      <h3>Start a blog</h3>
+      <p>Share your thoughts with friends<br/> and fans</p>
+      <p class="link">Learn More</p>
+     </a>
+    </div>
+    <div class="iconsmodel">
+     <a href="#" target="_blank" class="icon website">
+      <span class="noticon image-discover"></span>
+      <h3>Discover</h3>
+      <p>Find and discuss the best stories<br/> on the web</p>
+      <p class="link">Learn More</p>
+     </a>
+    </div>
+   </div>
+  </div> 
+ </body>
 </html>
