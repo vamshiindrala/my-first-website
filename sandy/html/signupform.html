@@ -1,0 +1,84 @@
+<html>
+   <head>
+    <title>Signup form</title>
+   	<style type="text/css">
+   	   .box{
+   	   	margin: 50px;
+   	   	width:300px;
+   	   	border:3px solid #B0171F;
+   	   	padding: 20px;
+   	   	text-align: center;
+   	   }
+   	   .login{
+   	   	visibility: hidden;
+   	  
+   	   }
+
+
+       input,button{
+       	margin: 10px;
+       	padding: 10px;
+       	display: block;
+       	width: calc(100% - 54px);
+       	border: 1px solid #778899;
+       }
+       .sun{
+       	width :auto;
+       	margin:auto;
+       	padding: 10px 40px;
+
+       }
+       h3{
+       	text-align: center;
+       	text-transform: uppercase;
+       }
+       .loginstyle{
+       	overflow: auto;
+       	text-align: center;
+       	padding: 0;
+       }
+       .linkstyle{
+       	display: inline-block;
+       	padding: 0px 10px;
+
+       }
+       button{
+       	cursor: pointer;
+       	
+       	background-color:#778899;
+
+       }
+       button:hover{
+       background-color: green;
+       }
+
+
+   	</style>
+   </head>
+   <body>
+   	  <div class= "box">
+   	  	<ul class = "loginstyle">
+   	  		<li class = "linkstyle"><a href="#Login">LOGIN</a></li>
+   	  		<li class = "linkstyle"><a href="#Signup">SIGN UP</a></li>
+   	  	</ul>
+   	  	<div>
+   	  		<form class="login"  method = "post">
+   	  			<h3>Login</h3>
+   	  			<div><input type ="email" name = "email" placeholder = "email"></div>
+   	  			<div><input type ="Password" name = "Password" placeholder = "Password"></div>
+   	  			<div><input type ="Re enter password" name = "Re enter password " placeholder = "Re Enter Password"></div>
+   	  			<button class = "sun">Login</button>
+   	  		</form>
+   	  	</div>	
+        	<div>
+   	  		<form id = "Signup "  method = "get">
+   	  			<h3>Signup</h3>
+   	  			<div><input type ="email" name = "email" placeholder = "email"></div>
+   	  			<div><input type ="Password" name = "Password" placeholder = "Password"></div>
+   	  			<div><input type ="Re enter password" name = "Re enter password " placeholder = "Re Enter Password"></div>
+   	  		    <button class = "sun">Sign up</button>
+   	  		</form>
+   	  	</div>	
+   	  </div>
+   </body>
+</html>
