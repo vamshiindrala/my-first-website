@@ -3,51 +3,58 @@
     <title>Signup form</title>
    	<style type="text/css">
    	   .box{
-   	   	margin: 50px;
-   	   	width:300px;
-   	   	border:3px solid #B0171F;
+   	   	margin: 300px;
+   	   	width:30px auto;
+   	   	border:2px solid #777;
    	   	padding: 20px;
-   	   	text-align: center;
-   	   }
+   	   	   	   }
    	   #login{
    	   	display: none;
    	   }
 
 
        input,button{
-       	margin: 10px;
-       	padding: 10px;
-       	display: block;
-       	width: calc(100% - 54px);
+        border: 1px solid #777;
+       	
+       	
+       	
+       	width: calc(100% - 42px);
+        padding: 10px;
+        margin: 10px;
        	border: 1px solid #777;
+        display: block;
        }
-       .sun{
-       	width :auto;
-       	margin:auto;
-       	padding: 10px 40px;
 
-       }
-       h3{
+       
+       h1{
        	text-align: center;
-       	text-transform: uppercase;
-       }
-       .loginstyle{
+       	 }
+         button{
+          width: auto;
+          margin: auto;
+          padding: 10px 40px;
+
+
+
+         }
+       .loginmenu{
        	overflow: auto;
        	text-align: center;
        	padding: 0;
        }
-       .linkstyle{
+       .loginmenu li {
        	display: inline-block;
        	padding: 0px 10px;
 
        }
-       button{
-       	cursor: pointer;
+        button{
+        cursor: pointer;
 
        }
        button:hover{
        background-color: green;
        }
+       
 
 
    	</style>
@@ -55,12 +62,12 @@
    <body>
    	  <div class= "box">
    	  	<ul class = "loginstyle">
-   	  		<li class = "linkstyle"><a href="#Login">LOGIN</a></li>
-   	  		<li class = "linkstyle"><a href="#Signup">SIGN UP</a></li>
+   	  		<li class = "#linkstyle"><a href="#Login">LOGIN</a></li>
+   	  		<li class = "#linkstyle"><a href="#Signup">SIGN UP</a></li>
    	  	</ul>
    	  	<div>
    	  		<h3>Login</h3>
-   	  		<form name = "login " action = "/login" method = "post">
+   	  		<form id = "login "  method = "post">
    	  			<div><input type ="email" name = "email" placeholder = "email"></div>
    	  			<div><input type ="Password" name = "Password" placeholder = "Password"></div>
    	  			<div><input type ="Re enter password" name = "Re enter password " placeholder = "Re Enter Password"></div>
@@ -69,7 +76,7 @@
    	  	</div>	
         	<div>
    	  		<h3>Signup</h3>
-   	  		<form name = "Signup " action = "/signup" method = "post">
+   	  		<form name = "Signup " method = "post">
    	  			<div><input type ="email" name = "email" placeholder = "email"></div>
    	  			<div><input type ="Password" name = "Password" placeholder = "Password"></div>
    	  			<div><input type ="Re enter password" name = "Re enter password " placeholder = "Re Enter Password"></div>
