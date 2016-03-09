@@ -1,0 +1,78 @@
+<html>
+   <head>
+    <title>LoginandSignup form</title>
+   	<style type="text/css">
+
+   	   .box{
+   	   	margin: 100px;
+   	   	width:300px;
+   	   	border:2px solid #eee;
+   	   	padding: 20px;
+   	   	text-align: center;
+   	   }
+
+   	   #login{
+   	     display: none;
+   	   }
+
+       input,button{
+       	margin: 10px;
+       	padding: 10px;
+       	display: block;
+       	width: calc(100% - 24px);
+       	border: 1px solid #777;
+       }
+      
+       h3{
+       	text-align: center;
+       	text-transform: uppercase;
+       }
+
+       .loginstyle{
+       	overflow: auto;
+       	text-align: center;
+       	padding: 0;
+       }
+
+       .linkstyle{
+       	display: inline-block;
+       	padding: 0px 10px;
+       }
+
+       button{
+       	cursor: pointer;
+       }
+
+       button:hover{
+       background-color: blue;
+       }
+
+   	</style>
+
+   </head>
+
+   <body>
+   	  <div class= "box">
+   	  	<ul class = "loginstyle">
+   	  		<li class = "linkstyle" id="loginCredentials"><a href="#Login">Login</a></li>
+   	  		<li class = "linkstyle"><a href="#Signup">SignUp</a></li>
+   	  	</ul>  
+      <div>
+  		<form id="login" action = "" method = "post">
+        <h3>Login</h3>
+  			<div><input type ="email" name = "email" placeholder = "email"></div>
+  			<div><input type ="Password" name = "Password" placeholder = "Password"></div>
+  			<button>Login</button>
+  		</form>
+   	  </div>	
+        <div>
+   	  		<form id="Signup" action = "" method = "post">
+            <h3>Signup</h3>
+   	  			<div><input type ="email" name = "email" placeholder = "email"></div>
+   	  			<div><input type ="Password" name = "Password" placeholder = "Password"></div>
+   	  			<div><input type ="Confirmpassword" name = "Confirmpassword " placeholder = "ConfirmPassword"></div>
+   	  		  <button>Sign up</button>
+   	  		</form>
+   	  	</div>	
+   </body>
+</html>
