@@ -11,7 +11,7 @@
 			padding:20px;
 			
 		}
-#logIn{
+	#logIn{
 			display:none;
 		}
 		/*
@@ -20,7 +20,7 @@
 		}*/
 		input,button{
 			border:1px solid #777;
-			/*width:calc(100%-42px);*/
+			width:calc(100% - 42px);
 			padding:10px;
 			margin:10px;
 			display:block;
@@ -29,14 +29,20 @@
 			text-align:center;
 		}
 		button{
-			/*width:calc(100%-20px);*/
-			margin:10px;
-			padding:10px auto;
+			width:calc(100% - 22px);
+			/*margin:10px;
+			padding:10px;*/
 			background:#333;
 			color:#FFF;
-			width:191px;
 			text-transform:uppercase;
+			cursor:pointer;
 			
+		}
+				input:focus{
+			background-color:#ecf7f9;
+		}
+				button:hover{
+			background-color: #DCDCDC;
 		}
 		.loginMenu{
 			overflow:auto;
@@ -53,9 +59,7 @@
 			height:50px;
 			
 		}
-			button:hover{
-			background-color: #DCDCDC;
-		}
+		
 		a{
 		text-decoration:none;
 		font-size:16px;	
