@@ -3,6 +3,7 @@
 <head>
 	<title>CSS Exercises - 4</title>
 	<style type="text/css">
+	<link rel="stylesheet" type="text/css" href="mailchimpstyle.css">
 	body{
 		font-family: 'Open Sans', sans-serif;
 	}
@@ -12,13 +13,12 @@
 		display: block;
 		top:0;
 		width: 100%;
-		height: 130%;
+		height: 120%;
 		position: absolute;
 		left: 0;
 		z-index: -1;
-		/*background: url("../images/pic-crowd.JPG") no-repeat center center;*/
-		/*background: url("https://s1.wp.com/home.logged-out/images/pic-crowd.webp?2") no-repeat center center;*/
-		background:#DCDCDC;
+		/*background-color:#F2F2F2;*/
+		background:url("https://static.mailchimp.com/web/home/desk-white.jpg") no-repeat center center;
 	}
 
 	ul {
@@ -28,7 +28,7 @@
 		overflow: hidden;
 		background-color: #fff;
 		border-bottom: 1px solid #DCDCDC;
-		height: 4rem;
+		height: 5rem;
 		left: 0;
 		margin-bottom: 1.6rem;
 		position: fixed;
@@ -39,211 +39,199 @@
 	}
 	li{
 		float:left;
-		font-weight: 300;
-		
 	}
 	.icon{
 		margin:0;
 	}
 	li img{
-		padding:8px 50px;
-		line-height:100px;
-
+		padding:15px 50px;
 	}
 	li a {
 		display: inline-block;
-		color:#000;
-		line-height:64px;
+		color:#3a3a3a;
+		line-height:80px;
 		font-family: arial;
-		font-size:14px;
+		font-size:12px;
 		font-weight:300;
 		padding:0 30px;
 		text-decoration: none;
+		font-weight:bold;
 	}
 	a:hover{
 		background:#DCDCDC;
 	}
 	.rightli{
-
+		
 		float:right;
 	}
-	.redborder{
+	li a.redborder{
 		background:#e85c41;
+		padding:10px;
+		margin:15px 10px;
+		display:inline-block;
+		line-height:2em;
+		border-radius:3px;
+		color:#fff;
 
 	}
-	/*li{
-		float:left;
-		font-weight: 300;
-
-
-	}
-	li img{
-
-		padding-top: 8px;
-		padding-bottom:8px;
-
+	li a.redborder:hover{
+		-webkit-animation-name:btnAnimation;/*Chrome ,Safari,Opera*/
+		-webkit-animation-duration:0.4s;/*Chrome ,Safari,Opera*/
+		animation-name:btnAnimation;
+		animation-duration:1s;
+		background-color:#549DDA;
 	}
 
-	li a {
-		display: inline-block;
-		color:rgba(255,255,255,1);
-		text-align: center;
-		padding-top:18px;
-		padding-bottom:18px;
-		text-decoration: none;
+	/*Chrome ,Safari,Opera*/
+	@-webkit-keyframes btnAnimation{
+		0% {background-color:#e85c41;}
+		100% {background-color:#549DDA;}
 	}
 
-	.wplogin:hover {
-		background-color: #49B3E3;
-	}
-	.wplogin{
-		padding-right:20px;
-		margin-right:200px;
-		margin-left:200px;
-		padding-left:20px;
-		float:right;
-		background-color:#0073A5;
-		font-size: 13.5px;
-	}
-	.wpicon{
-		padding-left:220px;
-
-	}
-	.wpname{
-		padding-left:5px;
-	}
-	span{
-
-		color:rgba(255,255,255,0.6);
-	}
-
-	.text{
-		min-height: 100vh;
-		padding: 45px 30px 0;
-		border: 0;
-		margin: 15px;
-		padding: 0;
-		text-align: center;
-		color:white;
-	}
-	.text h1{
-		font-size: 2.5em;
-		line-height: 1.25;
-		margin: 0 auto;
-		font-weight: 400;
-		padding-top: 100px;
-
-	}
-	.text h2{
-
-		line-height: 1.5em;
-		margin: 0 auto;
-		max-width: 100%;
-		font-size:1.5em;
-		font-weight: 200;
-		padding-top: 20px;
-		padding-bottom:20px;
-	}
-
-	.btn{
-		background: #1e8cbe;
-		border: 0;
-		color: #fff;
-		float: center;
-		font-size: 1.5em;
-		margin-top: 20px;
-		margin-bottom:20px;
-		padding: 0.5em 1em;
-		transition: background 200ms ;
-		cursor: auto;
-		box-shadow: 0px 0px 0px 10px rgba(0,0,0,0.5);
-
+	/*Standard Syntax*/
+	@keyframes btnAnimation{
+		0% {background-color:#e85c41;}
+		100% {background-color:#549DDA;}
 	}
 
 	.btn:hover{
-		background-color: #49B3E3;
+		-webkit-animation-name:btnAnimation;/*Chrome ,Safari,Opera*/
+		-webkit-animation-duration:0.4s;/*Chrome ,Safari,Opera*/
+		animation-name:btnAnimation;
+		animation-duration:1s;
+		background-color:#549DDA;
 	}
 
-	.box{
-
+	.pagetitle{
+		padding-top: 100px;
+		padding-bottom:20px;
+		color: #3a3a3a;
+		font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
+		font-size: 40px;
+		line-height: 1.2;
+		font-weight: bold;
+		letter-spacing: -0.02em;
+		float: none;
+		display: inline-block;
 		width:100%;
-		text-align:center;
 		margin:0;
+		border: 0;
+		outline: 0;
+		text-align: center;
+
+	}
+
+	.fallback{
+		width:680px;
+		height:250px;
 		padding:0;
-		color:white;
+		margin-left:250px;
+		margin-top: 0px;
 
 	}
-
-	.innerbox{
-		display:inline-block;
-		padding:20px;
-		margin:20px;
-		height:230px;
-		width:260px;
+	
+	.icon-search::before {
+		content: "\62";
+		font-family: "Open Sans","Graphik";
+		color:#fff;
 	}
-
-	.innerbox a{
-		color:#f2ffff;
-
-		text-decoration:none;
+	.pop.btn{
+		background: #e85c41;
 	}
-	.innerbox:hover{
+	.btn{
+		color: #fff;
+		display: inline-block;
+		box-sizing: border-box;
+		position: relative;
+		border: 0;
+		font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
+		font-size: 16px;
+		line-height: 1.6875;
+		padding: 0.5625em 1.5em;
+		font-weight: bold;
+		text-align: center;
+		letter-spacing: 0.02em;
+		text-decoration: none;
+		max-width: 100%;
+		-webkit-font-smoothing: antialiased;
+		border-radius: 4px;
+	}
+	.home-content {
+		margin-top:200px;
 
-		background-color: rgba(0,0,0,0.5);
+		margin-bottom: 36px;
+		padding-top: 18px;
+		padding-bottom: 18px;
+
 	}
 	p{
-		line-height: 1.4em;
+		width:31%;
+		display:inline-block;
+		margin-right:50px;
+		font-family: arial;
+		text-indent: justify;
+		line-height:1.5em;
+		text-align: justify;
 	}
-	.link{
-		border-bottom: 2px solid rgba(16,139,192,0.9);
-		display: inline;
+	.content{
+		font-family: arial;
+		text-align:center;
+	}
+	.mailchimp{
+		margin-left:550px;
+		width:150px;
+		height:150px;
 
 	}
+	h6{
+		padding:0;
+		margin:0;
+		font-family: arial;
+		font-weight:300;
+		text-align:center;
+	}
+	.footer{
+		width:100%;
+		height:50px;
+		background-color:black;
+		text-align:center;
+	}
+	.copyrights{
+		margin-top:40px;
+		margin-bottom:0;
+		padding-bottom:0;
+	}
+	span{
+		color:#2c9ab7;
+	}
+	.gobtn{
+		line-height: 3em;
+		color:#fff;
+		font-style: italic;
+		font-weight: bold;
+		text-decoration: none;
+		font-family: arial;
 
-	.websiteicon::before{
-		content: "\f475";
+	}
+	a.gobtn:hover{
+		background-color: transparent;
 	}
 
-	.blogicon::before{
-		content: "\f8a9";
-	}
-	.discovericon::before{
-		content: "\f8a2";
+.footer:hover{
+	background-color: #549DDA;
+}
+	.icon-arrow:before {
+		content: '\4d';
+		color:#fff;
 	}
 
-	@font-face {
-		font-family: "Noticons";
-		font-style: normal;
-		font-weight: 400;
-		src: url("/i/noticons/Noticons.eot?") format("embedded-opentype");
-	}
-	@font-face {
-		font-family: "Noticons";
-		font-style: normal;
-		font-weight: 400;
-		src: url("https://s1.wp.com/i/noticons/Noticons.woff") format("woff"), url("/i/noticons/Noticons.ttf") format("truetype"), url("/i/noticons/Noticons.svg#Noticons") format("svg");
-	}
-	@font-face {
-		font-family: "Noticons";
-		src: url("/i/noticons/Noticons.svg#Noticons") format("svg");
-	}
-	.noticon {
+	.icon-arrow{
 		display: inline-block;
-		font-family: "Noticons";
-		font-size: 32px;
-		font-style: normal;
-		font-variant: normal;
-		font-weight:normal;
-		line-height: 1;
-		text-align: center;
-		text-decoration: inherit;
-		text-transform: none;
-		vertical-align: top;
-		border: 1px solid;
-		border-radius:32px;
-		padding:15px;
+		line-height: 1em;
+		vertical-align: middle;
+		padding: 0 6px;
+		font-size: 24px;
 	}
-*/
 	</style>
 </head>
 <body class="home">
@@ -256,13 +244,43 @@
 			<li><a href="#">Support</a></li>
 			<li><a href="#">Blog</a></li>
 			<li><a href="#">More</a></li>
-		
+			<li class="rightli"><a href="#" class="icon-search"></a></li>
 			<li class="rightli"><a href="#">Log in</a></li>
 			<li class="rightli"><a href="#" class="redborder">Sign Up Free</a></li>
-		
-		
+
+
 		</ul>
+
 	</header>
-	
-					</body>
-					</html>
+
+	<h1 class="pagetitle">Send Better Email</h1>
+
+	<div class="appdesign">
+		<img src="https://static.mailchimp.com/web/home/animation/animation-fallback.jpg" class="fallback">
+	</div>
+
+	<section class="home-content">
+
+		<div class="content" >
+			<p>Join more than 10 million people who use MailChimp to design and send 600 million emails every day.
+			</p>
+			<a class="btn pop" href="http://mailchimp.com/signup">
+				Sign Up Free
+			</a>
+		</div>
+		<div>
+			<img src="http://mailchimp.com/assets/images/logo-dark.1457447224.svg" class="mailchimp">
+			<span class="icon-arrow"></span>
+		</div>
+		<div class="copyrights">
+			<h6>&#169;2001-2016 All Rights Reserved. MailChimp<sup>&#174;</sup> is a registered trademark of The Rocket Science Group. <span>Privacy</span> and <span>Terms</span></h6>
+		</div>
+		
+
+	</section>
+	<div class="footer">
+		<a href="#" class="gobtn">MailChimpPro:Advanced email marketing for $199/month</a><span class="icon-arrow"></span>
+	</div>
+</body>
+
+</html>
