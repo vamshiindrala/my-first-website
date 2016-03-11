@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Exercises - 4</title>
+  <style type="text/css">
+  <link rel="stylesheet" type="text/css" href="mailchimpstyle.css">
+  body{
+    font-family: 'Open Sans', sans-serif;
+  }
+  body::before{
+    content: "";
+    background-size: cover;
+    display: block;
+    top:0;
+    width: 100%;
+    height: 120%;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    background:url("https://static.mailchimp.com/web/home/desk-white.jpg") no-repeat center center;
+  }
+      header {
+        width: 100%;
+        height: 20px;
+        background-color: #fff;
+        top: 0px;
+      }
+      .logo {
+         width: 140px;
+         height: 40px;
+         display: block;
+         background: transparent url("http://mailchimp.com/assets/images/freddie.1457447224.svg") no-repeat center center;
+         float: left;
+         padding: 5px;
+      }
+      li {
+        text-decoration: none;
+      }
+      ul {
+        vertical-align: center;
+      }
+      .links {
+        position: relative;
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 0.04em;
+        color: #3a3a3a;
+        padding: 16px 18px;
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-tap-highlight-color: transparent;
+        box-sizing: border-box;
+      }
+      .links:hover {
+        background-color: #F2F2F2;
+      }
+      button {
+        background-color: #e85c41;
+        color: #fff;
+        font-size: 14px;
+        text-align: center;
+        border: 0px;
+        width: 100px;
+        height: 30px;
+        text-decoration: none;
+        float: right;
+        padding: 15px;
+        margin-left: 5px;
+      }   
+      .log {
+      float:right;
+      }
+  li{
+    float:left;
+  }
+  
+  .title{
+    padding-top: 80px;
+    padding-bottom:20px;
+    color: #3a3a3a;
+    font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
+    font-size: 40px;
+    line-height: 1.2;
+    font-weight: bold;
+    letter-spacing: -0.02em;
+    float: none;
+    display: inline-block;
+    width:100%;
+    margin:0;
+    border: 0;
+    outline: 0;
+    text-align: center;
+  }
+  .content {
+    font-family: arial;
+    text-align:center;
+
+  }
+  p{
+    margin-top: 450px;
+    width:31%;
+    display:inline-block;
+    margin-right:50px;
+    font-family: arial;
+    text-indent: justify;
+    line-height:1.5em;
+    text-align: justify;
+  }
+ 
+  .footer{
+    width:100%;
+    height:50px;
+    background-color:black;
+    margin-top:140px;
+    padding-top: 10px;
+  }
+  
+  .foot{
+    line-height: 3em;
+    color:#fff;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: arial;
+    display: inline;
+
+  }
+  
+.footer:hover{
+  background-color: lightgray;
+}
+  </style>
+</head>
+<body>
+<div class="content">
+  <header>
+      <a class="logo" href=""></a>
+      <div>
+        <nav>
+          <ul >
+            <li class="links">Features</li>
+            <li class="links">Pricing</li>
+            <li class="links">Support</li>
+            <li class="links">Blog</li>
+            <li class="links">More</li>  
+            <li class="log" ><button>Sign Up Free</button></li>  
+            <li class="log">Log in</li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+  <h1 class="title">Send Better Email</h1>
+
+  <section class="home-content">
+
+    <div class="content" >
+      <p>Join more than 10 million people who use MailChimp to design and send 600 million emails every day.
+      </p>
+      
+    </div>
+    
+    
+    <div class="footer">
+      <a href="#" class="foot">MailChimpPro:Advanced email marketing for $199/month</a><span></span>
+    </div>
+
+  </section>
+  
+</body>
+
+</html>
