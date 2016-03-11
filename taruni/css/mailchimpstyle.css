@@ -149,5 +149,57 @@
     font-weight: 900;
     src: url("https://static.mailchimp.com/web/assets/fonts/graphik/Graphik-SuperItalic-Web.eot?#iefix") format("embedded-opentype"), url("https://static.mailchimp.com/web/assets/fonts/graphik/Graphik-SuperItalic-Web.woff") format("woff"), url("https://static.mailchimp.com/web/assets/fonts/graphik/Graphik-SuperItalic-Web.ttf") format("truetype"), url("https://static.mailchimp.com/web/assets/fonts/graphik/Graphik-SuperItalic-Web.svg#Graphik-SuperItalic") format("svg");
 }
+@font-face {
+    font-family: "freddicons";
+    font-style: normal;
+    font-weight: normal;
+    src: url("http://assets/fonts/freddicons.1457447224.eot?#iefix") format("embedded-opentype"), url("http://assets/fonts/freddicons.1457447224.woff") format("woff"), url("http://assets/fonts/freddicons.1457447224.ttf") format("truetype"), url("http://assets/fonts/freddicons.1457447224.svg#freddicons") format("svg");
+}
+
+/*
+
+ body::after{
+            content: "";
+            background-size: cover;
+            display: block;
+            width: 100%;
+            z-index: -1;
+            left: 0;
+            top: 0;
+            height: 120%;
+            position: absolute;
+            background: url("https://static.mailchimp.com/web/home/desk-white.jpg") no-repeat center center;
+
+        .section, .row {
+            display: block;
+            clear: both;
+            vertical-align: top;
+        }
+
+        .home-content {
+        margin-bottom: 36px;
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+    .middle-block{
+        vertical-align: middle;
+        box-sizing: border-box;
+        display: inline-block;
+        width: 66.66667%;
+        float: none;
+    }
+
+        .block1{
+        vertical-align: middle;
+        box-sizing: border-box;
+        display: inline-block;
+        width: 36.66667%;
+        text-align: center;
+        display: inline-block;
+        float: none;
+        margin-top: 400px;
+        margin-left: 300px;
+    }
 
 
+*/
