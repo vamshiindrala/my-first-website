@@ -34,6 +34,7 @@
     	height: 50px;
     	display: inline-block;
     	background-color: #F2F2F2;
+        text-decoration: none;
     }
 
     .page-title {
@@ -45,7 +46,7 @@
         -webkit-font-smoothing: antialiased;
     }
 
-    li{
+    ul, li{
     	text-decoration: none;
     	color: 
     }
@@ -76,14 +77,16 @@
     	width: 100px;
     	height: 40px;
     	text-decoration: none;
-    }   
+    } 
+   
 	</style>
 
 </head>
 <body>
-	<header>
+	<div>
 		<a class="logo" href=""></a>
-		<div class="navigation">
+    </div>
+		<div>
 		<nav>
 			<ul>
 				<li class="nav-link">Features</li>
@@ -94,15 +97,18 @@
 			
 			</ul>
 		</nav>
+        </div >
+        <div >
 		<nav>
 			<ul>
-				<li>
-					<button >Sign Up Free</button>
+				<li >
+					<button>Sign Up Free</button>
 				</li>
+                <li class="nav-link">Login</li>
 			</ul>
 		</nav>
 	    </div>
-	</header>
+	
 	<div class="content">
      <h2 class="page-title">Send Better Email</h2>
 	</div>
