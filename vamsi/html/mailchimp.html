@@ -1,116 +1,52 @@
+<!DOCTYPE html>
 <html>
-<head>
-	<style type="text/css">
-
-	header{
-      width: 100%;
-      height: 20px;
-      background-color: #fff;
-      top: 0px;
-	}
-
-	.content{
-	   background-color: #F2F2F2;
-	   width: 100%;
-	   height: 500px;
-	}
-	.logo{
-       width: 140px;
-       height: 40px;
-       display: block;
-       background: transparent url("http://mailchimp.com/assets/images/freddie.1457447224.svg") no-repeat center center;
-       float: left;
-       padding: 5px;
-    }
-
-    h2{
-    	text-align: center;
-    	color: #3A3A3A;
-    	font-size: 30px;
-    }
-
-    a{
-    	width: 50px;
-    	height: 50px;
-    	display: inline-block;
-    	background-color: #F2F2F2;
-        text-decoration: none;
-    }
-
-    .page-title {
-        font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
-        font-size: 40px;
-        line-height: 1.2;
-        font-weight: bold;
-        letter-spacing: -0.02em;
-        -webkit-font-smoothing: antialiased;
-    }
-
-    ul, li{
-    	text-decoration: none;
-    	color: 
-    }
-
-    .nav-link{
-        position: relative;
-        font-size: 14px;
-        font-weight: bold;
-        letter-spacing: 0.04em;
-        color: #3a3a3a;
-        padding: 16px 18px;
-        display: inline-block;
-        vertical-align: middle;
-        -webkit-tap-highlight-color: transparent;
-        box-sizing: border-box;
-    }
-    
-    .nav-link:hover{
-    	background-color: #F2F2F2;
-    }
-   
-    button{
-    	background-color: #e85c41;
-    	color: #fff;
-    	font-size: 14px;
-    	text-align: center;
-    	border: 0px;
-    	width: 100px;
-    	height: 40px;
-    	text-decoration: none;
-    } 
-   
-	</style>
-
-</head>
-<body>
-	<div>
-		<a class="logo" href=""></a>
-    </div>
-		<div>
-		<nav>
+	<head>
+		<title>Mail Chimp</title>
+		<style type="text/css">
+			@import url(css/mailchimp.css);
+		</style>
+	</head>
+	<body>
+		<header id="site-header">
 			<ul>
-				<li class="nav-link">Features</li>
-				<li class="nav-link">Pricing</li>
-				<li class="nav-link">Support</li>
-				<li class="nav-link">Blog</li>
-				<li class="nav-link">More</li>
+				<li><a class="freddie" href="/"></a></li>
+				<li><a class="transparent" href="#">Features</a></li>
+				<li><a class="transparent" href="#">Pricing</a></li>
+				<li><a class="transparent" href="#">Support</a></li>
+				<li><a class="transparent" href="#">Blog</a></li>
+				<li><a class="transparent" href="#">More</a></li>
+				<li class="rightlist"><a class="transparent" href="#">Log in</a></li>
+				<li class="rightlist"><a href="#" class="redborder">Sign Up Free</a></li>
+		</ul>
 			
-			</ul>
-		</nav>
-        </div >
-        <div >
-		<nav>
-			<ul>
-				<li >
-					<button>Sign Up Free</button>
-				</li>
-                <li class="nav-link">Login</li>
-			</ul>
-		</nav>
-	    </div>
-	
-	<div class="content">
-     <h2 class="page-title">Send Better Email</h2>
-	</div>
-</body>
+		</header>
+		<div class="content">
+			<div class="block">
+				<h1 class="page-title type-dark">Send Better Email</h1>
+				<img class="fallback" src="https://static.mailchimp.com/web/home/animation/animation-fallback.jpg">
+				<div class="home1">
+					<a class="btn pop" id="btn" href="#">Sign Up Free</a>
+					<p id="p_home1">Join more than 10 million people who use MailChimp to design and send 600 million emails every day.</p>
+				</div>
+			</div>
+		</div>
+		
+		<footer>
+			<div class="logo">
+				<a href="/" id="footer-logo"></a>
+			</div>
+			<div class="privacy">
+				<p class="privacy-terms">
+					&#169;2001-2016 All Rights Reserved. MailChimp&#174; is a registered trademark of The Rocket Science Group. 
+					<a id="pt" href="/legal/privacy">Privacy</a> and <a id="pt" href="/legal">Terms.</a>
+				</p>
+			</div>
+			<div class="site-footer">
+				<a class="go_btn"  id="site-footer" href="/pro/all">MailChimp Pro
+					<span>: Advanced email marketing for $199 / month</span>
+					<span class="icon-arrow"></span>
+				</a>
+			</div>	
+		</footer>
+	</body>
 </html>
