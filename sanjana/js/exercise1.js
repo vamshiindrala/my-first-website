@@ -17,8 +17,7 @@ function printFibonocci(numbersToPrint){
     outputElement.innerHTML = "";
     outputElement.innerHTML = "<br/>";
     outputElement.innerHTML += n1 + "<br/>";
-    outputElement.innerHTML += n2 + "<br/>";
-      while(numbersToPrint > 2)
+      while(numbersToPrint >= 2)
       {       
         nextnum   = n1 + n2;
         n1  = n2;
