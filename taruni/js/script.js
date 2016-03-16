@@ -15,13 +15,30 @@ function printFibonocci(numbersToPrint){
 	var firstnum = 0, secondnum = 1, nextnum, outputElement;
 
 	if(parseInt(numbersToPrint) > 0) 
-	{
+	{		
+		if(parseInt(numbersToPrint) === 1)
+		{
 		outputElement = document.getElementById("output"); 
 		outputElement.innerHTML = "";
 		outputElement.innerHTML = "<br/>";
 		outputElement.innerHTML += firstnum + "<br/>";
+		// outputElement.innerHTML += secondnum + "<br/>";
+		}	
+		else if(parseInt(numbersToPrint) === 2)		
+		{
+			outputElement = document.getElementById("output"); 
+		outputElement.innerHTML = "";
+		outputElement.innerHTML = "<br/>";
+		outputElement.innerHTML += firstnum + "<br/>";
 		outputElement.innerHTML += secondnum + "<br/>";
-					
+		}
+		else{
+				outputElement = document.getElementById("output"); 
+		outputElement.innerHTML = "";
+		outputElement.innerHTML = "<br/>";
+		outputElement.innerHTML += firstnum + "<br/>";
+		outputElement.innerHTML += secondnum + "<br/>";
+
 		// here we are checking > 2 because we have already printed two numbers of fiboncacci series above 
 		//loop through the numbers to print limit till it becomes 0 (zero)
 			while(numbersToPrint > 2)
@@ -35,7 +52,8 @@ function printFibonocci(numbersToPrint){
 				 numbersToPrint--; //decrement the numbers to print limit by one 
 			}
 		
-	}else
+	}
+}else
 	{
 		var errormessage = document.getElementById("output");
 		errormessage.style.color = "#FF0000";
