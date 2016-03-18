@@ -61,7 +61,7 @@ function printFibonocci(){
 	output.innerHTML=html;
 }
 
-if (typeof module !=='undefined' && module.exports !==null){
+if (typeof module !==undefined && module.exports !==null){
 	exports.getFibonocci=getFibonocci;
 	exports.printFibonocci=printFibonocci;
 }
