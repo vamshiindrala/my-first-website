@@ -55,6 +55,10 @@ describe('Fibonacci', function() {
 			assert.equal('You have an invalid number. Please specify a integer > 0',fibonacci.getFibonacci('hjjhds')[0]);
 		});
 
+		it('should return ["You have an invalid number. Please specify a integer > 0"] when n is ""', function () {
+			assert.equal('You have an invalid number. Please specify a integer > 0',fibonacci.getFibonacci("")[0]);
+		});
+
 	});
 describe('printHtml(limit)',function(){
 	it('should return 0<br/> when n is 1',function(){
@@ -91,6 +95,10 @@ describe('printHtml(limit)',function(){
 
 	it('should return ["You have an invalid number. Please specify a integer > 0"] when n is abcxyz', function () {
 		assert.equal("<div style = 'color:red' >You have an invalid number. Please specify a integer > 0</div><br/>",fibonacci.printHtml("abcxyz"));
+	});
+
+	it('should return ["You have an invalid number. Please specify a integer > 0"] when n is ""', function () {
+		assert.equal("<div style = 'color:red' >You have an invalid number. Please specify a integer > 0</div><br/>",fibonacci.printHtml(""));
 	});
 });	
 });
