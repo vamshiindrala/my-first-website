@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+   
+  </head>
+  <body>
+    <div id="mocha"></div>
+    <script src="../js/sc1.js"></script>
+    
+    <script>
+      mocha.ui('tdd');
+      mocha.reporter('html');
+      assert = chai.assert;
+    </script>
+    <script src="js/sc1.js"></script>
+    
+    <script>
+      if (window.mochaPhantomJS) { mochaPhantomJS.run(); }
+      else { mocha.run(); }
+    </script>
+  </body>
+</html>
