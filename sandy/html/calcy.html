@@ -1,0 +1,76 @@
+<html>
+<head>
+ <style>
+  .box {
+       margin: 10px auto 10px auto;
+       max-width: 250px;
+       max-height: 800px;
+       overflow: auto;
+       background-color: #000;
+       border: 0px solid #555;
+       padding: 40px;
+       }
+  input{
+       width: 250px;
+       padding: 10px;
+       border: 0px;
+       }
+  button{
+       width: 50px;
+       height: 40px;
+       border: 10px;
+       text-align: center;
+       cursor: pointer;
+       font-size: 30px;
+       border-radius: 1px;
+       background-color: #fff;
+      }
+  .padding{
+       padding :10px;
+      }   
+  .padding1{
+       padding-left: 170px;
+       padding-top: 10px;
+      }
+  .sun1{
+        background-color: #4B8DF9;
+      }
+  .sun{
+        background-color: #D2D2D2;
+      }
+    </style>
+</head>
+<body>
+ <div class="box padding">
+   <input type="text" id="input" />
+   <div class="padding1">
+     <button>AC</button>
+   </div>
+   <div class="padding">
+    <button onclick="takeinput()">7</button>
+    <button value="8" onclick="valueeight()" id="value8">8</button>
+    <button>9</button>
+    <button class = "sun">%</button>
+   </div>
+   <div class="padding">
+    <button>4</button>
+    <button>5</button>
+    <button>6</button>
+    <button class = "sun">*</button>
+   </div>
+   <div class="padding">
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button class = "sun">-</button>
+   </div>
+   <div class="padding">
+    <button>0</button>
+    <button>.</button>
+    <button class="sun1">=</button>
+    <button class = "sun">+</button>
+   </div>
+  </div>
+ <script type="text/javascript" src=""></script>
+</body>
+</html>
