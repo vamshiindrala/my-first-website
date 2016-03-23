@@ -27,7 +27,7 @@ function getFibonocci(numbersToPrint){
 	if (parseInt(numbersToPrint)>0) {
 		var i;
 		var x = []; // Initializing array
-		for(i=0; i<=numbersToPrint; i++){
+		for(i=0; i<numbersToPrint; i++){
 			if(i===0) {
 				x[0]=0;
 				continue
@@ -61,7 +61,7 @@ function printFibonocci(){
 	output.innerHTML=html;
 }
 
-if (typeof module !==undefined && module.exports !==null){
+if ( module && module !==undefined && module.exports !==null){
 	exports.getFibonocci=getFibonocci;
 	exports.printFibonocci=printFibonocci;
 }
