@@ -1,0 +1,72 @@
+<html>
+<head>
+	<style type="text/css">
+	.box {
+		margin: 10px auto 10px auto;
+		max-width: 250px;
+		max-height: 800px;
+		overflow: auto;
+		background-color: #eee;
+		border: 0px solid #555;
+		padding: 40px;
+			}
+	 input{
+       width: 250px;
+       padding: 10px;
+       border: 0px;
+	      }
+     button{
+      	width: 50px;
+      	height: 40px;
+      	padding: 20px;
+      	border: 0px;
+      	background-color: #fff;
+      }
+      .padding{
+      	padding :10px;
+      }
+      .padding1{
+      	padding-left: 170px;
+      	padding-top: 10px;
+      }
+      .buttoncolor{
+        background-color: rgba(77, 144, 254, 1);
+      }
+	</style>
+</head>
+<body>
+	<div class="box padding">
+		<input type="text" id="input" />
+		<div class="padding1">
+		<button>CE</button>
+	    </div>
+		<div class="padding">
+		<button onclick="takeinput()">7</button>
+		<button value="8" onclick="valueeight()" id="value8">8</button>
+		<button>9</button>
+		<button>/</button>
+	    </div>
+	    <div class="padding">
+		<button>4</button>
+		<button>5</button>
+		<button>6</button>
+		<button>*</button>
+	    </div>
+	    <div class="padding">
+		<button>1</button>
+		<button>2</button>
+		<button>3</button>
+		<button>-</button>
+	    </div>
+	    <div class="padding">
+		<button>0</button>
+		<button>.</button>
+		<button class="buttoncolor">=</button>
+		<button>+</button>
+	    </div>
+      
+	</div>
+	<script type="text/javascript" src="js/calculator.js"></script>
+	
+</body>
+</html>
