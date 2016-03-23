@@ -41,19 +41,19 @@ describe('Fibonacci', function() {
 	});
 
 	describe('getFibonacciSequence', function(){
-		it('Febonacci sequence should return 0<br/> when n is 1', function () {
+		it('Fibonacci sequence should return 0<br/> when n is 1', function () {
 			assert.equal('0<br/>', fibonacci.getFibonacciSequence(1));
 		});
-		it('Febonacci sequence should return 0<br/>1<br/> when n is 2', function () {
+		it('Fibonacci sequence should return 0<br/>1<br/> when n is 2', function () {
 			assert.equal('0<br/>1<br/>', fibonacci.getFibonacciSequence(2));
 		});
-		it('Febonacci sequence should return 0<br/>1<br/>1<br/> when n is 3', function () {
+		it('Fibonacci sequence should return 0<br/>1<br/>1<br/> when n is 3', function () {
 			assert.equal('0<br/>1<br/>1<br/>', fibonacci.getFibonacciSequence(3));
 		});
-		it('Febonacci sequence should return 0<br/>1<br/>1<br/>2<br/> when n is 4', function () {
+		it('Fibonacci sequence should return 0<br/>1<br/>1<br/>2<br/> when n is 4', function () {
 			assert.equal('0<br/>1<br/>1<br/>2<br/>', fibonacci.getFibonacciSequence(4));
 		});
-		it('Febonacci sequence should return 0<br/>1<br/>1<br/>2<br/>3<br/> when n is 5', function () {
+		it('Fibonacci sequence should return 0<br/>1<br/>1<br/>2<br/>3<br/> when n is 5', function () {
 			assert.equal('0<br/>1<br/>1<br/>2<br/>3<br/>', fibonacci.getFibonacciSequence(5));
 		});
 		it('should return [You have entered an invalid input. Please specify an integer > 0</div><br/>] when n is 0', function () {
