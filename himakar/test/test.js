@@ -6,7 +6,7 @@ describe('series', function() {
 		});
 
 		it('should return [0,1,1] when n is 3', function () {
-			assert.equal(2, series.getFibonocci(3)[2]);
+			assert.equal('0,1,1', series.getFibonocci(3).join(','));
 		});
 
 		it('should return [0,1,1] when n is 3', function () {
