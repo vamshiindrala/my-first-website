@@ -1,4 +1,4 @@
-var assert = require('assert');
+/*var assert = require('assert');
 var fibonacci = require('../js/script.js');
 describe('Fibonacci', function() {
 	describe('getFibonacci(n)', function () {
@@ -101,4 +101,31 @@ describe('printHtml(limit)',function(){
 		assert.equal("<div style = 'color:red' >You have an invalid number. Please specify a integer > 0</div><br/>",fibonacci.printHtml(""));
 	});
 });	
+});
+*/
+var assert = require('assert');
+describe('Calculator', function() {
+	describe('eval(equation)', function () {
+
+		it('should return 20 when input equation is 4x5', function () {
+			assert.equal(20,eval(4*5));
+		});
+
+		it('should return 7 when input equation is 5+2', function () {
+			assert.equal(7,eval(5+2));
+		});
+
+		it('should return 4 when input equation is 6-2', function () {
+			assert.equal(4,eval(6-2));
+		});
+
+		it('should return 2.5 when input equation is 5/2', function () {
+			assert.equal(2.5,eval(5/2));
+		});
+
+		it('should return 21.25 when input equation is 5.5*2.5+2', function () {
+			assert.equal(21.25,eval(5.5*2.5+2));
+		});
+		
+	});	
 });

@@ -1,5 +1,5 @@
 var keys = document.querySelectorAll('#calculator span');
-var operators = ['+', '-', 'x', '÷'];
+var operators = ['+', '-', 'x', '/'];
 var decimalAdded = false;
 
 for(var i = 0; i < keys.length; i++) {
@@ -15,7 +15,7 @@ for(var i = 0; i < keys.length; i++) {
 		else if(keyvalue == '=') {
 			var equation = inputvalue;
 			var lastChar = equation[equation.length - 1];
-			equation = equation.replace(/x/g, '*').replace(/÷/g, '/');
+			equation = equation.replace(/x/g, '*');
 			if(operators.indexOf(lastChar) > -1 || lastChar == '.')//checking the last operator
 				equation = equation.replace(/.$/, '');
 			
