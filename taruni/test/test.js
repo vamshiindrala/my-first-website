@@ -1,5 +1,7 @@
 var assert = require('assert');
 var fibonacci = require('../js/script.js');
+
+//Fibonacci Mocha Tests
 describe('Fibonacci', function() {
 	describe('getFibonacci(n)', function () {
 
@@ -101,4 +103,47 @@ describe('printHtml(limit)',function(){
 		assert.equal("<div style = 'color:red' >You have an invalid number. Please specify a integer > 0</div><br/>",fibonacci.printHtml(""));
 	});
 });	
+});
+
+
+//Calculator Mocha tests
+describe('Calculator', function() {
+	describe('eval(equation)', function () {
+
+		it('should return 2 when input equation is 1x2', function () {
+			assert.equal(2,eval(1*2));
+		});
+
+		it('should return 3 when input equation is 1+2', function () {
+			assert.equal(3,eval(1+2));
+		});
+
+		it('should return -1 when input equation is 1-2', function () {
+			assert.equal(-1,eval(1-2));
+		});
+
+		it('should return 0.5 when input equation is 1/2', function () {
+			assert.equal(0.5,eval(1/2));
+		});
+
+		it('should return 4 when input equation is 1*2+2', function () {
+			assert.equal(4,eval(1*2+2));
+		});
+
+		it('should return 36 when input equation is 27+3*3', function () {
+			assert.equal(36,eval(27+3*3));
+		});
+
+		it('should return 48.7 when input equation is 8.5*6.2-4.0', function () {
+			assert.equal(48.7,eval(8.5*6.2-4.0));
+		});
+
+		it('should return 0 when input equation is 0*0', function () {
+			assert.equal(0,eval(0*0));
+		});
+
+		it('should return 6.438461538461539 when input equation is 5.4*6.2/5.2', function () {
+			assert.equal(6.438461538461539,eval(5.4*6.2/5.2));
+		});
+		});	
 });
