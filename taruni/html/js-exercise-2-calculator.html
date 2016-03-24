@@ -3,7 +3,6 @@
 	<head>
 		<title>Calculator</title>
 		<link rel="stylesheet" type="text/css" href="..\css\calculatorstyle.css">
-		<script src="..\js\calculator.js"></script>
 	</head>
 	<body>
 		<header>
@@ -11,35 +10,36 @@
 		</header>
 		<section>
 		<div class="calci">
-			<div ><input type="text" readonly class="calciscreen" id="calciscreen" /></div>
+			<div ><input type="text" class="calciscreen" id="calciscreen" /></div>
 			<div class="divclear">
-				<div class="btnclear"><input type="button" value="CE" id="btnclear" onClick = "clearCalciScreen()"/></div>
+				<div class="btnclear"><input type="button" value="CE" id="btnclear"/></div>
 			</div>
 			<div class="div1">
-				<div class="btn7"><input type="button" value=7 id="btn7" onClick="getInput(this.id)"/ ></div>
-				<div class="btn8"><input type="button" value=8 id="btn8" onClick="getInput(this.id)"/></div>
-				<div class="btn9"><input type="button" value=9 id="btn9" onClick="getInput(this.id)"/></div>
-				<div class="btndivision"><input type="button" value="/" id="btndivision" onClick="getInput(this.id)"/></div>
+				<div class="btn7"><input type="button" value=7 id="btn7"/ ></div>
+				<div class="btn8"><input type="button" value=8 id="btn8"/></div>
+				<div class="btn9"><input type="button" value=9 id="btn9"/></div>
+				<div class="btndivision"><input type="button" value="/" id="btndivision"/></div>
 			</div>
 			<div class="div2">
-				<div class="btn4"><input type="button" value=4 id="btn4" onClick="getInput(this.id)"/></div>
-				<div class="btn5"><input type="button" value=5 id="btn5" onClick="getInput(this.id)"/></div>
-				<div class="btn6"><input type="button" value=6 id="btn6" onClick="getInput(this.id)"/></div>
-				<div class="btnmultiply"><input type="button" value="x" id="btn8multiply" onClick="getInput(this.id)"/></div>
+				<div class="btn4"><input type="button" value=4 id="btn4"/></div>
+				<div class="btn5"><input type="button" value=5 id="btn5"/></div>
+				<div class="btn6"><input type="button" value=6 id="btn6"/></div>
+				<div class="btnmultiply"><input type="button" value="x" id="btn8multiply"/></div>
 			</div>
 			<div class="div3">
-				<div class="btn1"><input type="button" value=1 id="btn1" onClick="getInput(this.id)"/></div>
-				<div class="btn2"><input type="button" value=2 id="btn2" onClick="getInput(this.id)"/></div>
-				<div class="btn3"><input type="button" value=3 id="btn3" onClick="getInput(this.id)"/></div>
-				<div class="btnsubtract"><input type="button" value="-" id="btnsubtract" onClick="getInput(this.id)" /></div>
+				<div class="btn1"><input type="button" value=1 id="btn1"/></div>
+				<div class="btn2"><input type="button" value=2 id="btn2"/></div>
+				<div class="btn3"><input type="button" value=3 id="btn3"/></div>
+				<div class="btnsubtract"><input type="button" value="-" id="btnsubtract" /></div>
 			</div>
 			<div class="div4">
-				<div class="btn0"><input type="button" value=0 id="btn0" onClick="getInput(this.id)"/></div>
-				<div class="btnperiod"><input type="button" value="." id="btnperiod" onClick="getInput(this.id)"/></div>
+				<div class="btn0"><input type="button" value=0 id="btn0"/></div>
+				<div class="btnperiod"><input type="button" value="." id="btnperiod"/></div>
 				<div class="btnequal"><input type="button" value="=" id="btnequal" onClick="calculateInput()"/></div>
-				<div class="btnaddition"><input type="button" value="+" id="btnaddition" onClick="getInput(this.id)"/></div>
+				<div class="btnaddition"><input type="button" value="+" id="btnaddition"/></div>
 			</div>
 		</div>
 		</section>
+		<script src="..\js\calc.js"></script>
 	</body>
 </html>
