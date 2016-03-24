@@ -1,4 +1,4 @@
-var assert = require('assert');
+/*var assert = require('assert');
 var fibonacci = require('../js/exercise1.js');
 describe('Fibonacci', function() {
 	describe('getFibonacci(n)', function () {
@@ -73,4 +73,47 @@ describe('Fibonacci', function() {
 		});
 
 	});
+});
+*/
+var assert = require('assert');
+describe('Calculator', function() {
+	describe('eval(equation)', function () {
+
+		it('should return 20 when input equation is 4x5', function () {
+			assert.equal(20,eval(4*5));
+		});
+
+		it('should return 7 when input equation is 5+2', function () {
+			assert.equal(7,eval(5+2));
+		});
+
+		it('should return 4 when input equation is 6-2', function () {
+			assert.equal(4,eval(6-2));
+		});
+
+		it('should return 2.5 when input equation is 5/2', function () {
+			assert.equal(2.5,eval(5/2));
+		});
+
+		it('should return 15.75 when input equation is 5.5*2.5+2', function () {
+			assert.equal(15.75,eval(5.5*2.5+2));
+		});
+		it('should return 2 when input equation is 6-2*2', function () {
+			assert.equal(2,eval(6-2*2));
+		});
+
+		it('should return 4.5 when input equation is 5/2+2', function () {
+			assert.equal(4.5,eval(5/2+2));
+		});
+		it('should return -5 when input equation is 6/2-8', function () {
+			assert.equal(-5,eval(6/2-8));
+		});
+		it('should return 3.5200000000000005 when input equation is 3.2/2*2.2', function () {
+			assert.equal(3.5200000000000005,eval(3.2/2*2.2));
+		});
+		it('should return 30 when input equation is 5*5+5', function () {
+			assert.equal(30,eval(5*5+5));
+		});
+		
+	});	
 });
