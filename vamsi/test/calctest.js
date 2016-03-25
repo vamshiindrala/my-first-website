@@ -1,5 +1,8 @@
 var assert = require('assert');
-var series = require('../js/calculator.js');
-describe('series', function() {
-		
+var calculator = require('../js/calculator.js');
+describe('calculator', function() {
+		it('Should return Enter Valid Operation when my passed token is a invalid operation', function(){
+			assert.equal(calculator.OperatorSequencetest("12++12"), "Enter Valid OPeration");
+		});
 });
+

@@ -1,4 +1,4 @@
-var assert = require('assert');
+/*var assert = require('assert');
 var series = require('../js/script.js');
 describe('series', function() {
 		it('should return [0] when n is 1', function () {
@@ -19,4 +19,12 @@ describe('series', function() {
 
 		
 
+});*/
+
+var assert = require('assert');
+var calculator = require('../js/calculator.js');
+describe('calculator', function() {
+		it('Should return true when my passed token is an operator', function(){
+			assert.equal(calculator.isTokenAnOperator('+'), true)
+		});
 });
