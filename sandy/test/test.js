@@ -1,5 +1,5 @@
-var assert = require('assert');
-var util = require('../js/script.js');
+/*var assert = require('assert');
+var util = require('../js/sun.js');
 describe('util', function() {
 	describe('Fibonocci', function () {
 
@@ -8,4 +8,14 @@ describe('util', function() {
 			assert.equal(0, util.getFibonocci(1)[0]);
 		});
 	});
+});
+
+
+*/
+var assert = require('assert');
+var calcy = require('../js/calcy.js');
+describe('calcy', function() {
+  it('Should display an error', function(){
+   assert.equal(calcy.calcytest("11-+3"), "Error");
+  });
 });
