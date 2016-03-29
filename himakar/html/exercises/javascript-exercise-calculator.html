@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -6,34 +7,74 @@
 		<link rel="stylesheet" type="text/css" href="../../css/calc.css">
 		<script type="text/javascript" src="../../js/calcscript.js"></script> 
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
-		
 	</head>
 	<body>
 	  <div id="calculator">
-	    <!-- the <p> inside the result div is optional (for css)-->
-	    <div class="result"><p></p></div>
-	    <div class="clear">C</div>
-	 
-	    <span>7</span>
-	    <span>8</span>
-	    <span>9</span>
-	    <span>+</span>
-	 
-	    <span>4</span>
-	    <span>5</span>
-	    <span>6</span>
-	    <span>-</span>
-	 
-	    <span>1</span>
-	    <span>2</span>
-	    <span>3</span>
-	    <span>÷</span>
-	 
-	    <span>0</span>
-	    <span>.</span>
-	    <span>=</span>
-	    <span>x</span>
+	   
+	    <div class="top">
+        	<div class="screen"></div>
+      	</div>
+	    <div class="clearValue"> <span  onclick="handleKeyClick('AC')" class="clear" id="cl">AC</span>
+	    </div>
+	 	<div class="calckeys">
+	     <span onclick="handleKeyClick('7')">7</span>
+        <span  onclick="handleKeyClick('8')">8</span>
+        <span  onclick="handleKeyClick('9')">9</span>
+        <span  onclick="handleKeyClick('/')" class="operator">/</span>
+        <span  onclick="handleKeyClick('4')">4</span>
+        <span  onclick="handleKeyClick('5')">5</span>
+        <span  onclick="handleKeyClick('6')" >6</span>
+        <span  onclick="handleKeyClick('*')" class="operator">x</span>
+        <span  onclick="handleKeyClick('1')">1</span>
+        <span  onclick="handleKeyClick('2')">2</span>
+        <span  onclick="handleKeyClick('3')">3</span>
+        <span  onclick="handleKeyClick('-')" class="operator">-</span>
+        <span  onclick="handleKeyClick('0')" >0</span>
+        <span  onclick="handleKeyClick('.')" >.</span>
+        <span  onclick="handleKeyClick('=')" class="equalsTo">=</span>
+        <span  onclick="handleKeyClick('+')" class="operator">+</span>
+	    </div>
 	  </div>
 	</body>
 </html>
-	
+
+
+<!--
+<html>
+  <head>
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="../../css/calc.css">
+		<script type="text/javascript" src="../../js/calcscript.js"></script>
+  </head>
+  <body>
+    <h2>Calculator</h2>
+    <div id="calculator">
+      <div class="topScreen">
+         <div class="screen"></div>
+      </div>
+      <div class="clearValue">
+          <span  onclick="handleKeyClick('AC')" class="clear" id="cl">AC</span>
+      </div> 
+      <div class="calckeys">
+        <span onclick="handleKeyClick('7')">7</span>
+        <span  onclick="handleKeyClick('8')">8</span>
+        <span  onclick="handleKeyClick('9')">9</span>
+        <span  onclick="handleKeyClick('/')" class="operator" id="op1">/</span>
+        <span  onclick="handleKeyClick('4')">4</span>
+        <span  onclick="handleKeyClick('5')">5</span>
+        <span  onclick="handleKeyClick('6')" >6</span>
+        <span  onclick="handleKeyClick('*')" class="operator" id="op2">x</span>
+        <span  onclick="handleKeyClick('1')">1</span>
+        <span  onclick="handleKeyClick('2')">2</span>
+        <span  onclick="handleKeyClick('3')">3</span>
+        <span  onclick="handleKeyClick('-')" class="operator" id="op3">-</span>
+        <span  onclick="handleKeyClick('0')" >0</span>
+        <span  onclick="handleKeyClick('.')" >.</span>
+        <span  onclick="handleKeyClick('=')" class="equalsTo">=</span>
+        <span  onclick="handleKeyClick('+')" class="operator" id="op4">+</span>
+      </div>
+    </div>
+    
+  </body>
+</html>
+-->

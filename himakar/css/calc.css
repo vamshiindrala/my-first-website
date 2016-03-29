@@ -1,3 +1,96 @@
+#calculator {
+  width: 325px;
+  height: auto;
+  margin: 60px auto;
+  padding: 20px 20px 10px;
+  background: #3498db;
+  border-radius: 1px;
+  border: 1px solid black;
+  box-shadow: 10px 10px 5px #888888;
+  }
+html {
+  height: 100%;
+  background: white;
+  background-size: cover;
+}
+h2{
+  text-align: center;
+  margin-top: 30px;
+}
+div .calckeys span {
+  margin: 7.5px;
+}
+.top .screen {
+  margin-top: 20px;
+  height: 40px;
+  width: auto;
+  padding: 0 10px;
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid #C0C0C0;
+  border-radius: 1px;
+  font-size: 17px;
+  line-height: 40px;
+  color: black;
+  text-align: right;
+  letter-spacing: 1px;
+}
+.calckeys, .top, .clearValue {
+  overflow: hidden;
+}
+.calckeys span, .clearValue span.clear {
+  color: #444;
+  box-shadow: 4px 4px black;
+  font-weight: normal;
+  float: left;
+  position: relative;
+  top: 0;
+  cursor: pointer;
+  width: 66px;
+  height: 36px;
+  background: #F3F3F3;
+  border: 1px solid #C0C0C0;
+  border-radius: 1px;
+  margin: 10px 7px 11px 0;
+  font-size: 17px;
+  line-height: 36px;
+  text-align: center; 
+  user-select: none;
+  transition: all 0.2s ease;
+}
+.clearValue span.clear {
+  float: right;
+  margin-right: 0px;
+  background: #D5D5D5;
+}
+
+.calckeys span.operator {
+  background: #FFF0F5;
+  margin-right: 0px;
+}
+.calckeys span.equalsTo {
+  background: #4989F1;
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 20px;
+}
+.calckeys span:hover {
+  background: #d9d9d9;
+}
+.calckeys span.equalsTo:hover {
+  background: #1266ed;
+}
+.calckeys span.operator:hover {
+  background: #b3b3b3;
+}
+.clearValue span.clear:hover {
+  background: #b3b3b3;
+}
+.calckeys span:active, .calckeys span.equalsTo:active, .clearValue span.clear:active {
+  top: 2px;
+}
+
+
+/*
 * {
     margin: 0;
     padding: 0;
@@ -19,18 +112,22 @@ html, body {
   border-bottom: 5px solid #42729B;
 }
 
-.result {
-  width: 305px;
+.topScreen .screen {
+  margin-top: 20px;
   height: 40px;
-  float: left;
+  width: auto;
+  padding: 0 10px;
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid #C0C0C0;
+  border-radius: 1px;
+  font-size: 17px;
   line-height: 40px;
-  background-color: #3E4651;
-  color: #fff;
-  margin: 5px;
+  color: black;
+  text-align: right;
+  letter-spacing: 1px;
 }
-
-.result > p {
-  margin-left: 10px;
+.calckeys, .topScreen, .clearValue {
+  overflow: hidden;
 }
 
 .clear, span {
@@ -65,3 +162,5 @@ span {
   span:hover {
     background-color: #D4D4D4;
   } 
+ */
+
