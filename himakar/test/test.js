@@ -1,5 +1,5 @@
 var assert = require('assert');
-var calculator = require('../js/calculator.js');
+var calculator = require('../js/calcscript.js');
 describe('Calculator', function() {
 
 	describe('isTokenAnOperator', function (){
