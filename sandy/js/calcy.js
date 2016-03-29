@@ -52,28 +52,84 @@
       document.frm.result.value = "";
     }
 
-    var documentarray = [];
-    var sun = document.frm.result.value;
-function calcytest(sun){
-    var StringArray = sun.split("");
-    for(var i=0; i< StringArray.length; i++){
-      if(isNaN(StringArray[i]) === true){
-         if(isNaN(StringArray[i+1] === true)){
+   //functions 
+   var evalStringArray = [];
 
-          return "Error";
-          break;
-         }
-         else
-          continue;
+function handleKeyClick(value){
+  if(value === '='){
+    var result = getResult(evalStringArray);
+    evalStringArray = [];
+    document.querySelector('.screen').innerHTML = result;
+    evalStringArray.push(result);
+  }else if(value === 'AC'){
+    evalStringArray = [];
+    document.querySelector('.screen').innerHTML = '';
+  }else{
+    constructEvalString(value, evalStringArray);
+    document.querySelector('.screen').innerHTML = evalStringArray.join(' ');
+  } 
+}
+
+function getResult(evalStringArray) {
+  if(evalStringArray && evalStringArray.length > 0){
+    if(isTokenAnOperator(evalStringArray[0])){
+      evalStringArray.unshift('0');
+    }
+    if(isTokenAnOperator(evalStringArray[evalStringArray.length-1])){
+      evalStringArray.pop();
+    }
+    return eval(evalStringArray.join(''));
+  }
+  return 0;
+}
+
+function constructEvalString(keyvalue, evalStringArray) {
+  var evalStringArray = evalStringArray || [];
+  if(keyvalue) {
+    keyvalue = keyvalue + '';
+    if(evalStringArray.length > 0){
+      if(isTokenAnOperator(keyvalue)){
+        var previousToken = evalStringArray[evalStringArray.length - 1];
+        if(isTokenAnOperator(previousToken)){
+          evalStringArray.pop();
+        }
+        evalStringArray.push(keyvalue);
+      }else{
+        var previousToken = evalStringArray[evalStringArray.length - 1];
+        if(isTokenAnOperator(previousToken)){
+          evalStringArray.push(keyvalue);
+        }else{
+          evalStringArray.pop();
+          evalStringArray.push(previousToken + keyvalue);
+        }
       }
-      else
-        continue;
-          }
-  
+    }else{
+      evalStringArray.push(keyvalue);
+    }
+    return evalStringArray;
+  }else{
+    return [];
+  }
+}
 
+/**
+* Returns true or false  for the specified 
+* token if its in the list of operators
+*/ 
+function isTokenAnOperator(token){
+  var operators = ['+', '-', '*', '/'];
+  for(var i =0; i < operators.length; i++) {
+    if(operators[i] === token){
+      return true;
+    }
+  }
+  return false;
 }
 
 
  if (typeof module !== 'undefined' && module.exports != null){
-  exports.OperatorSequencetest = OperatorSequencetest;
+  exports.isTokenAnOperator = isTokenAnOperator;
+  exports.constructEvalString = constructEvalString;
+  exports.getResult = getResult;
+  exports.handleKeyClick = handleKeyClick;
   }
