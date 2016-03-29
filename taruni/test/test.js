@@ -63,6 +63,7 @@ describe('Fibonacci', function() {
 		});
 
 	});
+
 describe('printHtml(limit)',function(){
 	it('should return 0<br/> when n is 1',function(){
 		assert.equal('0<br/>',fibonacci.printHtml(1));
@@ -105,6 +106,31 @@ describe('printHtml(limit)',function(){
 	});
 });	
 });
+var assert = require('assert');
+describe('Calculator', function() {
+	describe('eval(equation)', function () {
+
+		it('should return 20 when input equation is 4x5', function () {
+			assert.equal(20,eval(4*5));
+		});
+
+		it('should return 7 when input equation is 5+2', function () {
+			assert.equal(7,eval(5+2));
+		});
+
+		it('should return 4 when input equation is 6-2', function () {
+			assert.equal(4,eval(6-2));
+		});
+
+		it('should return 2.5 when input equation is 5/2', function () {
+			assert.equal(2.5,eval(5/2));
+		});
+
+		it('should return 21.25 when input equation is 5.5*2.5+2', function () {
+			assert.equal(21.25,eval(5.5*2.5+2));
+		});
+		
+	});	
 
 
 //Calculator Mocha tests
