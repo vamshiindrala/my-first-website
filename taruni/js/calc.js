@@ -1,37 +1,80 @@
-var keys = document.querySelectorAll('.calci input');
-var operators = ['+', '-', 'x', '/'];
-var decimalAdded = false;
 
-for(var i = 0; i < keys.length; i++) {
-	keys[i].onclick = function(e) {
-		var input = document.querySelector('.calciscreen');
-		var inputvalue = input.value;
-		var keyvalue = this.value;
-		
-		if(keyvalue == 'CE') {
-			input.value = '';
-			decimalAdded = false;
-		}
-		else if(keyvalue == '=') {
-			var equation = inputvalue;
-			var lastChar = equation[equation.length - 1];
-			equation = equation.replace(/x/g, '*');
-			if(operators.indexOf(lastChar) > -1 || lastChar == '.')//checking the last operator
-				equation = equation.replace(/.$/, '');
-			
-			if(equation)
-				input.value = eval(equation);
+var evalStringArray = [];
 
-			 	console.log(equation);
-			 	console.log(eval(equation));
-				
-			decimalAdded = false;
-		}
-		
-		else {
-			input.value += keyvalue;
-		}
-		
-		e.preventDefault();
-	} 
+function handlekeyClick(value){
+if(value === '='){
+	var result  = getResult(evalStringArray);
+	document.querySelector('.calciscreen').value = result;
+}else if(value === 'CE'){
+	evalStringArray = [];
+	document.querySelector('.calciscreen').value = '';
+}else{
+	constructEvalString(value,evalStringArray);
+	document.querySelector('.calciscreen').value = evalStringArray.join(' ');
 }
+
+}
+
+function getResult(evalStringArray){
+if(evalStringArray && evalStringArray.length > 0){
+	if(isTokenAnOperator(evalStringArray[0])){
+	evalStringArray.unshift('0');
+}
+if(isTokenAnOperator(evalStringArray[evalStringArray.length - 1])){
+	evalStringArray.pop();
+}return eval(evalStringArray.join(''));
+
+}return 0;
+}
+
+
+
+function constructEvalString(keyvalue,evalStringArray){
+	var evalStringArray = evalStringArray || [];
+	if(keyvalue){
+		keyvalue = keyvalue + '';
+	if(evalStringArray.length > 0){
+		if(isTokenAnOperator(keyvalue)){
+			var previousToken = evalStringArray[evalStringArray.length-1];
+			if(isTokenAnOperator(previousToken)){
+				evalStringArray.pop();
+			}
+			evalStringArray.push(keyvalue);
+		}
+		else{
+			var previousToken = evalStringArray[evalStringArray.length-1];
+			if(isTokenAnOperator(previousToken)){
+				evalStringArray.push(keyvalue);
+			}
+			else{
+				evalStringArray.pop();
+				evalStringArray.push(previousToken + keyvalue);
+			}
+		}
+	}else{
+		evalStringArray.push(keyvalue);
+	}
+		return evalStringArray;
+}else{
+	return [];
+}
+}
+
+function isTokenAnOperator(token){
+	var operators = ['+', '-', 'x', '/','.'];
+	for(var i=0;i<operators.length;i++){
+		if(operators[i] === token){
+			return true;
+		}
+	}
+	return false;
+}
+
+
+if (typeof module !== 'undefined' && module.exports !== null) { 
+				exports.constructEvalString = constructEvalString;
+				exports.isTokenAnOperator = isTokenAnOperator;
+				exports.getResult = getResult;
+}
+
+
