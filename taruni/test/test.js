@@ -63,7 +63,6 @@ describe('Fibonacci', function() {
 		});
 
 	});
-
 describe('printHtml(limit)',function(){
 	it('should return 0<br/> when n is 1',function(){
 		assert.equal('0<br/>',fibonacci.printHtml(1));
@@ -103,36 +102,9 @@ describe('printHtml(limit)',function(){
 
 	it('should return ["You have an invalid number. Please specify a integer > 0"] when n is ""', function () {
 		assert.equal("<div style = 'color:red' >You have an invalid number. Please specify a integer > 0</div><br/>",fibonacci.printHtml(""));
-	});
-});	
-});
-var assert = require('assert');
-describe('Calculator', function() {
-	describe('eval(equation)', function () {
-
-		it('should return 20 when input equation is 4x5', function () {
-			assert.equal(20,eval(4*5));
 		});
-
-		it('should return 7 when input equation is 5+2', function () {
-			assert.equal(7,eval(5+2));
-		});
-
-		it('should return 4 when input equation is 6-2', function () {
-			assert.equal(4,eval(6-2));
-		});
-
-		it('should return 2.5 when input equation is 5/2', function () {
-			assert.equal(2.5,eval(5/2));
-		});
-
-		it('should return 21.25 when input equation is 5.5*2.5+2', function () {
-			assert.equal(21.25,eval(5.5*2.5+2));
-		});
-		
 	});	
-
-
+});
 //Calculator Mocha tests
 describe('Calculator', function() {
 	describe('isTokenAnOperator', function () {
@@ -147,7 +119,7 @@ describe('Calculator', function() {
 		it('should return true when input token is null or undefined', function () {
 			assert.equal(calculator.isTokenAnOperator(undefined),false);
 		});
-});
+	});
 
 	describe('constructEvalString', function () {
 		it('should return a empty array when I dont have arguments', function () {
@@ -197,9 +169,7 @@ describe('Calculator', function() {
 			assert.equal(array[2],"55");
 			assert.equal(array.length,3);
 		});
-
-
-});
+	});
 	describe('getResult',function(){
 		it('should return an evaluated string for passed in array ["2","+","2","-","2"]',function(){
 			var array = ['2','+','2','-','2'];
@@ -216,5 +186,4 @@ describe('Calculator', function() {
 			assert.equal(calculator.getResult(array),2);
 		});
 	});
-
 });
