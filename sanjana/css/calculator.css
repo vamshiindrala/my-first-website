@@ -60,7 +60,7 @@ div .calckeys span {
   margin-right: 0px;
   background: #D5D5D5;
 }
-#op{
+#op1, #op2, #op3, #op4, #cl {
   background: #D5D5D5;
 }
 .calckeys span.operator {
