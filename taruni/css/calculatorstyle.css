@@ -28,7 +28,7 @@ header{
 	width:328px;
 	margin-bottom:0;
 }
-.btn7 input,.btn8 input,.btn9 input,.btn4 input,.btn5 input,.btn6 input,.btn1 input,.btn2 input,.btn3 input,.btnclear input,.btndivision input,.btnmultiply input,.btnsubtract input,.btn0 input,.btnperiod input,.btnequal input,.btnaddition input {
+.btn7 button,.btn8 button,.btn9 button,.btn4 button,.btn5 button,.btn6 button,.btn1 button,.btn2 button,.btn3 button,.btnclear button,.btndivision button,.btnmultiply button,.btnsubtract button,.btn0 button,.btnperiod button,.btnequal button,.btnaddition button {
 	padding:10px;
 	height:50px;
 	width:50px;
