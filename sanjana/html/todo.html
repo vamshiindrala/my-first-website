@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Calculator</title>
-    <style type="text/css">
-      @import url(../css/todo.css);
-    </style>
+    <title>TODO APP</title>
+    <link rel="stylesheet" type="text/css" href="../css/todo.css">
   </head>
   <body>
-    <h2>TODO Application</h2>
-    <div id="todoapp">
-      <section id="additem">
-        <form action="#" method="post">
-          <input id="todo" placeholder="What needs to be done?" autofocus>
-          <button id="add">Add</button>
-        </form>
-      </section>
-      <section id="main">
-        <input id="toggle-all" type="checkbox">
-        <label for="toggle-all">Mark all as complete</label>
-        <div id="todo-list"></div>
-      </section>
+    <div id="container">
+      <div id="header">
+        <h1>Todo App</h1>
+      </div>
+      <div id="inputContainer">
+        <input id="taskInput" type="text" placeholder="Add a task" maxlength="100" />
+      </div>
+      <div id="listWrapper">
+        <ul id="taskList"></ul>
+      </div>
+      <div id="btnWrapper" >
+        <button id="deleteCompletedBtn" onclick="deleteCompleted()">Delete</button>
+        <button id="editBtn" onclick="editTask()">Edit</button>
+        <button id="clearTasksBtn" onclick="deleteAll()">Clear</button>
+      </div>
     </div>
-    <script src="../js/todo.js" type="text/javascript"></script>
+  <script src="../js/todo.js"></script>
   </body>
 </html>
