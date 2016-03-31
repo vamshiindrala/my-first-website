@@ -1,56 +1,35 @@
 var evalStringArray = [];
 var clearEvalStringArray = false;
-document.getElementById("cl").addEventListener("click", function() {
-    handleKeyClick('AC');
-});
-document.getElementById("op1").addEventListener("click", function() {
-    handleKeyClick('/');
-});
-document.getElementById("op2").addEventListener("click", function() {
-    handleKeyClick('*');
-});
-document.getElementById("op3").addEventListener("click", function() {
-    handleKeyClick('-');
-});
-document.getElementById("op4").addEventListener("click", function() {
-    handleKeyClick('+');
-});
-document.getElementById("btn1").addEventListener("click", function() {
-    handleKeyClick('1');
-});
-document.getElementById("btn2").addEventListener("click", function() {
-    handleKeyClick('2');
-});
-document.getElementById("btn3").addEventListener("click", function() {
-    handleKeyClick('3');
-});
-document.getElementById("btn4").addEventListener("click", function() {
-    handleKeyClick('4');
-});
-document.getElementById("btn5").addEventListener("click", function() {
-    handleKeyClick('5');
-});
-document.getElementById("btn6").addEventListener("click", function() {
-    handleKeyClick('6');
-});
-document.getElementById("btn7").addEventListener("click", function() {
-    handleKeyClick('7');
-});
-document.getElementById("btn8").addEventListener("click", function() {
-    handleKeyClick('8');
-});
-document.getElementById("btn9").addEventListener("click", function() {
-    handleKeyClick('9');
-});
-document.getElementById("btn0").addEventListener("click", function() {
-    handleKeyClick('0');
-});
-document.getElementById("decimal").addEventListener("click", function() {
-    handleKeyClick('.');
-});
-document.getElementById("isEqualTo").addEventListener("click", function() {
-    handleKeyClick('=');
-});
+var document = document || null;
+
+keyClickEventListener(document);
+
+function keyClickEventListener(document){
+	if(document){
+		document.getElementById("calculator").addEventListener("click", handleClickAction);		
+	}
+}
+
+function handleClickAction(e){
+	var classNames = e.target.className.toLowerCase().split(" ");
+	if(classNames.indexOf('js-calckey') != -1){
+		var value = getAttributes(e.target).value || e.target.innerHTML;
+		handleKeyClick(value);
+	}
+}
+
+function getAttributes(element){
+	var attributes = {},
+		attributeArray;
+	if(element){
+		attributeArray = element.attributes;
+		for(var i =0; i < attributeArray.length; i++){
+			attributes[attributeArray[i].name] = attributeArray[i].value;
+		}
+	}
+	return attributes;
+}
+
 
 function isFloat(n){
     return Number(n) === n && n % 1 !== 0;

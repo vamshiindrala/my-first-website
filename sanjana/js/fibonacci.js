@@ -39,8 +39,8 @@ function printFibonacci(){
       //   }
       //   sequence = sequence + value + "<br/>"
       // });
-      //output.innersequence =  "<br/>" + sequence;
-      output.innersequence = "<br/>" + getFibonacciSequence(value);
+      //output.innerHTML =  "<br/>" + sequence;
+      output.innerHTML = "<br/>" + getFibonacciSequence(value);
 }
 
 if (typeof module !== 'undefined' && module.exports != null){
