@@ -3,6 +3,12 @@ function updateTaskStatus(){
 	var itemText = document.getElementById("item_"+cbID);
 
 	if(this.checked){
+		// var completed = document.getElementById("completed");
+		// var listItem = document.createElement("li");
+		// var span = document.createElement("span");
+		// span.innerText = itemText;
+		// listItem.appendChild(span);
+		// completed.appendChild(listItem);
 		itemText.className = "checked";
 
 	}else{
@@ -10,16 +16,31 @@ function updateTaskStatus(){
 	}
 }
 function editTask(){
+	var ebID = this.id.replace("eb_","");
+	var taskbox = document.getElementById("taskbox");
+	var itemText = document.getElementById("item_"+ebID);
 	var newTaskText = prompt("what should this task be renamed to");
 	if(!newTaskText || newTaskText == "" || newTaskText == " "){
 		return false;
 	}
-
-	this.innerText = newTaskText;
+	taskbox.value = "";
+	itemText.innerText = newTaskText;
 }
-
 function deleteTask(){
-	this.style.display = "none";
+	var dbID = this.id.replace("db_","");
+	var taskbox = document.getElementById("taskbox");
+	var itemText = document.getElementById("item_"+dbID);
+	var editbtn = document.getElementById("eb_"+dbID);
+	var deletebtn = document.getElementById("db_"+dbID);
+	var liItem = document.getElementById("li_"+dbID);
+	var checkboxItem = document.getElementById("cb_"+dbID);
+
+	itemText.style.display = "none";
+	editbtn.style.display = "none";
+	deletebtn.style.display = "none";
+	liItem.style.display = "none";
+	checkboxItem.style.display = "none";
+	taskbox.value = "";
 }
 function addnewtask(list,itemText){
 	var date = new Date();
@@ -27,8 +48,6 @@ function addnewtask(list,itemText){
 
 	var listItem = document.createElement("li");
 	listItem.id = "li_" + id;
-	listItem.ondblclick = deleteTask;
-
 
 	var checkbox = document.createElement("input");
 	checkbox.type = "checkbox";
@@ -38,10 +57,22 @@ function addnewtask(list,itemText){
 	var span = document.createElement("span");
 	span.id = "item_"+id;
 	span.innerText = itemText;
-	span.onclick = editTask;
+	// span.onclick = editTask;
+
+	var editbutton = document.createElement("button");
+	editbutton.id = "eb_"+id;
+	editbutton.innerText = "Edit";
+	editbutton.onclick = editTask;
+
+	var deletebutton = document.createElement("button");
+	deletebutton.id = "db_"+id;
+	deletebutton.innerText = "Delete";
+	deletebutton.onclick = deleteTask;
 
 	listItem.appendChild(checkbox);
 	listItem.appendChild(span);
+	listItem.appendChild(editbutton);
+	listItem.appendChild(deletebutton);
 	list.appendChild(listItem);
 }
 
@@ -54,5 +85,5 @@ addtask.onclick = function(){
 	}
 	addnewtask(document.getElementById("todolist"),itemText);
 	taskboxtext.focus();
-	taskboxtext.select();
+	taskboxtext.value = "";
 };
