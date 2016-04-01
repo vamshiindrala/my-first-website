@@ -1,5 +1,5 @@
 .task-list {
-  width: 250px;
+  width: 1800px;
   float: left;
   margin: 0 5px;
   background-color: green;
@@ -9,7 +9,7 @@
 }
 
 .task-list input, .task-list textarea {
-  width: 240px;
+  width: 3000px;
   margin: 1px 5px;
 }
 
