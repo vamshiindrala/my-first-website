@@ -1,23 +1,143 @@
+ul#taskList {
+  padding: 0 25px;
+}
+
+li.task {
+  list-style-type: none;
+  font-family: Arial;
+  font-size: 1.2em;
+  padding: 7px 0;
+}
+
+li.task:hover {
+  background-color: rgba(100,100,100,0.5);
+}
+
+li.task:hover .deleteTaskBtn {
+  visibility: visible;
+  opacity: 1;
+}
+
+li.task:not(:last-child) {
+  border-bottom: 1px solid white;
+}
+
+input.taskCheckbox {
+  position: relative;
+  float: left;
+  margin-right: 10px;
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 1px solid white;
+  border-radius: 1.5px;
+  outline: none;
+  margin-left: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+input.taskCheckbox:checked {
+  background-color: #088B0A;
+}
+input.taskCheckbox:checked:after {
+  color: white;
+  content: "\2713";
+  display: block;
+  font-size: 12px;
+  height: 12px;
+  position: absolute;
+  width: 12px;
+  left: 0.5px;
+  bottom: 2px;
+}
+
+input.taskCheckbox + label.taskLabel {
+  color: white;
+}
+
+input.taskCheckbox:checked + label.taskLabel {
+  font-style: italic;
+  color: rgba(0,0,0,0.8);
+  font-weight: 500;
+  font-size: 18px;
+}
+
+input[placeholder] {
+  font-size: 1.1em;
+}
+input:focus {
+  background-color: #555555;
+}
 #container {
   width: 40%;
   height: 500px;
   position: relative;
   margin: 0 auto;
-  /*background-color: rgba(0,0,0,0.8);*/
-  background-color: #0A5E54;
+ /* background-color: #5061EA;*/
+  background-color: #A22D05;
   border-radius: 5px;
   /*max-width: 580px;*/
 }
+.animated-div{
+  font-weight: 500;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-animation: bounceIn 1.5s both 1s;
+  /*margin-top: 50px;*/
+}
+@-webkit-keyframes bounceIn{
+  0% { 
+    transform: scale(0.1); 
+    -webkit-transform: scale(0.1);
+    opacity: 0;
+  } 
 
+  60% { 
+    transform: scale(1.2); 
+    -webkit-transform: scale(1.2);
+    opacity: 1;
+  } 
+
+  100% { 
+    transform: scale(1); 
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes bounceIn{
+  0% { 
+    transform: scale(0.1); 
+    -webkit-transform: scale(0.1);
+    opacity: 0;
+  } 
+
+  60% { 
+    transform: scale(1.2); 
+    -webkit-transform: scale(1.2);
+    opacity: 1;
+  } 
+
+  100% { 
+    transform: scale(1); 
+    -webkit-transform: scale(1);
+  }
+}
 #header {
   color: white;
-  padding: 5px;
+  padding: 25px;
   text-align: center;
   font-family: Arial, sans-serif;
 }
-
+img{
+  margin-top:5px;
+  width:35px;
+  margin-left:10px;
+  display: inline-block;
+}
 #inputContainer {
-  padding: 15px;
+  padding: 10px;
 }
 
 #inputContainer #taskInput {
@@ -62,4 +182,27 @@
 #btnWrapper #deleteCompletedBtn:hover, #btnWrapper #clearTasksBtn:hover, #btnWrapper #editBtn:hover {
   cursor: pointer;
   opacity: 1;
+}
+.deleteTaskBtn {
+  float: right;
+  color: black;
+  background: rgba(0,0,0,0);
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid white;
+  border-radius: 1px;
+  padding: 10px 5px;
+  visibility: hidden;
+  opacity: 0;
+  line-height: 0;
+  margin-right: 5px;
+  cursor: default;
+}
+/*.editTaskBtn{
+  float: right;
+  color: black;
+}*/
+
+.deleteTaskBtn:hover {
+  background-color: #DF0902;
 }
