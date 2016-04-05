@@ -6,6 +6,8 @@ button{
 }
 section{
   margin:35px;
+  background-color: #e6e6e6;
+  padding-bottom:20px;
 }
 h1{
   color:#7FFFD4;
@@ -25,6 +27,8 @@ li{
   padding:5px 10px;
   color:#527a7a;
   background-color: #ffffcc;
+  width:150%;
+  margin-left:10px;
 }
 li span{
   padding-left: 10px;
@@ -35,9 +39,23 @@ li span{
   font-weight: bold;
   color:#40bf80;
 }
+@media (max-width: 609px) {
+  section{
+         overflow: hidden;
+         min-width:269px;
+}
+}
+@media (max-width: 605px) {
+  li{
+         overflow: hidden;
+         min-width:269px;
+}
+}
 input{
   color:#527a7a;
   background-color: #ffffcc;
+  margin-left:10px;
+  margin-bottom:10px;
 }
 input:focus{
   background-color: #ffffff;
