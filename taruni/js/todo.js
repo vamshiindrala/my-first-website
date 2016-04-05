@@ -1,16 +1,8 @@
 function updateTaskStatus(){
 	var cbID = this.id.replace("cb_","");
 	var itemText = document.getElementById("item_"+cbID);
-
 	if(this.checked){
-		// var completed = document.getElementById("completed");
-		// var listItem = document.createElement("li");
-		// var span = document.createElement("span");
-		// span.innerText = itemText;
-		// listItem.appendChild(span);
-		// completed.appendChild(listItem);
 		itemText.className = "checked";
-
 	}else{
 		itemText.className = "";
 	}
@@ -57,7 +49,6 @@ function addnewtask(list,itemText){
 	var span = document.createElement("span");
 	span.id = "item_"+id;
 	span.innerText = itemText;
-	// span.onclick = editTask;
 
 	var editbutton = document.createElement("button");
 	editbutton.id = "eb_"+id;
