@@ -1,85 +1,13 @@
-ul#taskList {
-  padding: 0 25px;
-}
-
-li.task {
-  list-style-type: none;
-  font-family: Arial;
-  font-size: 1.2em;
-  padding: 7px 0;
-}
-
-li.task:hover {
-  background-color: green;
-}
-
-li.task:hover .deleteTaskBtn {
-  visibility: visible;
-  opacity: 1;
-}
-
-li.task:not(:last-child) {
-  border-bottom: 1px solid black;
-}
-
-input.taskCheckbox {
-  position: relative;
-  float: left;
-  margin-right: 10px;
-  -webkit-appearance: none;
-  width: 15px;
-  height: 15px;
-  border: 1px solid white;
-  border-radius: 1.5px;
-  outline: none;
-  margin-left: 5px;
-  text-align: center;
-  cursor: pointer;
-}
-
-input.taskCheckbox:checked {
-  background-color: red;
-}
-input.taskCheckbox:checked:after {
-  color: white;
-  content: "\2713";
-  display: block;
-  font-size: 12px;
-  height: 12px;
-  position: absolute;
-  width: 12px;
-  left: 0.5px;
-  bottom: 2px;
-}
-
-input.taskCheckbox + label.taskLabel {
-  color: white;
-}
-
-input.taskCheckbox:checked + label.taskLabel {
-  font-style: italic;
-  color: rgba(0,0,0,0.8);
-  font-weight: 500;
-  font-size: 18px;
-}
-
-input[placeholder] {
-  font-size: 1.1em;
-}
-input:focus {
-  background-color: #555555;
-}
 #container {
-  width: 100%;
+  width: 40%;
   height: 500px;
   position: relative;
   margin: 0 auto;
- /* background-color: #5061EA;*/
-  background-color: green;
+ background-color: #5061EA;
+
   border-radius: 5px;
   /*max-width: 580px;*/
 }
-
 #header {
   color: white;
   padding: 25px;
@@ -134,6 +62,7 @@ input:focus {
   cursor: pointer;
   opacity: 1;
 }
+
 .deleteTaskBtn {
   float: right;
   color: black;
@@ -149,10 +78,6 @@ input:focus {
   margin-right: 5px;
   cursor: default;
 }
-/*.editTaskBtn{
-  float: right;
-  color: black;
-}*/
 
 .deleteTaskBtn:hover {
   background-color: #DF0902;
