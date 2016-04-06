@@ -1,4 +1,4 @@
- function run7(){
+    function run7(){
    document.frm.result.value += "7";
     }
     function run8(){
