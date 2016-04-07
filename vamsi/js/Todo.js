@@ -1,17 +1,17 @@
 
- var array = [];
-
-function getvalue(){
-	var value = document.querySelector("#inputvalue");
-	return value;
-	}
+array = [];
 
 function add(){
-  array = array || [], docvalue = getvalue();
+
+  var array = array || []
+  
   for(var i=0; i<=array.length; i++){
-  	 array[i].push(docvalue);
+    var docvalue = document.getElementById('inputvalue').value;
+  	 var result = array.push(docvalue);
+     console.log( result);
+    document.getElementById('textoutput').innerHTML = array;
   }
- document.querySelector('.textoutput').innerHTML = array;
+
 }
 
 function edit(EditItem){
