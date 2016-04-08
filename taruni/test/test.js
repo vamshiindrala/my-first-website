@@ -1,6 +1,7 @@
 var assert = require('assert');
 var fibonacci = require('../js/script.js');
 var calculator = require('../js/calc.js');
+var todo = require('../js/todoapp.js');
 
 //Fibonacci Mocha Tests
 describe('Fibonacci', function() {
@@ -184,6 +185,160 @@ describe('Calculator', function() {
 		it('should return an evaluated string for passed in array ["+","2","-"]',function(){
 			var array = ['+','2','-'];
 			assert.equal(calculator.getResult(array),2);
+		});
+	});
+	});
+
+describe('Todo', function() {
+	describe('buildToDoItem', function () {
+		it('should take a string an return an object', function () {
+			var todoItem = todo.buildToDoItem('Learn Html');
+			assert.equal(todoItem.task,"Learn Html");
+			assert.equal(todoItem.status,"Incomplete");
+			assert.equal(typeof todoItem.date,"number");
+		});
+		it('should take an empty string an return null', function () {
+			var todoItem = todo.buildToDoItem('');
+			assert.equal(todoItem,null);
+		});
+		it('should take undefined or null string an return null', function () {
+			var todoItem = todo.buildToDoItem();
+			assert.equal(todoItem,null);
+		});
+	});
+		describe('addToDo(todoItemTask)', function () {
+		it('should add the todo task to the todoList Array', function() {
+			var todoList = todo.addToDo('Buy Milk', []);
+			assert.equal(todoList.length, 1);
+		});
+
+		it('should add 2 todo tasks to the todoList Array', function() {
+			var todoList = todo.addToDo('Buy Milk', []);
+			todoList = todo.addToDo('Oil Change', todoList);
+			assert.equal(todoList.length, 2);
+		});
+
+		it('should return false when task is undefined', function() {
+			var todoList = todo.addToDo();
+			assert.equal(todoList, false);
+		});
+	});
+
+	describe('removeToDo(index)', function () {
+		it('should remove the todo task from the todoList Array', function() {
+			var todoList = todo.addToDo('Buy Milk', []);
+			todoList = todo.removeToDo(0, todoList);
+			assert.equal(todoList.length, 0);
+		});
+
+		it('should remove 2 todo item from the todoList Array', function() {
+			var todoList = todo.addToDo('Buy Milk', []);
+			todoList = todo.addToDo('Oil Change', todoList);
+			todoList = todo.removeToDo(1, todoList);
+			assert.equal(todoList.length, 1);
+		});
+
+		it('should return false when task is undefined', function() {
+			var todoList = todo.removeToDo();
+			assert.equal(todoList, false);
+		});
+	});
+
+	describe('editToDo', function () {
+		it('should remove the todo task from the todoList Array and replace with new todotask at the index position', function() {
+			var todoList = todo.addToDo('Buy Milk', []);
+			console.log(todoList[0]['task']);
+			todoList = todo.editToDo(0,"Buy Chocolates",todoList);
+			assert.equal(todoList.length, 1);
+			assert.equal(todoList[0]['task'],"Buy Chocolates");
+			console.log(todoList.length);
+			console.log(todoList[0]['task']);
+		});
+		it('should remove the todo task from the todoList Array and replace with new todotask at the index position', function() {
+			var todoList = todo.addToDo('Buy Milk', []);
+			todoList = todo.addToDo('Oil Change', todoList);
+			console.log(todoList[1]['task']);
+			todoList = todo.editToDo(1,"Buy Chocolates",todoList);
+			assert.equal(todoList.length, 2);
+			assert.equal(todoList[1]['task'],"Buy Chocolates");
+			console.log(todoList.length);
+			console.log(todoList[1]['task']);
+		});
+		it('should remove the todo task from the todoList Array and replace with new todotask at the index position', function() {
+			var todoList = todo.addToDo('Buy Milk', []);
+			todoList = todo.addToDo('Oil Change', todoList);
+			todoList = todo.addToDo('Learn Html', todoList);
+			todoList = todo.addToDo('Learn CSS', todoList);
+			todoList = todo.addToDo('Learn Jquery', todoList);
+			console.log(todoList[3]['task']);
+			todoList = todo.editToDo(3,"Learn JS",todoList);
+			assert.equal(todoList.length, 5);
+			assert.equal(todoList[3]['task'],"Learn JS");
+			console.log(todoList.length);
+			console.log(todoList[3]['task']);
+		});
+		
+	});
+
+	describe('markToDoAsDone', function () {
+		it('should update the task status to Done from the Incomplete status at the index position', function() {
+			var todoList = todo.addToDo('Buy Milk', []);
+			todoList = todo.addToDo('Oil Change', todoList);
+			todoList = todo.addToDo('Learn Html', todoList);
+			todoList = todo.addToDo('Learn CSS', todoList);
+			todoList = todo.addToDo('Learn Jquery', todoList);
+			assert.equal(todoList[0]['status'],"Incomplete");
+			console.log(todoList[0]['status']);
+			todoList = todo.markToDoAsDone(0,todoList);
+			assert.equal(todoList[0]['status'],"Done");
+			console.log(todoList[0]['status']);
+
+		});
+	});
+
+	describe('buildListHTML', function () {
+		it('should print the task with class as strike-through if status is Done', function() {
+			var todoList = todo.addToDo('Buy Milk', []);
+			todoList = todo.markToDoAsDone(0,todoList);
+			var todohtml  = todo.buildListHTML(todoList);
+			console.log(todohtml);
+			assert.equal(todohtml,'<ul><li><input type="checkbox" id="0"><span class="strike-through">Buy Milk</span><button class="remove" id="0">x</button></li></ul>');
+
+		});
+		it('should print the tasks with class as strike-through if status is Done', function() {
+			var todoList = todo.addToDo('Buy Milk', []);
+			todoList = todo.addToDo('Learn Html', todoList);
+			todoList = todo.markToDoAsDone(0,todoList);
+			var todohtml  = todo.buildListHTML(todoList);
+			console.log(todohtml);
+			assert.equal(todohtml,'<ul><li><input type="checkbox" id="0"><span class="strike-through">Buy Milk</span><button class="remove" id="0">x</button></li><li><input type="checkbox" id="1"><span>Learn Html</span><button class="remove" id="1">x</button></li></ul>');
+
+		});
+		it('should print the tasks with class as strike-through if status is Done', function() {
+			var todoList = todo.addToDo('Buy Milk', []);
+			todoList = todo.addToDo('Learn Html', todoList);
+			todoList = todo.markToDoAsDone(1,todoList);
+			todoList = todo.markToDoAsDone(0,todoList);
+			var todohtml  = todo.buildListHTML(todoList);
+			console.log(todohtml);
+			assert.equal(todohtml,'<ul><li><input type="checkbox" id="0"><span class="strike-through">Buy Milk</span><button class="remove" id="0">x</button></li><li><input type="checkbox" id="1"><span class="strike-through">Learn Html</span><button class="remove" id="1">x</button></li></ul>');
+
+		});
+
+		it('should print the task without class as strike-through if status is Incomplete', function() {
+			var todoList = todo.addToDo('Buy Milk', []);
+			var todohtml  = todo.buildListHTML(todoList);
+			console.log(todohtml);
+			assert.equal(todohtml,'<ul><li><input type="checkbox" id="0"><span>Buy Milk</span><button class="remove" id="0">x</button></li></ul>');
+		});
+
+		it('should print the tasks with class as strike-through if status is Done', function() {
+			var todoList = todo.addToDo('Buy Milk', []);
+			todoList = todo.addToDo('Learn Html', todoList);
+			var todohtml  = todo.buildListHTML(todoList);
+			console.log(todohtml);
+			assert.equal(todohtml,'<ul><li><input type="checkbox" id="0"><span>Buy Milk</span><button class="remove" id="0">x</button></li><li><input type="checkbox" id="1"><span>Learn Html</span><button class="remove" id="1">x</button></li></ul>');
+
 		});
 	});
 });
