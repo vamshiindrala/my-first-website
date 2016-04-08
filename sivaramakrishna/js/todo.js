@@ -1,145 +1,119 @@
-document.querySelector('#taskInput').addEventListener('keypress', function (e) {
-    var key = e.which || e.keyCode;
-    if (( key == 13 ) && ( document.querySelector('#taskInput').value.length > 0 )) // 13 is enter
-    	addToList( this.value.trim() );
-});
-
-var taskList = [],
-	completedTasks = [];
-
-if( JSON.parse( localStorage.getItem( 'taskList' )))
-	taskList = JSON.parse( localStorage.getItem( 'taskList' ));
-else
-	localStorage.setItem("taskList", JSON.stringify( taskList ));
-
-updateCompletedListArray();
-updateListView();
-
-function updateCompletedListArray() {
-	completedTasks = [];
-
-	taskList.forEach(function( task ) {
-		if( task.done )
-			completedTasks.push( taskList.indexOf( task ) + '' );
-	});
-}
-
-function addToList( task ){
-	taskList.push({
-		name: task,
-		done: false
-	});
-
-	updateListView();
-
-	localStorage.setItem('taskList', JSON.stringify( taskList ));
-	document.querySelector('#taskInput').value = '';
-}
-
-function updateListView() {
-	var ul = document.getElementById('taskList');
-
-	ul.innerHTML = '';
-
-	taskList.forEach(function( task ) {
-		var listItem = document.createElement('li'),
-			taskLabel = document.createElement('label'),
-			delBtn = document.createElement('span'),
-			checkbox = document.createElement('input');
-			// editBtn = document.createElement('button');
-
-		listItem.className = 'task';
-		listItem.id = taskList.indexOf( task );
-
-		taskLabel.className = 'taskLabel';
-		taskLabel.textContent = task.name;
-		taskLabel.htmlFor = 'c' + taskList.indexOf( task );
-
-		delBtn.className = 'deleteTaskBtn';
-		delBtn.textContent = 'X';
-		delBtn.onclick = deleteThisTask;
-
-
-		// editBtn.className = 'editTaskBtn';
-		// editBtn.id = 'c' + taskList.indexOf( task );
-		// editBtn.textContent = 'edit';
-		// editBtn.onclick = editThisTask;
-		// editBtn.type = 'button';
-
-		checkbox.className = 'taskCheckbox';
-		checkbox.id = 'c' + taskList.indexOf( task );;
-		checkbox.type = 'checkbox';
-		checkbox.checked = task.done;
-		checkbox.onclick = toggleChecked;
-
-
-		listItem.appendChild( checkbox );
-		listItem.appendChild( taskLabel );
-		// listItem.appendChild( editBtn );
-		listItem.appendChild( delBtn );
-			  ul.appendChild( listItem );
-	});
-}
-
-function toggleChecked(e) {
-	var checkStatus = e.target.checked,
-		task = e.target.parentElement,
-		taskId = task.id,
-		removed = false;
-
-	taskList[taskId].done = checkStatus;
-
-	if( completedTasks.length === 0 ) {
-		completedTasks.push( taskId );
-		task.style.textDecoration='line-through';
-	}
-	else {
-		completedTasks.forEach(function( index ) {
-			if( taskId === index ) {
-				completedTasks.splice( completedTasks.indexOf( index ), 1 );
-				removed = true;
-				task.style.textDecoration='none';
-			}
+var assert = require('assert');
+var todoApp = require('../js/todo.js');
+describe('Todo', function() {
+	describe('buildToDoItem(todoItemTask)', function () {
+		it('should take a string and return an object', function(){
+			var todoItem = todoApp.buildToDoItem('Buy Milk');
+			assert.equal(todoItem.task, 'Buy Milk');
+			assert.equal(todoItem.status, 'Incomplete');
+			assert.equal(typeof todoItem.date, 'number');
 		});
 
-		if( !removed ) {
-			completedTasks.push( taskId );
-			completedTasks.sort();
-			task.style.textDecoration='line-through';
-		}
-	}
+		it('should take a empty string and return null', function(){
+			var todoItem = todoApp.buildToDoItem('');
+			assert.equal(todoItem, null);
+		});
 
-	saveLocalList();
-}
+		it('should take undefined or null string and return null', function(){
+			var todoItem = todoApp.buildToDoItem();
+			assert.equal(todoItem, null);
+		});
+	});
 
-function deleteThisTask(e) {
-	taskList.splice( e.target.parentElement.id, 1 );
-	saveLocalList();
-	updateCompletedListArray();
-	updateListView();
-}
+	describe('addToDo(todoItemTask)', function () {
+		it('should add the todo task to the todoList Array', function() {
+			var todoList = todoApp.addToDo('Buy Milk', []);
+			assert.equal(todoList.length, 1);
+		});
 
-function deleteCompleted() {
-	var length = completedTasks.length;
+		it('should add 2 todo tasks to the todoList Array', function() {
+			var todoList = todoApp.addToDo('Buy Milk', []);
+			todoList = todoApp.addToDo('Oil Change', todoList);
+			assert.equal(todoList.length, 2);
+		});
 
-	for( var i = completedTasks.length; i--; ) {
-		taskList.splice( completedTasks[i], 1 );
-	}
+		it('should return false when task is undefined', function() {
+			var todoList = todoApp.addToDo();
+			assert.equal(todoList, false);
+		});
+	});
 
-	saveLocalList();
-	updateCompletedListArray();
-	updateListView();
-}
+	describe('removeToDo(index)', function () {
+		it('should remove the todo task from the todoList Array', function() {
+			var todoList = todoApp.addToDo('Buy Milk', []);
+			todoList = todoApp.removeToDo(0, todoList);
+			assert.equal(todoList.length, 0);
+		});
 
-function deleteAll() {
-	if(( taskList.length > 0 ) && confirm( "clear the task" )) {
-		var ul = document.getElementById('taskList');
-		ul.innerHTML = '';
-		taskList = completedTasks = [];
-		saveLocalList();
-	}
-}
+		it('should remove 2 todo item from the todoList Array', function() {
+			var todoList = todoApp.addToDo('Buy Milk', []);
+			todoList = todoApp.addToDo('Oil Change', todoList);
+			todoList = todoApp.removeToDo(1, todoList);
+			assert.equal(todoList.length, 1);
+		});
 
-function saveLocalList() {
-	localStorage.setItem("taskList", JSON.stringify( taskList ));
-}
+		it('should return false when task is undefined', function() {
+			var todoList = todoApp.removeToDo();
+			assert.equal(todoList, false);
+		});
+	});
+
+	 describe('editToDo', function () {
+  it('should edit the todo task from the todoList Array', function() {
+   var todoList = todoApp.addToDo('Buy Milk', []);
+   todoList = todoApp.addToDo('Oil Change', todoList);
+   todoList = todoApp.editToDo(0, 'make money', todoList);
+   assert.equal(todoList.length, 2);
+  });
+  it('should edit the todo task from the todoList Array', function() {
+   var todoList = todoApp.addToDo('Buy Milk', []);
+   todoList = todoApp.addToDo('Oil Change', todoList);
+   todoList = todoApp.editToDo(1, 'make money', todoList);
+   assert.equal(todoList.length, 2);
+  });
+  it('should return false todoList Array', function() {
+   var todoList = todoApp.addToDo('Buy Milk', []);
+   todoList = todoApp.addToDo('Oil Change', todoList);
+   todoList = todoApp.editToDo();
+   assert.equal(todoList, false);
+  });
+ });
+
+	 describe('markToDoAsDone', function () {
+  it('should mark the todo task from the todoList Array as done', function() {
+   var todoList = todoApp.addToDo('Buy Milk', []);
+   todoList = todoApp.addToDo('Oil Change', todoList);
+   var result = todoApp.markToDoAsDone(0, todoList, 'Buy Milk');
+   assert.equal(result, 'red');
+  });
+  it('should mark the todo task from the todoList Array as done', function() {
+   var todoList = todoApp.addToDo('Buy Milk', []);
+   todoList = todoApp.addToDo('Oil Change', todoList);
+   var result = todoApp.markToDoAsDone(1, todoList, 'Brakes');
+   assert.equal(result, false);
+  });
+
+ });
+
+
+	describe('buildListHTML', function () {
+
+		it('should buildListHTML task from the todoList Array as done', function() {
+   var todoList = todoApp.addToDo('Buy Milk', []);
+   todoList = todoApp.addToDo('Oil Change', todoList);
+   var result = todoApp.markToDoAsDone(0, todoList, 'Buy Milk');
+   assert.equal(result, 'red');
+  });
+  it('should mark the todo task from the todoList Array as done', function() {
+   var todoList = todoApp.addToDo('Buy Milk', []);
+   todoList = todoApp.addToDo('Oil Change', todoList);
+   var result = todoApp.markToDoAsDone(1, todoList, 'Brakes');
+   assert.equal(result, false);
+  });
+
+ });
+
+		
+	});
+
+});
