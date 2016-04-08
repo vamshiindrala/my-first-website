@@ -2,13 +2,49 @@
 <html>
 	<head>
 		<title>Kiran's Todo list</title>
+		<style type="text/css">
+			.strike-through{
+				text-decoration: line-through;
+			}
+		</style>
 	</head>
 	<body>
 		<h1>My Todo List</h1>
-		<div id="output">
-			
+		<div id="output"></div>
+		<div>
+			<input type="text" id="todoInput" placeholder="Enter your todo" /> 
+			<button onclick="addAction()">Add Todo</button>
 		</div>
-
 		<script type="text/javascript" src="../js/todo.js"></script>
+		<script type="text/javascript">
+			var todoList = [];
+
+			function addAction(){
+				var todoItem = document.getElementById("todoInput").value;
+				todoList = addToDo(todoItem, todoList);
+				document.getElementById("output").innerHTML = buildListHTML(todoList);
+				document.getElementById("todoInput").value = '';
+			}
+
+			function removeAction(index){
+				todoList = removeToDo(index, todoList);
+				document.getElementById("output").innerHTML = buildListHTML(todoList);
+			}
+
+			function doneAction(index){
+				todoList = markToDoAsDone(index, todoList);
+				document.getElementById("output").innerHTML = buildListHTML(todoList);
+			}
+
+			function undoAction(index){
+				todoList = markToDoAsUnDone(index, todoList);
+				document.getElementById("output").innerHTML = buildListHTML(todoList);
+			}
+
+			function editAction(index, e){
+				// console.log(e.target);
+				e.target.parentElement.innerHTML = getEditHTML(index, todoList[index].task);
+			}
+		</script>
 	</body>
 </html>
