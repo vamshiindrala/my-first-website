@@ -1,0 +1,60 @@
+<html>
+<head>
+ <style type="text/css">
+ .Todo{
+  background-color: #ADDFFF;
+  width: 500px;
+  height: 400px;
+  top: 80px;
+  left: 40%;
+  position: relative;
+
+ }
+ .Todobox{
+       width: 500px;
+       left: 40%;
+       top: 80px;
+       position: relative;
+ }
+ .alignment{
+  text-align: center;
+ }
+ .inputwidth{
+  width: 500px;
+  height: 20px;
+ }
+ .buttonsize{
+  background-color: #696905;
+  border: 0px;
+  width: 100px;
+  height: 50px;
+  padding: 10px;
+  left: 40%;
+        top: 80px;
+        position: relative;
+ }
+ .padding{
+  padding: 10px;
+ }
+ h1{
+  font-family: 'Open Sans',serif;
+ }
+ </style>
+</head>
+<body>
+    <div class="Todo">
+     <h1 class="alignment">ToDo Task</h1>
+     <p id="textoutput"></p>
+    </div>
+    <div class="Todobox">
+     <input class="inputwidth" id = "inputvalue" type="text"  placeholder="Enter your task here" />
+    </div>
+    <div class="padding">
+     <input class="buttonsize" type="button" onclick="#" value="ADD" />
+     <input class="buttonsize" type="button" value="EDIT" />
+     <input class="buttonsize" type="button" value="TASK READ" />
+     <input class="buttonsize" type="button" value="DELETE" />
+    </div>
+    <script type="text/javascript" src="../js/todo.js"></script>
+</body>
+</html> 
