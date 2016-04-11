@@ -1,3 +1,4 @@
+/*
 $(document).ready(function(){
 	var testNumLength = function(number) {
         if (number.length > 9) {
@@ -48,3 +49,4 @@ $(document).ready(function(){
     	newnumber = "";
     });
 });
+*/
