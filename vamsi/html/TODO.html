@@ -1,63 +1,50 @@
+<!DOCTYPE html>
 <html>
-<head>
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple">
+	<head>
+		<title>Todo list</title>
+		<style type="text/css">
+			.strike-through{
+				text-decoration: line-through;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>My Todo List</h1>
+		<div id="output"></div>
+		<div>
+			<input type="text" id="todoInput" placeholder="Enter your todo" /> 
+			<button onclick="addAction()">Add Todo</button>
+		</div>
+		<script type="text/javascript" src="../js/todo.js"></script>
+		<script type="text/javascript">
+			var todoList = [];
 
-	<style type="text/css">
-	@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-	.Todo{
-		background-color: #eee;
-		width: 500px;
-		height: 400px;
-		top: 80px;
-		left: 40%;
-		position: relative;
+			function addAction(){
+				var todoItem = document.getElementById("todoInput").value;
+				todoList = addToDo(todoItem, todoList);
+				document.getElementById("output").innerHTML = buildListHTML(todoList);
+				document.getElementById("todoInput").value = '';
+			}
 
-	}
-	.Todobox{
-       width: 500px;
-       left: 40%;
-       top: 80px;
-       position: relative;
-	}
-	.alignment{
-		text-align: center;
-	}
-	.inputwidth{
-		width: 500px;
-		height: 20px;
-	}
-	.buttonsize{
-		background-color: #228B22;
-		border: 0px;
-		width: 100px;
-		height: 50px;
-		padding: 10px;
-		left: 40%;
-        top: 80px;
-        position: relative;
-	}
-	.padding{
-		padding: 10px;
-	}
-	h1{
-		font-family: 'Open Sans',serif;
-	}
-	</style>
-</head>
-<body>
-    <div class="Todo">
-    	<h1 class="alignment">ToDo Task</h1>
-    	<p id="textoutput"></p>
-    </div>
-    <div class="Todobox">
-    	<input class="inputwidth" id = "inputvalue" type="text"  placeholder="Enter your task here" />
-    </div>
-    <div class="padding">
-    	<input class="buttonsize" type="button" onclick="add()" value="ADD" />
-    	<input class="buttonsize" type="button" value="EDIT" />
-    	<input class="buttonsize" type="button" value="TASK READ" />
-    	<input class="buttonsize" type="button" value="DELETE" />
-    </div>
-    <script type="text/javascript" src="../js/Todo.js"></script>
-</body>
-</html> 
+			function removeAction(index){
+				todoList = removeToDo(index, todoList);
+				document.getElementById("output").innerHTML = buildListHTML(todoList);
+			}
+
+			function doneAction(index){
+				todoList = markToDoAsDone(index, todoList);
+				document.getElementById("output").innerHTML = buildListHTML(todoList);
+			}
+
+			function undoAction(index){
+				todoList = markToDoAsUnDone(index, todoList);
+				document.getElementById("output").innerHTML = buildListHTML(todoList);
+			}
+
+			function editAction(index, e){
+				// console.log(e.target);
+				e.target.parentElement.innerHTML = getEditHTML(index, todoList[index].task);
+			}
+		</script>
+	</body>
+</html>
