@@ -73,10 +73,6 @@ describe('Todo', function() {
 
 	describe('markToDoAsDone', function () {
 		it('the status of the task should be marked as done when the task is completed', function(){
-			// var todoItem = todoApp.buildToDoItem('Buy Milk');
-			// assert.equal(todoItem.task, 'Buy Milk');
-			// assert.equal(todoItem.status, 'Incomplete');
-			// assert.equal(typeof todoItem.date, 'number');
 			var todoList = todoApp.addToDo('Buy Milk', []);
 			todoList = todoApp.addToDo('Attend Meeting', todoList);
 			todoList = todoApp.markToDoAsDone(1, todoList);
@@ -88,6 +84,19 @@ describe('Todo', function() {
 			assert.equal(todoList, false);
 		});
 	});
+	describe('markToDoAsUnDone', function () {
+		it('the status of the task should be marked as done when the task is completed', function(){
+			var todoList = todoApp.addToDo('Buy Milk', []);
+			todoList = todoApp.addToDo('Attend Meeting', todoList);
+			todoList = todoApp.markToDoAsUnDone(1, todoList);
+			assert.equal(todoList[1]['status'], 'Incomplete');
+
+		});
+		it('should return false when task is undefined', function() {
+			var todoList = todoApp.markToDoAsUnDone();
+			assert.equal(todoList, false);
+		});
+	});
 
 	describe('buildListHTML', function () {
 		it('should return html list which is built', function() {
@@ -95,17 +104,17 @@ describe('Todo', function() {
 			todoList = todoApp.addToDo('Attend meeting', todoList);
 			todoList = todoApp.addToDo('Complete your task', todoList);
 			var buildList = todoApp.buildListHTML(todoList);
-			assert.equal(buildList,'<ul><li><span>Buy Milk</span><button class="remove" id="0">x</button></li><li><span>Attend meeting</span><button class="remove" id="1">x</button></li><li><span>Complete your task</span><button class="remove" id="2">x</button></li></ul>');	
+			assert.equal(buildList,'<ul><li class="taskList"><button class="done" onclick="doneAction(0)">&#10004;</button><span class="taskName">Buy Milk</span><button class="remove" onclick="removeAction(0)">&#10008;</button><button class="edit" onclick="editAction(0, event)">&#9998;</button></li><li class="taskList"><button class="done" onclick="doneAction(1)">&#10004;</button><span class="taskName">Attend meeting</span><button class="remove" onclick="removeAction(1)">&#10008;</button><button class="edit" onclick="editAction(1, event)">&#9998;</button></li><li class="taskList"><button class="done" onclick="doneAction(2)">&#10004;</button><span class="taskName">Complete your task</span><button class="remove" onclick="removeAction(2)">&#10008;</button><button class="edit" onclick="editAction(2, event)">&#9998;</button></li></ul>');	
 		});
 		it('should return proper html list which is built when the status of the task is marked as done', function() {
 			var todoList = todoApp.addToDo('Buy Milk', []);
 			todoList = todoApp.addToDo('Attend meeting', todoList);
 			todoList = todoApp.addToDo('Complete your task', todoList);
 			var buildList = todoApp.buildListHTML(todoList);
-			assert.equal(buildList,'<ul><li><span>Buy Milk</span><button class="remove" id="0">x</button></li><li><span>Attend meeting</span><button class="remove" id="1">x</button></li><li><span>Complete your task</span><button class="remove" id="2">x</button></li></ul>');
+			assert.equal(buildList,'<ul><li class="taskList"><button class="done" onclick="doneAction(0)">&#10004;</button><span class="taskName">Buy Milk</span><button class="remove" onclick="removeAction(0)">&#10008;</button><button class="edit" onclick="editAction(0, event)">&#9998;</button></li><li class="taskList"><button class="done" onclick="doneAction(1)">&#10004;</button><span class="taskName">Attend meeting</span><button class="remove" onclick="removeAction(1)">&#10008;</button><button class="edit" onclick="editAction(1, event)">&#9998;</button></li><li class="taskList"><button class="done" onclick="doneAction(2)">&#10004;</button><span class="taskName">Complete your task</span><button class="remove" onclick="removeAction(2)">&#10008;</button><button class="edit" onclick="editAction(2, event)">&#9998;</button></li></ul>');
 			todoList = todoApp.markToDoAsDone(1, todoList);
-			buildList = todoApp.buildListHTML(todoList);
-			assert.equal(buildList,'<ul><li><span>Buy Milk</span><button class="remove" id="0">x</button></li><li><span class="strike-through">Attend meeting</span><button class="remove" id="1">x</button></li><li><span>Complete your task</span><button class="remove" id="2">x</button></li></ul>');
+			buildList = todoApp.buildListHTML(todoList);	
+			assert.equal(buildList,'<ul><li class="taskList"><button class="done" onclick="doneAction(0)">&#10004;</button><span class="taskName">Buy Milk</span><button class="remove" onclick="removeAction(0)">&#10008;</button><button class="edit" onclick="editAction(0, event)">&#9998;</button></li><li class="taskList"><button class="undo" onclick="undoAction(1)">&#10004;</button><span class="strike-through taskName">Attend meeting</span><button class="remove" onclick="removeAction(1)">&#10008;</button><button class="edit" onclick="editAction(1, event)">&#9998;</button></li><li class="taskList"><button class="done" onclick="doneAction(2)">&#10004;</button><span class="taskName">Complete your task</span><button class="remove" onclick="removeAction(2)">&#10008;</button><button class="edit" onclick="editAction(2, event)">&#9998;</button></li></ul>');
 		});
 		
 	});
