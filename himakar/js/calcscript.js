@@ -36,7 +36,7 @@ window.onload = function () {
   }
 };
 */
-
+/*
 var evalStringArray = [];
 
 function handleKeyClick(value){
@@ -113,3 +113,5 @@ if (typeof module !== 'undefined' && module.exports != null){
   exports.handleKeyClick = handleKeyClick;
   exports.getResult = getResult;
 }
+*/
+
