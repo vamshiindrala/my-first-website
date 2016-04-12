@@ -1,7 +1,7 @@
 //Add a todo item
 
 function getEditHTML(index, todoItemTask){
-	var html = '<input id="newTask" type="text" value="'+todoItemTask+'"> <button onclick="saveAction('+index+', event)">Save</button>';
+	var html = '<input id="newTask" type="text" value="'+todoItemTask+'"> <button onclick="saveAction('+index+', event)">&#128190;</button>';
 	return html;
 }
 
