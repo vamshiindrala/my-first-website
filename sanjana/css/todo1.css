@@ -1,20 +1,27 @@
-#listWrapper {
+/*#listWrapper {
   position: absolute;
   bottom: 50px;
   top: 160px;
   right: 0;
   left: 0;
   overflow: auto;
-}
+}*/
 ul#output {
-  padding: 0 0px;
+  padding: 0px;
   /*float: left;*/
+}
+button{
+  background-color: #F9F8F7;
+  border: 1px solid black;
 }
 li.taskList {
   list-style-type: none;
   font-family: Arial;
   font-size: 1.2em;
-  padding: 7px 0;
+  padding: 10px;
+  overflow: auto;
+  margin: 0px;
+  /*float: left;*/
 }
 li.taskList:hover {
   background-color: rgba(100,100,100,0.5);
@@ -34,26 +41,29 @@ ul{
 .done,.undo{
   float: left;
 }
+button.undo{
+  background-color: #53939A; 
+}
 .strike-through{
 	text-decoration: line-through;
   font-style: italic;
 }
+span.strike-through{
+  color: black;
+}
 .taskName{
   padding: 0 25px 0 10px;
+  color: white;
 }
-
-
-
-
 #container {
-  width: 40%;
+  max-width: 520px;
   height: 500px;
   position: relative;
   margin: 0 auto;
  /* background-color: #5061EA;*/
   background-color: #A22D05;
   border-radius: 5px;
-  /*max-width: 580px;*/
+  overflow: auto;
 }
 .animated-div{
   font-weight: 500;

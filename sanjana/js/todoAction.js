@@ -1,41 +1,64 @@
-var todoList = [];
+var todoList = initTodoList() || [];
 var todoItem;
 
 document.querySelector('#todoInput').addEventListener('keypress', function (e) {
     var key = e.which || e.keyCode;
-    if (( key == 13 ) && ( document.querySelector('#todoInput').value.length > 0 )) // 13 is enter
+    if (( key == 13 ) && ( $("#todoInput").val().length > 0 )) // 13 is enter
     	addAction( this.value.trim() );
 });
 
 function addAction(todoItem){
-	//var todoItem = document.getElementById("todoInput").value;
 	todoList = addToDo(todoItem, todoList);
-	document.getElementById("output").innerHTML = buildListHTML(todoList);
-	document.getElementById("todoInput").value = '';
+	$("#output").html(buildListHTML(todoList));
+	$("#todoInput").val('');
+	saveTodoList()
 }
 
 function removeAction(index){
 	todoList = removeToDo(index, todoList);
-	document.getElementById("output").innerHTML = buildListHTML(todoList);
+	$("#output").html(buildListHTML(todoList));
+	saveTodoList()
 }
 
 function doneAction(index){
 	todoList = markToDoAsDone(index, todoList);
-	document.getElementById("output").innerHTML = buildListHTML(todoList);
+	$("#output").html(buildListHTML(todoList));
+	saveTodoList()
 }
 
 function undoAction(index){
 	todoList = markToDoAsUnDone(index, todoList);
-	document.getElementById("output").innerHTML = buildListHTML(todoList);
+	$("#output").html(buildListHTML(todoList));
+	saveTodoList()
 }
 
 function editAction(index, e){
-	// console.log(e.target);
-	e.target.parentElement.innerHTML = getEditHTML(index, todoList[index].task);
+	$(e.target).parent().html(getEditHTML(index, todoList[index].task));
 }
+function saveAction(index,e) {
+	  var todoItemTask =  $(e.target).prev().val();
+	  if(todoItemTask) {
+		todoList = editToDo(index, todoItemTask, todoList);
+		$("#todolist").html(buildListHTML(todoList));
+		 saveToDoList();
+	  }
+	}
 function saveAction(index, e){
-	console.log(e.target);
-	var newTask = document.getElementById("newTask").value;
+	var newTask = $("#newTask").val();
 	todoList[index].task = newTask;
-	document.getElementById("output").innerHTML = buildListHTML(todoList);
+	$("#output").html(buildListHTML(todoList));
+	saveTodoList()
+}
+function initTodoList(){
+	var todoListString = localStorage.getItem('myTodoList');
+	if(todoListString !== "undefined"){
+		var todos = JSON.parse(todoListString);
+		// $("#output").html(buildListHTML(todos));
+		document.getElementById("output").innerHTML = buildListHTML(todos);
+		return todos;
+	}
+	return [];
+}
+function saveTodoList(){
+	localStorage.setItem('myTodoList', JSON.stringify(todoList));
 }   

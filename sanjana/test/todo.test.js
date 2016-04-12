@@ -118,5 +118,13 @@ describe('Todo', function() {
 		});
 		
 	});
+	describe('getEditHTML', function () {
+		it('should provide an input box with save button when edit button of a paticular task is  clicked', function() {
+			var todoList = todoApp.addToDo('Buy Milk', []);
+			todoList = todoApp.addToDo('Attend meeting', todoList);
+			var editHTML = todoApp.getEditHTML(1,'Finish Task');
+			assert.equal(editHTML,'<input id="newTask" type="text" value="Finish Task"> <button onclick="saveAction(1, event)">&#128190;</button>');
+		});
+	});
 
 });
