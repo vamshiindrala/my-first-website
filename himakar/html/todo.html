@@ -4,13 +4,22 @@
     <title>TODO</title>
     <link rel="stylesheet" type="text/css" href="../css/todo.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		
   </head>
   <body>
     <div id="container">
      	 <div id="header">Todo List</div>
+      	<!--
       	<div id="taskInput"><input id="task"><button id="add">Add</button><div>
 		<hr>
 		<div id="todos"></div>
+		-->
+		<div>
+			<input type="text" id="todoInput" placeholder="Enter your todo" /> 
+			<button onclick="addAction()">Add Todo</button>
+		</div>
+		<div id="output"></div>
     </div>
   <script src="../js/todo.js"></script>
   </body>

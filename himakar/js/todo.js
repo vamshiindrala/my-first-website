@@ -5,7 +5,7 @@ function add(){
   var array = array || []
   
   for(var i=0; i<=array.length; i++){
-    var docvalue = document.getElementById('taskInput').value;
+    var docvalue = $('taskInput').value;
     var result = array.push(docvalue);
      console.log( result);
     document.getElementById('textoutput').innerHTML = array;
@@ -96,6 +96,42 @@ show();
 */
 
 //Add a todo item
+var todoList = [];
+
+function addAction(){
+	var todoItem = $("todoInput").value;
+	todoList = addToDo(todoItem, todoList);
+	$("output").innerHTML = buildListHTML(todoList);
+	$("todoInput").value = '';
+}
+
+function removeAction(index){
+	todoList = removeToDo(index, todoList);
+	$("output").innerHTML = buildListHTML(todoList);
+}
+
+function doneAction(index){
+	todoList = markToDoAsDone(index, todoList);
+	$("output").innerHTML = buildListHTML(todoList);
+}
+
+function undoAction(index){	
+	todoList = markToDoAsUnDone(index, todoList);
+	$("output").innerHTML = buildListHTML(todoList);
+}
+
+function editAction(index, e){
+	// console.log(e.target);
+	e.target.parentElement.innerHTML = getEditHTML(index, todoList[index].task);
+}
+
+function saveAction(index,e) {
+	var todoItemTask = e.target.previousElementSibling.value;
+	if(todoItemTask) {
+		todoList = editToDo(index, todoItemTask, todoList);
+		$("output").innerHTML = buildListHTML(todoList	);
+	}
+}
 
 function getEditHTML(index, todoItemTask){
 	var html = '<input type="text" value="'+todoItemTask+'"> <button onclick="saveAction('+index+')">Save</button>';
@@ -155,7 +191,17 @@ function markToDoAsDone(index, todoList) {
 	}
 	return false;
 }
- 
+
+function markToDoAsUnDone(index, todoList) {
+	index = parseInt(index);
+	if(todoList && todoList.length > 0 && !isNaN(index) && index >= 0){
+		todoList[index]['status'] = 'Incomplete';
+		todoList[index]['date'] = (new Date()).getTime();
+		return todoList;
+	}
+	return false;
+}
+
 function buildListHTML(todoList) {
 	var html = ''; 
  	if(todoList && todoList.length > 0){
