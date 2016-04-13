@@ -1,4 +1,4 @@
-body,button {font-family: Rockwell;}
+body,button,section {font-family: Rockwell;}
 button {
   background-color: #00cc99;
   color:#ffffff;
@@ -11,14 +11,18 @@ section {
   margin-right:auto;
   background-color: #e6e6e6;
   padding-bottom:20px;
-  /*height: 500px;*/
- /* width:400px;*/
   max-width: 500px;
  overflow: auto;
+}
+header,p{
+  text-align: center;
 }
 h1 {
   color:#00cc99;
   display:inline;
+}
+p{
+   overflow: auto;
 }
 ul {
   list-style: none;
@@ -26,7 +30,12 @@ ul {
   margin-top:0;
   margin-bottom:0;
   margin-right:0;
-  /*width:500px;*/
+  border:0px;
+}
+div#todolist{
+  margin:35px;
+  border:0px;
+  padding:0px;
 }
 li {
   border:1px solid #ccc;
@@ -34,42 +43,28 @@ li {
   padding:5px 10px;
   color:#527a7a;
   background-color: #ffffcc;
-  /*width:150%;*/
-  margin-left:10px;
-  margin-right:10px;
-     overflow: auto;
+  overflow: auto;
+}
+button.remove,button.save,button.edit{
+  float:right;
 }
 li span {
   padding-left: 10px;
   cursor: default;
 }
-.checked {
-  text-decoration: line-through;
-  font-weight: bold;
-  color:#40bf80;
+button.done,button.undone{
+  font-size:16px;
 }
-/*@media (max-width: 500px) {
-  section{
-   overflow: auto;
-   min-width:426px;
-  }
-}
-@media (max-width: 382px) {
-  li{
-         overflow: auto;
-         min-width:345px;
-  }
-}*/
 #taskbox {
-  width:250px;
   height:25px;
 }
 input {
   color:#527a7a;
   background-color: #ffffcc;
-  margin-left:10px;
-  margin-bottom:10px;
+ /* margin-bottom:10px;*/
   border:1px solid lightgray;
+ /* max-width: 250px;*/
+  width:75%;
 }
 input:focus {
   background-color: #ffffff;
@@ -77,7 +72,6 @@ input:focus {
 img {
   margin-top:5px;
   width:35px;
-  margin-left:10px;
 }
 .strike-through {
   text-decoration: line-through;
