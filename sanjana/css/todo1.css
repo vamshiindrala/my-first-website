@@ -6,9 +6,9 @@
   left: 0;
   overflow: auto;
 }*/
+
 ul#output {
   padding: 0px;
-  /*float: left;*/
 }
 button{
   background-color: #F9F8F7;
@@ -21,7 +21,6 @@ li.taskList {
   padding: 10px;
   overflow: auto;
   margin: 0px;
-  /*float: left;*/
 }
 li.taskList:hover {
   background-color: rgba(100,100,100,0.5);
@@ -60,7 +59,6 @@ span.strike-through{
   height: 500px;
   position: relative;
   margin: 0 auto;
- /* background-color: #5061EA;*/
   background-color: #A22D05;
   border-radius: 5px;
   overflow: auto;
@@ -71,7 +69,6 @@ span.strike-through{
   text-align: center;
   text-transform: uppercase;
   -webkit-animation: bounceIn 1.5s both 1s;
-  /*margin-top: 50px;*/
 }
 @-webkit-keyframes bounceIn{
   0% { 
