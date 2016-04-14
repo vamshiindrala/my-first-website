@@ -126,7 +126,7 @@ describe('Todo', function() {
 			var todoList = todo.addToDo('Buy Milk', []);
 			todoList = todo.markToDoAsDone(0,todoList);
 			var todohtml  = todo.buildListHTML(todoList);
-			var html = '<ul><li><button class="undone">&#10004;</button><span class="strike-through">Buy Milk</span><button class="remove">&#10008;</button><button class="edit">&#9998;</button></li></ul>';
+			var html = '<ul><li class="tasklist"><button class="undone">&#10004;</button><span class="strike-through todo">Buy Milk</span><button class="remove">&#10008;</button><button class="edit">&#9998;</button></li></ul>';
 			assert.equal(todohtml,html);
 		});
 
@@ -135,7 +135,7 @@ describe('Todo', function() {
 			todoList = todo.addToDo('Learn Html', todoList);
 			todoList = todo.markToDoAsDone(0,todoList);
 			var todohtml  = todo.buildListHTML(todoList);
-			var html = '<ul><li><button class="undone">&#10004;</button><span class="strike-through">Buy Milk</span><button class="remove">&#10008;</button><button class="edit">&#9998;</button></li><li><button class="done">&#10065;</button><span>Learn Html</span><button class="remove">&#10008;</button><button class="edit">&#9998;</button></li></ul>';
+			var html = '<ul><li class="tasklist"><button class="undone">&#10004;</button><span class="strike-through todo">Buy Milk</span><button class="remove">&#10008;</button><button class="edit">&#9998;</button></li><li class="tasklist"><button class="done">&#10065;</button><span class="todo">Learn Html</span><button class="remove">&#10008;</button><button class="edit">&#9998;</button></li></ul>';
 			assert.equal(todohtml,html);
 		});
 		it('should print the task with index 0 with class as strike-through if status is Done and task with index 1 with a class as strike-through', function() {
@@ -144,14 +144,14 @@ describe('Todo', function() {
 			todoList = todo.markToDoAsDone(1,todoList);
 			todoList = todo.markToDoAsDone(0,todoList);
 			var todohtml  = todo.buildListHTML(todoList);
-			var html = '<ul><li><button class="undone">&#10004;</button><span class="strike-through">Buy Milk</span><button class="remove">&#10008;</button><button class="edit">&#9998;</button></li><li><button class="undone">&#10004;</button><span class="strike-through">Learn Html</span><button class="remove">&#10008;</button><button class="edit">&#9998;</button></li></ul>';
+			var html = '<ul><li class="tasklist"><button class="undone">&#10004;</button><span class="strike-through todo">Buy Milk</span><button class="remove">&#10008;</button><button class="edit">&#9998;</button></li><li class="tasklist"><button class="undone">&#10004;</button><span class="strike-through todo">Learn Html</span><button class="remove">&#10008;</button><button class="edit">&#9998;</button></li></ul>';
 			assert.equal(todohtml,html);
 		});
 
 		it('should print the task without class as strike-through if status is Incomplete', function() {
 			var todoList = todo.addToDo('Buy Milk', []);
 			var todohtml  = todo.buildListHTML(todoList);
-			var html = '<ul><li><button class="done">&#10065;</button><span>Buy Milk</span><button class="remove">&#10008;</button><button class="edit">&#9998;</button></li></ul>';
+			var html = '<ul><li class="tasklist"><button class="done">&#10065;</button><span class="todo">Buy Milk</span><button class="remove">&#10008;</button><button class="edit">&#9998;</button></li></ul>';
 			assert.equal(todohtml,html);
 		});
 
@@ -159,7 +159,7 @@ describe('Todo', function() {
 			var todoList = todo.addToDo('Buy Milk', []);
 			todoList = todo.addToDo('Learn Html', todoList);
 			var todohtml  = todo.buildListHTML(todoList);
-			var html = '<ul><li><button class="done">&#10065;</button><span>Buy Milk</span><button class="remove">&#10008;</button><button class="edit">&#9998;</button></li><li><button class="done">&#10065;</button><span>Learn Html</span><button class="remove">&#10008;</button><button class="edit">&#9998;</button></li></ul>';
+			var html = '<ul><li class="tasklist"><button class="done">&#10065;</button><span class="todo">Buy Milk</span><button class="remove">&#10008;</button><button class="edit">&#9998;</button></li><li class="tasklist"><button class="done">&#10065;</button><span class="todo">Learn Html</span><button class="remove">&#10008;</button><button class="edit">&#9998;</button></li></ul>';
 			assert.equal(todohtml,html);
 		});
 
