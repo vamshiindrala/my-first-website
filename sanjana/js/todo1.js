@@ -1,7 +1,10 @@
-//Add a todo item
+function escapeQuotes(text){
+	return text.replace('"', "&#34");
+	// return text.replace("'", "&#39");
+}
 
 function getEditHTML(index, todoItemTask){
-	var html = '<input id="newTask" type="text" value="'+todoItemTask+'"><button class="save">&#128190;</button>';
+	var html = '<input id="newTask" type="text" value="'+escapeQuotes(todoItemTask)+'"><button class="save">&#128190;</button>';
 	return html;
 }
 
@@ -76,12 +79,12 @@ function buildListHTML(todoList) {
 	    for(var i=0; i<todoList.length; i++) {
 	    	if(todoList[i].status === 'Done'){
 	    		html += '<li class="taskList"><button class="undo">&#10004;</button>' +
-	    			    '<span class="strike-through taskName">' + todoList[i].task + '</span>'+
+	    			    '<span class="strike-through taskName">' + escapeQuotes(todoList[i].task) + '</span>'+
 	    			    '<button class="remove">&#10008;</button>'+
 	    			    '<button class="edit">&#9998;</button></li>';
 	    	}else{
 	    		html += '<li class="taskList"><button class="done">&#10004;</button>'+
-	    		'<span class="taskName">' + todoList[i].task + '</span>'+
+	    		'<span class="taskName">' + escapeQuotes(todoList[i].task) + '</span>'+
 	    		'<button class="remove")">&#10008;</button>'+
 	    		'<button class="edit">&#9998;</button></li>';
 	    	}	        

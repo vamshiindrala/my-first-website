@@ -1,23 +1,22 @@
-/*#listWrapper {
-  position: absolute;
-  bottom: 50px;
-  top: 160px;
-  right: 0;
-  left: 0;
-  overflow: auto;
-}*/
+body{
+  font-family: Arial;
+}
 
-ul#output {
+ul {
   padding: 0px;
+  margin: 10px;
 }
 button{
   background-color: #F9F8F7;
   border: 1px solid black;
 }
+#newTask{
+  padding : 7px;
+  font-size: 14px;
+  width: calc(100% - 50px);
+}
 li.taskList {
   list-style-type: none;
-  font-family: Arial;
-  font-size: 1.2em;
   padding: 10px;
   overflow: auto;
   margin: 0px;
@@ -28,9 +27,9 @@ li.taskList:hover {
 li.taskList:not(:last-child) {
   border-bottom: 1px solid white;
 }
-ul{
+/*ul{
   display: inline-block;
-}
+}*/
 .edit,.remove{
   float: right;
 }
@@ -56,8 +55,8 @@ span.strike-through{
 }
 #container {
   max-width: 520px;
-  height: 500px;
-  position: relative;
+  min-height: 500px;
+  /*position: relative;*/
   margin: 0 auto;
   background-color: #A22D05;
   border-radius: 5px;
@@ -69,6 +68,34 @@ span.strike-through{
   text-align: center;
   text-transform: uppercase;
   -webkit-animation: bounceIn 1.5s both 1s;
+}
+
+#header {
+  color: white;
+  padding: 25px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+img{
+  margin-top:5px;
+  width:35px;
+  margin-left:10px;
+  display: inline-block;
+}
+#inputContainer {
+  padding: 10px;
+}
+input[placeholder] {
+  font-size: 1.1em;
+}
+input:focus {
+  background-color: #555555;
+}
+#inputContainer #todoInput {
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
 @-webkit-keyframes bounceIn{
   0% { 
@@ -106,31 +133,4 @@ span.strike-through{
     transform: scale(1); 
     -webkit-transform: scale(1);
   }
-}
-#header {
-  color: white;
-  padding: 25px;
-  text-align: center;
-  font-family: Arial, sans-serif;
-}
-img{
-  margin-top:5px;
-  width:35px;
-  margin-left:10px;
-  display: inline-block;
-}
-#inputContainer {
-  padding: 10px;
-}
-input[placeholder] {
-  font-size: 1.1em;
-}
-input:focus {
-  background-color: #555555;
-}
-#inputContainer #todoInput {
-  padding: 10px;
-  width: 100%;
-  border-radius: 5px;
-  box-sizing: border-box;
 }
