@@ -1,3 +1,9 @@
+function escapeQuotes(todo) {
+	return todo.replace('"',"&#34");
+	return todo.replace("'","&#39");
+}
+
+
 function addToDo(todoItemTask, todoList) {
 	var todoList = todoList || [],
 	todoItem;
@@ -61,7 +67,7 @@ function markToDoAsUnDone(index, todoList) {
 }
 
 function getEditHTML(index, todoItemTask) {
-	var html = '<input type="text" value="'+todoItemTask+'"><button class="save">&#128190;</button>';
+	var html = '<input type="text" value="'+escapeQuotes(todoItemTask)+'"><button class="save">&#128190;</button>';
 	return html;
 }
 
@@ -73,13 +79,13 @@ function buildListHTML(todoList) {
 		html = '<ul>';
 		for(var i=0; i<todoList.length; i++) {
 			if(todoList[i].status === 'Done'){
-				html += '<li><button class="undone">&#10004;</button>'+
-				'<span class="strike-through">' + todoList[i].task + '</span>'+
+				html += '<li class="tasklist"><button class="undone">&#10004;</button>'+
+				'<span class="strike-through todo">' + escapeQuotes(todoList[i].task) + '</span>'+
 				'<button class="remove">&#10008;</button>'+
 				'<button class="edit">&#9998;</button></li>';
 			}else{
-				html += '<li><button class="done">&#10065;</button>'+
-				'<span>' + todoList[i].task + '</span>'+
+				html += '<li class="tasklist"><button class="done">&#10065;</button>'+
+				'<span class="todo">' + escapeQuotes(todoList[i].task) + '</span>'+
 				'<button class="remove">&#10008;</button>'+
 				'<button class="edit">&#9998;</button></li>';
 			}	        
