@@ -1,0 +1,60 @@
+.box{
+	width: 305px;
+	min-height: 400px;
+	background-color: #fff;
+	border: 1px solid #DDD;
+	top: 86px;
+	left: 40%;
+	position: relative;
+}
+.top{
+	width: 300px;
+	height: 50px;
+	background-color: #424242;
+	color: #fff;
+	padding: 5px;
+	left: 40%;
+	top: 66px;
+	position: relative;
+}
+.align{
+	text-align: center;
+}
+
+.progressbar1{
+	width: 243px;
+    height: 10px;
+    background-color: #EF5F3C;
+    border: 1px solid #DDD;
+
+}
+.bottom{
+	left: 40%;
+	top: 100px;
+	width: 305px;
+    position: relative;
+    padding: 5px;
+}
+.padding{
+	padding: 10px;
+}
+input{
+	padding: 10px;
+}
+p{
+	padding: 10px;
+	margin: 20px;
+}
+.green{
+	background-color: #1CBC2C;
+	border: 1px solid ##1EAF2C;
+}
+.right{
+	margin-left: 40px;
+}
+.blue{
+	color: #149BD0;
+}
+.place{
+	margin-left: 25px;
+}
