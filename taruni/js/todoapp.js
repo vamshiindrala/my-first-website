@@ -1,6 +1,7 @@
 function escapeQuotes(todo) {
-	return todo.replace('"',"&#34");
-	return todo.replace("'","&#39");
+	return todo.replace(/"/g, "&#34;");
+	// return todo.replace('"',"&#34");
+	// return todo.replace("'","&#39");
 }
 
 
