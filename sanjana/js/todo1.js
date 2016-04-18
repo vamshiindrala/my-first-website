@@ -1,6 +1,5 @@
 function escapeQuotes(text){
-	return text.replace('"', "&#34");
-	// return text.replace("'", "&#39");
+	return text.replace(/"/g, "&#34");
 }
 
 function getEditHTML(index, todoItemTask){
