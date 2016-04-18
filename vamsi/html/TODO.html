@@ -20,25 +20,25 @@
 			var todoList = [];
 
 			function addAction(){
-				var todoItem = document.getElementById("todoInput").value;
+				var todoItem = $(".todoInput").value;
 				todoList = addToDo(todoItem, todoList);
-				document.getElementById("output").innerHTML = buildListHTML(todoList);
-				document.getElementById("todoInput").value = '';
+				$(".output").innerHTML = buildListHTML(todoList);
+				$(".todoInput").value = '';
 			}
 
 			function removeAction(index){
 				todoList = removeToDo(index, todoList);
-				document.getElementById("output").innerHTML = buildListHTML(todoList);
+				$(".output").innerHTML = buildListHTML(todoList);
 			}
 
 			function doneAction(index){
 				todoList = markToDoAsDone(index, todoList);
-				document.getElementById("output").innerHTML = buildListHTML(todoList);
+				$(".output").innerHTML = buildListHTML(todoList);
 			}
 
 			function undoAction(index){
 				todoList = markToDoAsUnDone(index, todoList);
-				document.getElementById("output").innerHTML = buildListHTML(todoList);
+				$(".output").innerHTML = buildListHTML(todoList);
 			}
 
 			function editAction(index, e){
