@@ -2,49 +2,22 @@
 <html>
 	<head>
 		<title>Todo list</title>
-		<style type="text/css">
-			.strike-through{
-				text-decoration: line-through;
-			}
-		</style>
+		<link rel="stylesheet" type="text/css" href="./css/todo.css">
 	</head>
 	<body>
-		<h1>My Todo List</h1>
-		<div id="output"></div>
-		<div>
-			<input type="text" id="todoInput" placeholder="Enter your todo" /> 
-			<button onclick="addAction()">Add Todo</button>
+		<div id="container">
+			<div id="header" class="animated-div">
+				<img src="./images/todo.png"/>
+				Todo List
+      		</div>
+			<div id="inputContainer">
+				<input type="text" id="todoInput" placeholder="Enter your todo" />
+			</div>
+			<div id="output">
+      		</div>
 		</div>
-		<script type="text/javascript" src="../js/todo.js"></script>
-		<script type="text/javascript">
-			var todoList = [];
-
-			function addAction(){
-				var todoItem = document.getElementById("todoInput").value;
-				todoList = addToDo(todoItem, todoList);
-				document.getElementById("output").innerHTML = buildListHTML(todoList);
-				document.getElementById("todoInput").value = '';
-			}
-
-			function removeAction(index){
-				todoList = removeToDo(index, todoList);
-				document.getElementById("output").innerHTML = buildListHTML(todoList);
-			}
-
-			function doneAction(index){
-				todoList = markToDoAsDone(index, todoList);
-				document.getElementById("output").innerHTML = buildListHTML(todoList);
-			}
-
-			function undoAction(index){
-				todoList = markToDoAsUnDone(index, todoList);
-				document.getElementById("output").innerHTML = buildListHTML(todoList);
-			}
-
-			function editAction(index, e){
-				// console.log(e.target);
-				e.target.parentElement.innerHTML = getEditHTML(index, todoList[index].task);
-			}
-		</script>
+		<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../js/Todo.js"></script>
+		<script type="text/javascript" src="../js/todoAction.js"></script>
 	</body>
 </html>
