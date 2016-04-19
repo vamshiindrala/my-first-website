@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSS Exercise-5</title>
+		<style type="text/css">
+			div {
+				padding: 20px;
+				font-family: 'Open Sans', sans-serif;
+			}
+		  	button{
+		  		margin: 0;
+		  		padding:0;
+		  		background:#fff;
+		  		color: #000;
+		  		font-size: 14px;
+		  		font-weight: bold;
+		  		text-transform: uppercase;
+		  		line-height: 40px;
+		  		padding: 5px;
+		  		border: 1px solid #999;
+		  	}
+		  	button::before{
+		  		content: "";
+		  		width: 40px;
+		  		height: 40px;
+		  		display: inline-block;
+		  		float: left;
+		  		background: url("http://info.appdirect.com/uploads/blog/Content/2011/SVG-icons.png") no-repeat 0 0;
+		  	}
+		  	button.thunder::before{
+		  		background-position: -147px 3px;
+		  	}
+		  	button.warning::before{
+		  		background-position: -367px -40px;
+		  	}
+		  	button.browser::before{
+		  		background-position: -111px -185px;
+		  	}
+		  	button.dollars::before {
+		  		background-position: -72px -2px;
+		  	}
+		  	button.secure::before {
+		  		background-position: -74px -149px;
+		  	}
+		  	button.settings::before {
+		  		background-position: -372px -149px;
+		  	}
+		  	button:hover{
+		  		background-color: #808080; 
+		  	}
+  		</style>
+	</head>
+	<body>
+		<div>
+			<button class="thunder"><a href="#">Thunder</a></button>
+			<button class="warning"><a href="#">Warning</a></button>
+			<button class="browser"><a href="#">Explorer</a></button>
+		</div>
+		<div>
+			<button class="dollars"><a href="#">Dollars</a></button>
+			<button class="secure"><a href="#">Secure</a></button>
+			<button class="setings"><a href="#">Settings</a></button>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSS Exercises - 6</title>
+		<style type="text/css">
+		
+		/*#signUp{
+			display: none;
+		}*/
+		/*#logIn{
+			display: none;
+		}*/
+		
+		.Menu{
+			text-align: center;
+			padding: 0;
+			overflow: auto;
+		}
+		.Menu li{
+			display: inline-block;
+			padding: 0px 10px;
+		}
+		input, button{
+			border: 1px solid #777;
+			background-color: #ffff99;
+			width: calc(100% - 22px);
+			padding: 10px 10px;
+			margin: 10px 0;
+			display: block;
+		}
+		h1{
+			text-align: center;
+		}
+		.box{
+			width: 300px;
+			background-color: #CCC;
+			padding: 20px;
+			margin: 40px auto;
+			border: 2px solid #777;
+		}
+		button{
+			width: 100%;
+			
+			padding: 10px;
+			background: #666666;
+			color: #FFF;
+			text-transform: uppercase;
+			cursor: pointer;
+			display: block;
+
+		}
+       button:hover{
+       background-color: #333333;
+       }
+		
+		</style>
+	</head>
+		<div class="box">
+			<ul class="Menu">
+				<li><a href="#logIn">Log In</a></li>
+				<li><a href="#signUp">Sign Up</a></li>
+			</ul>
+			<div id="logIn">
+				<h1>Log In</h1>
+				<form name="loginForm" action="/login" method="post">
+					<div><input type="email" name="email" placeholder="Email"/></div>
+					<div><input type="password" name="password" placeholder="Password"/></div>
+					<div><button name="loginButton">Log In</button></div>
+				</form>
+			</div>
+			<div id="signUp">
+				<h1>Sign Up</h1>
+				<form name="signupForm" action="/signup" method="post">
+					<div><input type="email" name="email" placeholder="Enter your Email"/></div>
+					<div><input type="password" name="password" placeholder="Enter your Password"/></div>
+					<div><input type="password" name="confirmpassword" placeholder="Confirm your Password"/></div>
+					<div><button name="signupButton">sign Up</button></div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

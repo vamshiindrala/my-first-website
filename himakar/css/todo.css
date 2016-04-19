@@ -1,0 +1,24 @@
+#container {
+  width: 40%;
+  height: 500px;
+  position: relative;
+  margin: 0 auto;
+ background-color: #5061EA;
+
+  border-radius: 5px;
+  /*max-width: 580px;*/
+}
+#header {
+  color: white;
+  padding: 25px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 30px;
+}
+
+#taskInput {
+  padding:5px 20px;
+  color: white;
+  font-size: 20px;
+}
+
