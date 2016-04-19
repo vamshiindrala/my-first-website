@@ -1,0 +1,182 @@
+body{
+ background-color: #FAFAFA;
+ font-family: 'proxima-nova', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+.instagarmMargin{
+   margin: 20px auto 10px;
+}
+
+.instagarmblock {
+   display: block;
+   overflow: hidden;
+   text-indent: 110%;
+   white-space: nowrap;
+}
+.img{
+   background-image: url(https://instagramstatic-a.akamaihd.net/h1/sprites/core/6f2033.png);
+   background-repeat: no-repeat;
+   background-position: 0px -322px;
+   height: 49px;
+   width: 171px;
+}
+.container{
+  max-width: 410px;
+  min-width: 380px;
+  min-height: 500px;
+  margin: 0 auto;
+  background-color: #FFF;
+  border: 1px solid #eee;
+  overflow: auto;
+}
+.bottom1{
+    max-width: 348px;
+    min-height: 50px;
+    margin: 0 auto;
+    background-color: #FFF;
+    border: 1px solid #eee;
+    overflow: auto;
+}
+.formclass{
+    color: #a5a7aa;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 0 40px 10px;
+    text-align: center;
+}
+
+.bclass1{
+  margin: 8px 40px;
+}
+.bclass2{
+  color: #fff;
+}
+.bclass3{
+      line-height: 29px;
+      padding: 0 11px;
+}
+button{
+    background-color: #4090db;
+    border-color: #4090db;
+}
+.bclass4{
+   cursor: pointer;
+}
+.bclass5{
+   border-radius: 3px;
+   border-style: solid;
+   border-width: 1px;
+   font-size: 14px;
+   font-weight: 600;
+   outline: none;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   -webkit-appearance: none;
+}
+.formtop {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.buttonimage{
+    background-image: url(https://instagramstatic-a.akamaihd.net/h1/sprites/core/6f2033.png);
+    background-repeat: no-repeat;
+    background-position: -439px -322px;
+    height: 16px;
+    width: 16px;
+}
+.bimage{   
+    display: inline-block;
+    margin-right: 8px;
+    position: relative;
+    top: 3px;
+}
+.seperation {
+   
+    margin: 10px 40px 18px;
+}
+.seperationline {
+    background-color: #c9cbcc;
+    width: 100px;
+    height: 1px;
+    top: 45%;
+}
+.orclass{
+    color: #a5a7aa;
+  
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 15px;
+    margin: 0 18px;
+    text-transform: uppercase;
+}
+.online{
+   display: inline-block;
+}
+.textfield{
+   margin: 0 40px 6px;
+}
+.textfieldprop{
+   position: relative;
+}
+.textinput{
+    background-color: #fdfdfd;
+    border: 1px solid #edeeee;
+    border-radius: 3px;
+    font-size: 14px;
+    padding: 9px 8px 7px;
+    -webkit-appearance: none;
+}
+input{
+ width: 268px;
+ margin: 0px 0px 6px 0px;
+}
+.terms{
+    color: #818488;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 10px 60px;
+    text-align: center;
+}
+.conditions{
+ color: #818488;
+    font-weight: 600;
+}
+a{
+ text-decoration: none;
+}
+.bottomcontext {
+    background-color: white;
+    border: 1px solid #edeeee;
+    border-radius: 1px;
+    margin: 0 0 10px;
+    padding: 10px 0;
+}
+.textalign{
+    color: #4b4f54;
+    font-size: 14px;
+    margin: 15px;
+    text-align: center;
+
+}
+.mobileimage{
+    background: url("https://instagramstatic-a.akamaihd.net/h1/images/homepage/home-phones.png/26f8f9119be7.png");
+    background-repeat: no-repeat;
+    height: 618px;
+    z-index: -1;
+}
+.imagecontainer{
+   background: url("https://instagramstatic-a.akamaihd.net/h1/images/homepage/home-phones.png/26f8f9119be7.png");
+   background-repeat: no-repeat;
+   margin: 0 auto;
+   height: 618px;
+   overflow: auto;
+   z-index: -1;
+}
