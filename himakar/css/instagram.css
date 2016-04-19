@@ -20,7 +20,8 @@ body{
    width: 171px;
 }
 .container{
-  max-width: 348px;
+  max-width: 410px;
+  min-width: 380px;
   min-height: 500px;
   margin: 0 auto;
   background-color: #FFF;
