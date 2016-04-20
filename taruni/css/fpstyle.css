@@ -1,34 +1,26 @@
 #container{
  max-width: 500px;
- height: auto;
- margin: 50px auto;
- padding: 20px 20px 10px;
- border-radius: 1px;
- min-height: 500px;
- font-family: "candara";
+  height: auto;
+  margin: 20px auto;
+  padding: 20px 20px 10px;
+  border-radius: 1px;
+  min-height: 500px;
+  font-family: "candara";
  /* overflow:auto;*/
  /*overflow:hidden;*/
+
 }
 
 progress{
- width:100%;
- height:20px;
- display:block;
- /* Important Thing */
- -webkit-appearance: none;
- border: 1px solid lightgray;
- overflow: hidden;
-}
+/* width:500px;*/
+width:100%;
+  height:20px;
+display:block;
+  /* Important Thing */
+  -webkit-appearance: none;
+  border: 1px solid lightgray;
+  overflow: hidden;
 
-.tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: black transparent transparent transparent;
 }
 
 /* All good till now. Now we'll style the background */
@@ -37,44 +29,72 @@ progress::-webkit-progress-bar {
   
   box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.2);
 }
+
 /* Now the value part */
+  
+
 progress::-webkit-progress-value {background-color: #ef5f3c !important;}
 
 div.tooltip{
- height:70px;
- border-radius: 5px;
- background-color: #424242;
- text-align: center;
- margin:10px 0 10px 0;
+
+  height:70px;
+ 
+ /* background-color: #424242;*/
+  
+  text-align: center;
+
+   margin:10px 0 10px 0;
+
  overflow:hidden;
 }
 span.tooltiptext{
- color:#ffffff;
- line-height: 2.5em;
- font-size:22px;
- font-family: candara;
+  color:#ffffff;
+   border-radius: 5px;
+  line-height: 3em;
+  font-size:22px;
+  font-family: candara;
+  display:block;
+/*  margin:20px 0;*/
+  background-color: #424242;
 }
-.tooltiptext::after {
- content: "";
- position: absolute;
- top: 22.56%;
- left: 64%;
- margin-left: -5px;
- border-width: 5px;
- border-style: solid;
- border-color: #424242 transparent transparent transparent;
+
+.tooltip::after { 
+   content: "";
+    position: absolute; 
+    border-width: 8px;
+    border-style: solid;
+    border-color: #424242 transparent transparent transparent;
+    bottom:535px;
+    right:488px;
+  /*Sanjana system dim  bottom:481px;
+    right:490px;*/
+
 }
+
+/*.tooltip::after{
+  content: "▾";
+  position: absolute;
+  right:480px;
+  bottom:497px;
+  color:#424242;
+  font-size:2em;
+}*/
+
+
+
 .maindiv{
- margin:0;
- border-top:none;
- border-left: 1px solid lightgray;
- border-right: 1px solid lightgray;
- border-bottom: 1px solid lightgray;
- min-height:350px;
+  margin:0;
+  border-top:none;
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  min-height:350px;
 }
+
 h2{
   font-size: 24px;
   font-weight: normal;
+
 }
 span.graytext{
   color:gray;
@@ -83,88 +103,99 @@ span.redtext{
  color:#ef5f3c;
   font-weight: bold; 
 }
+
 span.fund{
- padding:5px;
- color:#424242;
+  padding:5px;
+  color:#424242;
 }
+
 #amountbox{
- margin-left:8px;
- margin-right:8px;
- height:70px;
- width:calc(100% - 235px);
- border-radius: 5px;
- color:black;
- overflow:hidden;
- font-size: 22px;
- font-weight: bold;
- background-color:#ffffff;
- text-align: left;
- border:1px solid lightgray;
- font-family: arial;
+   margin:auto 10px auto 10px;
+  /*margin-left:10px;
+  margin-right:15px;*/
+   height:70px;
+  width:calc(100% - 240px);
+   border-radius: 5px;
+   color:black;
+   overflow:hidden;
+      font-size: 22px;
+   font-weight: bold;
+   background-color:#ffffff;
+     border:0;
+   text-align: left;
+   border:1px solid lightgray;
+   font-family: arial;
 }
 #btn1{
- overflow: hidden;
- margin-left:8px;
- margin-right:8px;
- height:70px;
- width:calc(100% - 235px);
+  
+  overflow: hidden;
+  margin:auto 10px auto 10px;
+  /*margin-left:15px;
+  margin-right:10px;*/
+  padding:0;
+   height:70px;
+   width:calc(100% - 240px);
   /* width:202px;*/
- border-radius: 5px;
- background-color: #1cbc2c;
- color:#ffffff;
- border:0;
- font-size: 20px;
- font-weight: bold;
+   border-radius: 5px;
+   background-color: #1cbc2c;
+   color:#ffffff;
+   border:0;
+   font-size: 20px;
+   font-weight: bold;
 }
+
 .btn2{
- margin: 20px 10px 20px 0px;
- height:60px;
+  margin: 20px 10px 20px 0px;
+     height:60px;
   /* width:235px;*/
- width: calc(100% - 260px);
+  width: calc(100% - 260px);
 /*   margin:15px 15px 15px 0px ;*/
- text-align: center;
- text-align: center;
- border-bottom: 3px solid lightgray ;
- border-top:1px solid lightgray;
- border-left: 1px solid lightgray;
- border-right:1px solid lightgray;
- border-radius: 5px;
- background-color: #f2f2f2;
- color: #424242;
- font-size: 22px;
- font-weight: bold;
- padding:0;
- overflow: hidden;
+  text-align: center;
+  text-align: center;
+  border-bottom: 3px solid lightgray ;
+  border-top:1px solid lightgray;
+  border-left: 1px solid lightgray;
+  border-right:1px solid lightgray;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  color: #424242;
+   font-size: 22px;
+   font-weight: bold;
+   padding:0;
+   overflow: hidden;
+
 }
 .btn3{
- overflow: hidden;
- color: #424242;
- background-color: #f2f2f2;
- margin: 20px 0px 20px 10px;
- height:60px;
+  overflow: hidden;
+  color: #424242;
+  background-color: #f2f2f2;
+    margin: 20px 0px 20px 10px;
+     height:60px;
    /*width:235px;*/
- width:calc(100% - 260px);
+   width:calc(100% - 260px);
 /*margin:15px 0px 15px 15px;*/
- padding:0;
- text-align: center;
- border-bottom: 3px solid lightgray ;
- border-top:1px solid lightgray;
- border-left: 1px solid lightgray;
- border-right:1px solid lightgray;
- border-radius: 5px;
- font-size: 22px;
- font-weight: bold;
+padding:0;
+  text-align: center;
+  border-bottom: 3px solid lightgray ;
+  border-top:1px solid lightgray;
+  border-left: 1px solid lightgray;
+  border-right:1px solid lightgray;
+  border-radius: 5px;
+   font-size: 22px;
+   font-weight: bold;
 }
+
 div.div3{
  margin:0;
- padding: 20px 30px;
+ padding: 15px 30px 10px 30px;
+ /*display:inline-block;*/
  overflow:auto;
 }
 div.progress{
- margin:0;
+   margin:0;
  padding:0;
- overflow:auto;
- border: 0px;
+  overflow:auto;
+  border: 0px;
 }
 div.div2{
  margin:0;
@@ -172,22 +203,26 @@ div.div2{
  /* padding: 5px 70px 5px 35px;*/
  overflow:hidden;
 }
+
 div.outerdiv{
- margin:0;
- padding:0;
- overflow:auto;
+  margin:0;
+  padding:0;
+  overflow:auto;
 }
+
 div.div1{
  margin:0;
- padding: 5px 35px;
- overflow:auto;
+  padding: 5px 35px;
+  overflow:auto;
 }
 div.div4{
  margin:0;
  padding: 0px 35px;
  color:#4eb4dc;
  overflow:auto;
+
 }
+
 h2.maintext{
   margin:0;
   padding:0px;
@@ -196,5 +231,8 @@ h2.maintext{
 h2.infotext{
     margin:0;
   padding:0;
+  font-style: italic;
 }
-
+::-webkit-input-placeholder {
+   color: #424242;
+}

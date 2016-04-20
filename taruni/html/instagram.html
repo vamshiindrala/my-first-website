@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Instagram</title>
+  <meta charset="utf-8">
+  <link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
+  <style>
+  body{
+    background-color: #FAFAFA;
+  }
+  h1 {
+    font: 42px 'Lobster Two', Helvetica, sans-serif;
+    color:#125688;
+    padding:0;
+    margin:10px 20px 10px 20px;
+    text-align:center;
+  }
+
+  .box {
+    width:100%;
+    display:box;
+    /* Firefox */
+    display:-moz-box;
+    -moz-box-orient:horizontal;
+    /* Safari, Opera, and Chrome */
+    display:-webkit-box;
+    -webkit-box-orient:horizontal;
+    /* W3C */
+    display:box;
+    box-orient:horizontal;
+  }
+
+    .box2 {
+    width:100%;
+    display:box;
+    margin:0;
+    /* Firefox */
+    display:-moz-box;
+    -moz-box-orient:horizontal;
+    /* Safari, Opera, and Chrome */
+    display:-webkit-box;
+    -webkit-box-orient:horizontal;
+    /* W3C */
+    display:box;
+    box-orient:horizontal;
+  }
+
+  .box .column1 {
+    -moz-box-flex:1.0; /* Firefox */
+    -webkit-box-flex:1.0; /* Safari and Chrome */
+    -ms-flex:1.0; /* Internet Explorer 10 */
+    box-flex:1.0;
+    background: #FAFAFA;
+  }
+
+  .box .column2 {
+    -moz-box-flex:1.0; /* Firefox */
+    -webkit-box-flex:1.0; /* Safari and Chrome */
+    -ms-flex:1.0; /* Internet Explorer 10 */
+    box-flex:1.0;
+    background: #FAFAFA;
+  }
+
+
+  #logIn{
+    display:none;
+  }
+
+  #mainimage{
+    margin:68px 0 68px 200px;
+    /*height:618px;*/
+    float:right;
+  }
+  .fbloginpage{
+    width:calc(100% - 57px);
+    display:block;
+    margin:0px 30px 30px 30px;
+    padding:7px;
+    background: white;
+    color: #4b4f54;
+    /* border-radius: 5px;*/
+    /*text-transform:uppercase;*/
+    cursor:pointer;
+    border:none;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: segoe UI;
+
+  }
+
+  .innerbox{
+    width:50%;
+    /* display:box;*/
+    background-color: white;
+    /* min-height:400px;*/
+    /*  width:400px;*/
+    margin:30px 0px 0px 0px;
+    border:0;
+    /* background-color:#CCC;*/
+    padding:0px;
+    border:1px solid #e6e6e6;
+  }
+
+    .footer{
+    width:100%;
+    /* display:box;*/
+/*    background-color: white;*/
+    /* min-height:400px;*/
+    /*  width:400px;*/
+    height:30px;
+    margin:0px 0px 0px 0px;
+    border:0;
+   /*  background-color:#CCC;*/
+    padding:0px;
+    border:0px;
+    display:inline-block;
+  }
+
+  #signUp{
+    margin:0;
+    padding:0;
+  }
+  input{
+    /*rgb(237 238 238)*/
+    border:1px solid #f2f2f2;
+    width:calc(100% - 80px);
+    padding:10px;
+    margin:5px 30px 5px 30px;
+    display:block;
+    border-radius:2px;
+    background-color: #FDFDFD;
+    /* color:#424242;*/
+    color:#000000;
+    font-family: 'Helvetica Neue',Helvetica, Arial;
+    font-weight:normal;
+    font-size:14px;
+  }
+
+  .btns{
+    width:calc(100% - 57px);
+    display:block;
+    margin:10px 30px 10px 30px;
+    padding:7px;
+    background: #4090db;
+    color: #ffffff;
+    border-radius: 5px;
+    /*text-transform:uppercase;*/
+    cursor:pointer;
+    border:none;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: segoe UI;
+
+  }
+  input:focus{
+    background-color:#ffffff;
+  }
+  button:hover{
+    background-color: #DCDCDC;
+  }
+  .heading{
+    overflow:auto;
+    text-align:center;
+    padding:0;
+    margin:0;
+
+  }
+
+  h3{
+    padding:0;
+    margin:0px 35px 10px 35px;
+    font-size: 15px;
+    text-align: center;
+    font-family: 'Helvetica Neue',Helvetica, Arial;
+    font-weight: bold;
+    /*font-weight: bold;*/
+  }
+  .para{
+    overflow:auto;
+    text-align:center;
+    padding:0;
+    margin:0px;
+    color:#a5a7aa;
+    line-height: 1.3em;
+
+  }
+  .signup,.login{
+    margin:0;
+    padding:0;
+  }
+  .loginfb{
+    overflow:hidden;
+    text-align:center;
+    padding:0;
+    margin:0;
+  }
+
+  #terms{
+   overflow:auto;
+   text-align:center;
+   padding:0;
+   margin:0;
+ }
+ .outerdiv{
+   width:50%;
+   overflow:auto;
+   text-align:center;
+   padding:0;
+   margin:0px;
+ }
+
+ .appdiv{
+  width:50%;
+  overflow:auto;
+  text-align:center;
+  padding:0;
+  margin-top:20px;
+}
+
+.innerappdiv{
+  margin-top:10px;
+}
+
+h4.loginlink{
+ /*   padding:0px 0px 20px 0px;*/
+ /*margin:10px 25px 10px 25px;*/
+ text-align: center;
+ border:1px solid #e6e6e6;
+ background-color: white;
+ /* border:1px solid lightgray;*/
+ margin:10px 0px 0px 0px;
+ padding:20px 0px 20px 0px;
+ font-family: segoe UI;
+ font-weight: normal;
+ color:#4b4f54;
+ font-size:14px;
+}
+
+h4.applink{
+ text-align: center;
+ /* border:1px solid lightgray;*/
+ margin:10px 0px 0px 0px;
+ /*padding:20px 0px 20px 0px;*/
+ font-family: segoe UI;
+ font-weight: normal;
+ color:#4b4f54;
+ font-size:14px;
+}
+
+h5.terms{
+  padding:0px 0px 0px 0px;
+  margin:10px 40px 30px 40px;
+  line-height:1.5em;
+  text-align: center;
+  font-family: 'Helvetica Neue',Helvetica, Arial;
+  font-weight: normal;
+  color:#818488;
+  font-size:14px;
+}
+.btns:hover{
+  background-color: #2d6599;
+}
+.fbloginpage:hover{
+  background-color: transparent;
+}
+
+::-webkit-input-placeholder {
+ color: #424242;
+}
+
+.seperation {
+
+  margin: 10px 30px 20px 30px;
+
+}
+.seperationline {
+  background-color: #c9cbcc;
+  /*width: 100px;*/
+  width:calc(100% - 157px);
+  height: 1px;
+  margin:0px;
+}
+.orclass{
+  color: #a5a7aa;
+  font-size: 13px;
+  font-weight: 600;
+  /* line-height: 1.3em;*/
+  margin: 2px 5px;
+  text-transform: uppercase;
+}
+
+.online{
+ display: inline-block;
+}
+
+a{
+  color: #2092d1;
+  cursor:pointer;
+}
+a:link {
+  color:#2092d1;
+}
+
+/* visited link */
+a:visited {
+  color:#424242;
+}
+
+/* mouse over link */
+a:hover {
+  color:#2092d1;
+}
+
+/* selected link */
+a:active {
+  color: #2092d1;
+}
+
+#appstore{
+ height:40px;
+ width:calc(100% - 200px);
+ margin-right:5px;
+}
+
+#googleplay{
+ height:40px;
+ width:calc(100% - 200px);
+ margin-left:5px;
+}
+span.grayboldtext{
+  font-weight: bold;
+}
+
+ul{
+  margin-left:120px;
+  margin-right:120px;
+  display: block;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+    .footerMenu li{
+      display:inline-block;
+      padding:0px 10px;
+      line-height:1.5em;
+      font-family: segoe UI;
+      font-size: 11px;
+      font-weight: bold;
+      
+
+    }
+
+    .footerMenu li a{
+    color: #125688;
+    }
+
+    .innerfooter{
+      text-align:center;
+      margin:0;
+      padding:0;
+    }
+
+    .copyright{
+margin-left:185px;
+margin-right:185px;
+      /*float:right;*/
+    }
+
+</style>
+</head>
+<body>
+  <div class="box">
+    <div class="column1">
+      <img src="https://instagramstatic-a.akamaihd.net/h1/images/homepage/home-phones.png/26f8f9119be7.png" id="mainimage"/>
+    </div>
+    <div class="column2">
+      <div class="innerbox">
+        <div class="heading"><h1>Instagram</h1></div>
+        
+        <div id="logIn">
+          <form name="loginForm" action="/login" method="post">
+            <div><input type="text" name="username" placeholder="Username"/></div>
+            <div><input type="password" name="password" placeholder="Password                               Forgot?"/></div>
+            <div class="login"><button name="loginButton" class="btns">Log in</button></div>
+          </form>
+          <div class="seperation">
+            <div class="seperationline online"></div>
+            <div class="orclass online">or</div>
+            <div class="seperationline online"></div>
+          </div>
+          <div class="loginfb"><button name="fbloginpage" class="fbloginpage">Log in with Facebook</button></div>
+        </div>
+        <div id="signUp">
+          <div class="para"><h3>Sign up to see photos and videos from your friends</h3></div>
+          <div class="loginfb"><button name="fblogin" class="btns">Log in with Facebook</button></div>
+          <div class="seperation">
+            <div class="seperationline online"></div>
+            <div class="orclass online">or</div>
+            <div class="seperationline online"></div>
+          </div>
+          <form name="signupForm" action="/signup" method="post">
+            <div><input type="email" name="email" placeholder="Email"/></div>
+            <div><input type="text" name="fullname" placeholder="Full Name"/></div>
+            <div><input type="text" name="username" placeholder="Username"/></div>
+            <div><input type="password" name="password" placeholder="Password"/></div>
+            <div class="signup"><button name="signupButton" class="btns">Sign up</button></div>
+          </form>
+          <div id="terms">
+            <h5 class="terms">By signing up, you agree to our <span class="grayboldtext">Terms &amp; Privacy Policy.</span></h5>
+          </div>
+        </div>
+
+      </div>
+      <div class="outerdiv"><h4 class="loginlink">Have an account?<a onclick="login()">Log in</a></h4></div>
+      <div class="appdiv"><h4 class="applink">Get the app</h4>
+        <div class="innerappdiv"><img src="https://instagramstatic-a.akamaihd.net/h1/images/appstore-install-badges/badge_ios_english-en.png/4b70f6fae447.png" id="appstore"/><img src="https://instagramstatic-a.akamaihd.net/h1/images/appstore-install-badges/english_get.png/74c874cf7dc5.png" id="googleplay"/></div>
+      </div>
+    </div>
+    <!-- <div class="lowerdiv">hjdfhkdf</div> -->
+  </div>
+  <div class="box2">
+    <div class="footer">
+      <div class="innerfooter">
+      <!--   <span class="copyright">2016 INSTAGRAM</span> -->
+            <ul class="footerMenu">
+        <li><a>ABOUT US</a></li>
+        <li><a>SUPPORT</a></li>
+        <li><a>BLOG</a></li>
+        <li><a>PRESS</a></li>
+        <li><a>API</a></li>
+        <li><a>JOBS</a></li>
+        <li><a>PRIVACY</a></li>
+        <li><a>TERMS</a></li>
+        <li><a>LANGUAGE</a></li>
+        <li class="copyright"><a>2016 INSTAGRAM</a></li>
+      </ul>
+      </div>
+    </div>
+  </div>
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+  <script>
+  function login(){
+    $('#signUp').hide();
+    $('#logIn').show();
+    $('.outerdiv').html("<h4 class='loginlink'>Don't have an account?<a onclick='signup()'>Sign up</a></h4>");
+    $('#mainimage').css({"margin":"0px 0px 0px 200px","float":"right"});
+    $('.innerbox').css({"width":"50%","background-color": "white","margin":"120px 0px 0px 0px","border":"0","padding":"0px","border":"1px solid #e6e6e6"});
+    $('input').css({"border":"1px solid #f2f2f2","width":"calc(100% - 80px)","padding":"10px","margin":"5px 30px 5px 30px","display":"block","border-radius":"2px","background-color": "#FDFDFD","color":"#000000","font-family":"'Helvetica Neue',Helvetica, Arial","font-weight":"normal","font-size":"14px"});
+  }
+
+  function signup(){
+    $('#logIn').hide();
+    $('#signUp').show();
+    $('.outerdiv').html("<h4 class='loginlink'>Have an account?<a onclick='login()'>Log in</a></h4>");
+    $('#mainimage').css({"margin":"68px 0 68px 200px","float":"right"});
+    $('.innerbox').css({"width":"50%","background-color": "white","margin":"30px 0px 0px 0px","border":"0","padding":"0px","border":"1px solid #e6e6e6"});
+  }
+
+  </script>
+</body>
+</html>
