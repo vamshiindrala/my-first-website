@@ -1,55 +1,24 @@
 .container {
-	/*margin: 10px auto 10px auto;
-	padding: 5px 40px 35px 35px;
-	max-width: 450px;
-	background-color: gray;
-	border: 5px solid transparent;*/
-	/*vertical-align: middle;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    flex-grow: 1;
+    margin: 30px auto 0;
+    max-width: 935px;
     width: 100%;
-    margin-top: 35px;
-    margin-left: 30px;*/
-    width:100%;
-    display:box;
-    /* Firefox */
-    display:-moz-box;
-    -moz-box-orient:horizontal;
-     /* Safari, Opera, and Chrome */
-    display:-webkit-box;
-    -webkit-box-orient:horizontal;
-    /* W3C */
-    display:box;
-    box-orient:horizontal;
 }
 .leftcolumn{
-	/*padding: 10px 60px 10px 40px;
-    vertical-align: middle;
-    font-size: 18px;
-    line-height: 1.750em;
-    position: relative;
-    color: #2A2A2A;
-    max-width: 575px;*/
-    -moz-box-flex:1.0; /* Firefox */
-    -webkit-box-flex:1.0; /* Safari and Chrome */
-    -ms-flex:1.0; /* Internet Explorer 10 */
-    box-flex:1.0;
-    background: #FAFAFA;
-}
-.mobile{
-	align-self: center;
-    background: url("https://instagramstatic-a.akamaihd.net/h1/images/homepage/home-phones.png/26f8f9119be7.png") no-repeat;
-    background-position: 0 0;
-    flex-basis: 454px;
-    height: 618px;
-    margin-top: 70px;
-    margin-left: 250px;
-    margin-right: -15px;
+   background-color: blue;
+    -webkit-flex: auto;
+    flex: auto;
 }
 .anime{
-	margin: 96px 0 0 132px;
+    margin: 96px 0 0 132px;
     position: relative;
 }
 .animeimage{
-	height: 427px;
+    height: 427px;
     left: 0;
     position: absolute;
     top: 0;
@@ -58,32 +27,31 @@
     left: 132px;*/
 }
 .rightcolumn{
-    /*font-size: 14px;
-    color: #666666;
-    line-height: 0.938em;
-    text-transform: uppercase;
-    font-weight: 700;*/
-    -moz-box-flex:1.0; /* Firefox */
-    -webkit-box-flex:1.0; /* Safari and Chrome */
-    -ms-flex:1.0; /* Internet Explorer 10 */
-    box-flex:1.0;
-    background: #FFF;
-    margin-left: -15px;
-    margin-right: 250px;
-}
-.section{
+    -webkit-flex: auto;
+    flex: auto;
     flex-grow: 1;
-    -webkit-box-pack: center;
-    justify-content: center;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
     margin-top: 12px;
     max-width: 350px;
+    margin-left: -200px;
+    margin-right: 75px;
+}
+.mobile{
+    align-self: center;
+    background: url("https://instagramstatic-a.akamaihd.net/h1/images/homepage/home-phones.png/26f8f9119be7.png") no-repeat;
+    background-position: 0 0;
+    flex-basis: 454px;
+    height: 618px;
+    margin-top: 40px;
 }
 .box{
     background-color: white;
     border: 1px solid #edeeee;
     border-radius: 1px;
-    margin: 30px 0 10px;
-    padding: 10px 0;
+    margin: 0px 0px 10px;
 }
 .content{
     margin: 20px auto 10px;
@@ -97,17 +65,8 @@
     height: 49px;
     width: 171px;
 }
-h1{
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-.formcontent{
+.section{
     margin-bottom: 20px;
-}
-.signUp{
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -122,39 +81,17 @@ h1{
     text-align: center;
 }
 .fbbtn{
-   /* margin: 8px 40px;*/
     color: white;
     line-height: 29px;
-    padding: 0 11px;
-    cursor: pointer;
+    margin: 8px 40px;
     background-color: #4090db;
     border-color: #4090db;
-   /* background: none;*/
     border-radius: 3px;
     border-style: solid;
     border-width: 1px;
     font-size: 14px;
     font-weight: 600;
-    outline: none;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    width: 100%;
-    -webkit-appearance: none;
-}
-button{
     font-family: 'proxima-nova', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    align-items: flex-start;
-    text-align: center;
-    box-sizing: border-box;
-    border: 2px outset buttonface;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    font: 13.3333px Arial;
 }
 .fbicon{
     display: inline-block;
@@ -169,42 +106,107 @@ button{
 }
 .fbbtn:hover{
     background-color: #405D9B;
-     border-color: #405D9B;
+    border-color: #405D9B;
 }
-.ortext{
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    flex-direction: row;
-    margin: 10px 40px 18px;
-}
-.rline,.lline{
-    -webkit-box-flex: 1;
-    flex-grow: 1;
-    flex-shrink: 1;
-    background-color: #c9cbcc;
-    height: 1px;
-    position: relative;
-    top: 45%;
-}
-.or{
-    color: #a5a7aa;
-    flex-grow: 0;
-    flex-shrink: 0;
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 15px;
-    margin: 0 18px;
-    text-transform: uppercase;
-}
-.formcontent{
-    margin: 10px 40px 6px;
-    position: relative;
-}
-.formbtn{
-    background-color: #fdfdfd;
+input{
+    background-color: #FFF;
     border: 1px solid #edeeee;
     border-radius: 3px;
     font-size: 14px;
-    padding: 9px 8px 7px;
-    -webkit-appearance: none;
+    width: calc(100% - 98px);
+    padding: 5px 8px 5px;
+    margin: 0 40px 6px;
+    display: block;
+    line-height: 23px;
+}
+::-webkit-input-placeholder {
+    color: #4b4f54;
+}
+.p1{
+    font-family: 'proxima-nova', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    color: #818488;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 10px 60px;
+    text-align: center;
+}
+.s1{
+    color: #818488;
+    font-weight: 600;
+}
+.lgIn{
+    background-color: white;
+    border: 1px solid #edeeee;
+    border-radius: 1px;
+    margin: 0 0 10px;
+    padding: 10px 0;
+}
+.p2{
+    font-family: 'proxima-nova', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    color: #4b4f54;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 15px;
+    text-align: center;
+}
+a, a:visited {
+    color: #125688;
+    text-decoration: none;
+}
+.p3{
+    font-family: 'proxima-nova', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    color: #4b4f54;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 20px 20px 10px 20px;
+    text-align: center;
+}
+.apple{
+    margin-right: 8px;
+}
+.img1,.img2{
+    height: 40px;
+}
+.google{
+    margin-right: 0;
+}
+.stores{
+    display: flex;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+}
+#site-footer{
+    padding: 0px 20px 60px;
+    background-color: white;
+}
+ul {
+    list-style-type: none;
+    width: 100%;     
+}
+li{
+    float:left;
+}
+.rightlist{
+    float:right;
+    color: #4b4f54;
+}
+li a,.transparent{
+    display: inline-block;
+    line-height:62px;
+    font-family: arial;
+    font-size:12px;
+    font-weight:300;
+    padding:0 10px;
+    text-decoration: none;
+    font-weight:bold;
+    text-transform: uppercase;
+}
+nav{
+    max-width: 1020px;
+    padding: 10px 60px ;
+    margin: 0px
 }
