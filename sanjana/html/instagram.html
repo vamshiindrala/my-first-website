@@ -8,36 +8,55 @@
 		<div class="container">
 			<div class="leftcolumn mobile">
 				<div class="anime">
-					<img class="animeimage" src="https://instagramstatic-a.akamaihd.net/h1/images/homepage/screenshot1.jpg/63c13211f012.jpg">
+					<!-- <img class="animeimage active" src="https://instagramstatic-a.akamaihd.net/h1/images/homepage/screenshot1.jpg/63c13211f012.jpg">
 					<img class="animeimage" src="https://instagramstatic-a.akamaihd.net/h1/images/homepage/screenshot2.jpg/4864a4378d2c.jpg">
 					<img class="animeimage" src="https://instagramstatic-a.akamaihd.net/h1/images/homepage/screenshot3.jpg/ffe9bdb05113.jpg">
 					<img class="animeimage" src="https://instagramstatic-a.akamaihd.net/h1/images/homepage/screenshot4.jpg/2db50f7f967f.jpg">
-					<img class="animeimage" src="https://instagramstatic-a.akamaihd.net/h1/images/homepage/screenshot5.jpg/5ee560883409.jpg">
+					<img class="animeimage" src="https://instagramstatic-a.akamaihd.net/h1/images/homepage/screenshot5.jpg/5ee560883409.jpg"> -->
+					<img class="animeimage active" src="../images/image1.jpg">
+					<img class="animeimage" src="../images/image2.jpg">
+					<img class="animeimage" src="../images/image3.jpg">
+					<img class="animeimage" src="../images/image4.jpg">
+					<img class="animeimage" src="../images/image5.jpg">
 				</div>
 			</div>
 			<div class="rightcolumn">
 				<div class="box">
 					<h1 class="content">Instagram</h1>
-					<div class="section">
+					<div id="logIn" class="section">
+						<form>
+							<div><input type="text" name="username" placeholder="Username"/></div>
+             				<div><input type="password" name="password" placeholder="Password                                 Forgot?"/></div>
+             				<button class="fbbtn btn">
+								<span>Log in</span>
+							</button>
+						</form>	
+					</div>
+					<div class="section" id="signUp">
 						<h2 class="signuptext">Sign up to see photos and videos from your friends.</h2>
 						<button class="fbbtn">
 							<span class="fbicon"></span>
 							<span>Log in with Facebook</span>
 						</button>
+						<div class="orclass">
+			             	<div class="rline"></div>
+			             	<div class="ortext">or</div>
+			             	<div class="lline"></div>
+           				</div>
 						<form>
 							<div><input name="email" placeholder="Email" value="" type="text"></div>
 							<div><input name="email" placeholder="Full Name" value="" type="text"></div>
 							<div><input name="email" placeholder="Username" value="" type="text"></div>
 							<div><input name="email" placeholder="Password" value="" type="password"></div>
+							<button class="fbbtn btn">
+								<span>Sign up</span>
+							</button>
 						</form>
-						<button class="fbbtn">
-							<span>Sign up</span>
-						</button>
 						<p class="p1">By signing up, you agree to our <span class="s1">Terms & Privacy Policy.</span></p>
 					</div>
 				</div>
 				<div class="lgIn">
-					<p class="p2">Have an account? <a href="#">Log in</a></p>
+					<p class="p2">Have an account? <a href="#" onclick="login()">Log in</a></p>
 				</div>
 				<p class="p3">Get the app.</p>
 				<div class="stores">
@@ -66,5 +85,42 @@
 				</ul>
 			</nav>	
 		</footer>
+		<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+	   <script>
+		   function login(){
+		     $('#signUp').hide();
+		     $('#logIn').show();
+		     $('.lgIn').html("<p class='p2'>Don't have an account? <a href='#' onclick='signup()'>Sign up</a></p>");
+		   }
+		   function signup(){
+		     $('#logIn').hide();
+		     $('#signUp').show();
+		     $('.lgIn').html("<p class='p2'>Have an account? <a href='#' onclick='login()'>Log in</a></p>");
+		   }
+		</script>
+		<script>
+			// function cycleImages(){
+			//     var $active = $('.anime .active');
+			//     var $next = ($active.next().length > 0) ? $active.next() : $('.anime img:first');
+			//     $next.css('z-index',2);//move the next image up the pile
+			//     $active.fadeOut(1500,function(){//fade out the top image
+			// 	$active.css('z-index',1).show().removeClass('active');//reset the z-index and unhide the image
+			//     $next.css('z-index',3).addClass('active');//make the next image the top one
+		 //      });
+		 //    }
+
+			// $(document).ready(function(){
+			// 	setInterval('cycleImages()', 4000); // run every 4 secs
+			// })
+			$(function(){
+    			$('.anime img:gt(0)').hide();
+			    setInterval(function(){
+			      $('.anime :first-child').fadeOut()
+			         .next('img').fadeIn()
+			         .end().appendTo('.anime');}, 
+			      3000);
+			});
+
+ 	</script>
 	</body>
 </html>
