@@ -20,7 +20,6 @@ function signup(){
 
 }
 
-
 $(".tag > div:gt(0)").hide();
 
 setInterval(function() { 
