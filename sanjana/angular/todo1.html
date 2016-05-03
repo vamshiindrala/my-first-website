@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="todo">
+	<head>
+		<title>Todo list</title>
+		<link rel="stylesheet" type="text/css" href="css/todo1.css">
+	</head>
+	<body>
+		<div id="container" ng-controller="todoCtrl">
+			<header></header>
+			<div id="inputContainer"> 
+				<input id="todoInput" type="text" ng-model="todoInput" placeholder="Enter your todo" ng-keyup="addTodoTask()"/>
+    			<!-- <button ng-click="todoAdd()" id="btnAdd">Add</button> -->
+			</div>
+			<div id="todolist">
+				<ul id="todo-list">
+	     			<li ng-repeat="todo in todoList" class="taskList" ng-dblclick="editMode()">
+		    			<button class="undo" type="button" ng-click="changeClass()" ng-class="class">&#10004;</button>
+		    			<span ng-bind="todo.todoText" class="taskName" ng-class="strikethrough"></span>
+		    			<button class="remove" ng-click="todoDelete($index)">&#10008;</button>
+						<input class="edit" type="text" ng-model="todo.todoText" ng-keyup="editOnEnter(todo)"/>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="/node_modules/angular/angular.js"></script>
+		<script type="text/javascript" src="js/todo.js"></script>
+	</body>
+</html>
